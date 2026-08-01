@@ -1,0 +1,233 @@
+================================================================================
+TABELA BRASILEIRA DE COMPOSIÇÃO DE ALIMENTOS (TBCA) – VERSÃO 7.2 (2023)
+Tabelas Complementares – Resposta Glicêmica
+Rede Brasileira de Dados de Composição de Alimentos (Brasilfoods)
+Universidade de São Paulo (USP) | Food Research Center (FoRC)/CEPID/FAPESP
+================================================================================
+
+
+================================================================================
+INFORMAÇÕES GERAIS
+================================================================================
+
+Citação sugerida:
+Tabela Brasileira de Composição de Alimentos (TBCA). Tabelas Complementares – Resposta
+glicêmica. Universidade de São Paulo (USP). Food Research Center (FoRC). Versão 7.2.
+São Paulo, 2023. [Acesso em: xxxx]. Disponível em: http://www.fcf.usp.br/tbca/
+
+Licença:
+É permitida a reprodução total ou parcial do material, desde que seja citada a fonte. Não é
+permitida a comercialização. Não é permitido a alteração total ou mesmo parcial do conteúdo
+(Creative Commons NonCommercial-NoDerivatives – CC BY-NC-ND 4.0).
+
+Equipe responsável pela versão 7.2:
+- Franco M. Lajolo (Coordenador, Pesquisador do FoRC)
+- Eduardo Purgatto (Vice coordenador, Pesquisador do FoRC)
+- Eliana Bistriche Giuntini (Pesquisadora do FoRC)
+- Kristy Soraya Coelho (Pesquisadora de Pós-doutorado)
+- Elizabete Wenzel de Menezes (Vice coordenadora, Pesquisadora do FoRC – até 2016)
+
+Agradecimentos:
+- Aos órgãos de fomento: FAPESP, CAPES, CNPq, FAO
+- Às indústrias de alimentos e laboratórios que colaboraram no fornecimento de informações.
+
+
+================================================================================
+TABELA COMPLEMENTAR – RESPOSTA GLICÊMICA
+================================================================================
+
+Muitos estudos têm relacionado o consumo excessivo de carboidratos com a ocorrência de
+obesidade, diabetes e doenças cardiovasculares. Porém o tempo de digestão e absorção dos
+carboidratos pode ser bem variados e tem grande importância para o controle e diminuição do
+risco de tais doenças crônicas não-transmissíveis (DCNT); por esse motivo, vem crescendo o
+interesse sobre a resposta glicêmica produzida após o consumo dos alimentos, ou seja, o
+impacto sobre a glicemia.
+
+A resposta glicêmica pode ser avaliada por dois índices, o índice glicêmico (IG) e carga
+glicêmica (CG). O IG é calculado a partir da glicemia encontrada no sangue em até duas horas
+após a ingestão de um determinado alimento fonte de carboidrato; é um índice qualitativo. A
+carga glicêmica (CG) relaciona a qualidade do carboidrato do alimento e a quantidade
+consumida desse alimento.
+
+Geralmente, os alimentos com carboidratos não disponíveis, como cereais integrais, feijão e
+outros grãos, ricos em fibra alimentar, amido resistente e/ou frutanos proporcionam um aumento
+reduzido de glicose (baixos IG e CG) e da insulina na corrente sanguínea, mesmo após uma
+refeição rica em carboidratos. Esse tipo de carboidrato tem sido relacionado com a diminuição
+do apetite, e com níveis mais adequados de glicose, insulina e lipídios no sangue. O mesmo não
+acontece com os carboidratos disponíveis, açúcares e amido, presentes nos doces, batata,
+refrigerantes e alguns tipos de pães (altos IG e CG).
+
+Informações dessa natureza, assim como das frações de carboidratos presentes nos alimentos,
+são mais uma ferramenta a ser utilizada na diminuição de risco de DCNT e síndrome metabólica.
+
+Os dados aqui apresentados são decorrentes de ensaios clínicos sobre índice glicêmico em
+alimentos brasileiros realizados na Faculdade de Ciências Farmacêuticas da Universidade de
+São Paulo. Os dados foram compilados e estão disponíveis na TBCA em formato .pdf para
+consulta ou impressão (Quadro 1).
+
+
+--------------------------------------------------------------------------------
+VALORES DE REFERÊNCIA PARA IG, CG e CG/DIA
+--------------------------------------------------------------------------------
+
+Classificação  | IG (pão=100%) | IG* (glicose=100%) | CG      | CG/dia
+---------------|---------------|---------------------|---------|--------
+Baixo          | ≤76           | ≤55                 | ≤10     | ≤80
+Médio          | 76–94         | 56–69               | 11–19   | 81–119
+Alto           | ≥95           | ≥70                 | ≥20     | ≥120
+
+* Para obtenção de valores de IG (glicose=100%), multiplica-se por 0,7 o valor de IG
+  (pão=100%) (SUGIRS, 2007).
+
+Legenda de classificação usada nas colunas: B = Baixo | M = Médio | A = Alto
+
+
+================================================================================
+QUADRO 1 – RESPOSTA GLICÊMICA DE ALIMENTOS BRASILEIROS
+================================================================================
+
+Colunas:
+  CÓD.   = Código de identificação do alimento na TBCA
+  IG%     = Índice Glicêmico médio % (glicose = 100%)
+  IG CL.  = Classificação do IG (B=Baixo / M=Médio / A=Alto)
+  PORÇÃO  = Porção recomendada (g ou ml)
+  CARB    = Carboidratos disponíveis por porção (g)
+  CG      = Carga Glicêmica
+  CG CL.  = Classificação da CG (B=Baixo / M=Médio / A=Alto)
+  REF.    = Referência bibliográfica
+  *       = dado não disponível
+
+--------------------------------------------------------------------------------
+FRUTAS
+--------------------------------------------------------------------------------
+
+CÓD.   ALIMENTO                                                        VOL.          IG%  IG CL.  PORÇÃO  CARB    CG   CG CL.  REF.
+------ --------------------------------------------------------------- ------------- ---- ------- ------- ------- ---- ------- ----
+720C   Abacaxi, Pérola, cerne, in natura, Ananas comosus               7/saudáveis   67   M       10      2,00    1    B       4
+720C   Abacaxi, Pérola, cerne, liofilizado, Ananas comosus             7/saudáveis   67   M       *       *       *    *       4
+721C   Abacaxi, Pérola, polpa e cerne, in natura, Ananas comosus       7/saudáveis   66   M       100     11,00   7    B       4
+719C   Abacaxi, Pérola, polpa, in natura, Ananas comosus               7/saudáveis   65   M       90      9,00    6    B       4
+718C   Abacaxi, Pérola, polpa, liofilizada, Ananas comosus             7/saudáveis   65   M       *       *       *    *       4
+745C   Amora silvestre, liofilizada, Rubus rosaefoluis                  6/saudáveis   27   B       50      3,00    1    B       4
+734C   Banana, mysore, Musa spp                                         7/saudáveis   49   B       110     12,00   6    B       4
+730C   Banana, nanica, Musa spp (banana d'água, caturra)               14/saudáveis  61   M       110     24,00   14   M       4
+716C   Banana, prata, madura, Musa ssp                                  15/saudáveis  27   B       100     27,94   8    B       4
+715C   Laranja, suco, s/açúcar, embalagem cartonada                     15/saudáveis  41   B       200     13,67   6    B       4
+714C   Maçã, fuji, c/ casca, Malus sylvestris Mill                      15/saudáveis  25   B       100     10,36   3    B       4
+717C   Mamão, papaya, Carica papaya L.                                  15/saudáveis  43   B       90      7,90    3    B       4
+746C   Morango, liofilizado, Fragaria ananassa Duch                     8/saudáveis   37   B       120     6,00    2    B       4
+
+--------------------------------------------------------------------------------
+CEREAIS, PÃES E MASSAS
+--------------------------------------------------------------------------------
+
+CÓD.   ALIMENTO                                                        VOL.          IG%  IG CL.  PORÇÃO  CARB    CG   CG CL.  REF.
+------ --------------------------------------------------------------- ------------- ---- ------- ------- ------- ---- ------- ----
+734A   Aveia, farelo, "Oat bran"                                        16/saudáveis  28   B       10      4,29    1    B       4
+732A   Aveia, flocos, "Quaker"                                          16/saudáveis  39   B       30      14,81   6    B       4
+642A   Biscoito, doce, maisena                                          15/saudáveis  50   B       30      18,08   9    B       4
+644A   Biscoito, salgado, cream cracker                                 15/saudáveis  38   B       30      16,70   6    B       4
+728A   Macarrão, espaguete, cozido/20 min                               10/saudáveis  43   B       180     45,00   19   M       4
+1006A  Macarrão, tradicional, cozido                                    15/saudáveis  49   B       180     42,00   21   A       4
+1007A  Macarrão, integral, cozido                                       15/saudáveis  43   B       180     38,00   16   M       4
+733A   Mingau, instantâneo, arroz e aveia, "Mingo"                      15/saudáveis  71   A       21      16,04   11   B       4
+729A   Pão, trigo, forma, tradicional, "Pullman/Plus Vita"              16/saudáveis  68   A       50      21,00   14   M       4
+730A   Pão, trigo, forma, Cenoura, light, "Plus Vita"                   16/saudáveis  46   B       50      14,00   7    B       4
+731A   Pão, trigo, forma, 7 Grãos, light, "Plus Vita"                   15/saudáveis  42   B       50      14,00   6    B       4
+640A   Pão, trigo, francês                                              19/saudáveis  70   A       50      20,46   14   M       4
+1004A  Pão, trigo, forma, tradicional, "Wickbold"                       15/saudáveis  57   M       50      25,47   14   M       4
+1005A  Pão, trigo, forma, com grãos, "Wickbold"                         15/saudáveis  27   B       50      19,02   5    B       4
+1008A  Pão, trigo, integral clássico (c/ farinha integral e fibra de    15/saudáveis  71   A       50      22,59   16   M       4
+       trigo)
+1009A  Pão, trigo, integral clássico (ingrediente principal farinha      15/saudáveis  71   A       50      21,21   15   M       4
+       integral, c/ fibra de trigo)
+1010A  Pão, trigo, integral light (c/ farinha integral e fontes de      15/saudáveis  58   M       50      22,68   13   M       4
+       fibras)
+1011A  Pão, trigo, integral light (ingrediente principal farinha         15/saudáveis  50   B       50      20,62   10   B       4
+       integral, c/ fibra de trigo)
+1012A  Pão, trigo, integral com grãos (ingrediente principal farinha     15/saudáveis  44   B       50      16,57   7    B       4
+       integral, c/ 15 grãos)
+1013A  Pão, trigo, integral (c/ 5 grãos)                                15/saudáveis  49   B       50      22,16   11   M       4
+1014A  Pão, trigo, integral (c/ 12 grãos)                               15/saudáveis  60   M       50      19,67   12   M       4
+1015A  Pão, trigo, integral (ingrediente principal farinha integral,     15/saudáveis  57   M       50      21,60   12   M       4
+       c/ 9 grãos)
+
+--------------------------------------------------------------------------------
+TUBÉRCULOS E RAÍZES
+--------------------------------------------------------------------------------
+
+CÓD.   ALIMENTO                                                        VOL.          IG%  IG CL.  PORÇÃO  CARB    CG   CG CL.  REF.
+------ --------------------------------------------------------------- ------------- ---- ------- ------- ------- ---- ------- ----
+1040B  Batata, inglesa, cozida/20 min, Solanum tuberosum L.             15/saudáveis  81   A       150     15,59   13   M       4
+1050B  Mandioca, amarela, cozida/30 min, Manihot esculenta Crantz       15/saudáveis  40   B       130     38,25   15   M       4
+       (aipim, macaxeira)
+1040B  Mandioca, farinha, torrada                                        15/saudáveis  52   B       35      27,83   14   M       4
+1079B  Mandioquinha, cozida/15 min, Arracacia xanthorrhiza               15/saudáveis  62   M       100     29,42   18   M       4
+       (batata baroa)
+1061B  Pinhão, cozido/60 min, sem casca, Araucaria angustifolia          6/saudáveis   43   M       50      16,00   7    B       4
+1080B  Pinhão, cozido/90 min, c/ casca, Araucaria angustifolia           6/saudáveis   47   M       50      16,00   8    B       4
+
+--------------------------------------------------------------------------------
+LEGUMINOSAS
+--------------------------------------------------------------------------------
+
+CÓD.   ALIMENTO                                                        VOL.          IG%  IG CL.  PORÇÃO  CARB    CG   CG CL.  REF.
+------ --------------------------------------------------------------- ------------- ---- ------- ------- ------- ---- ------- ----
+301T   Feijão, carioca, cozido, temperado, Phaseolus vulgaris           15/saudáveis  38   B       200     14,11   5    B       4
+105T   Feijão, carioca, cozido/36 min, congelado/30 dias, s/caldo,      10/saudáveis  13   B       170     24,00   3    B       4
+       Phaseolus vulgaris L.
+104T   Feijão, carioca, cozido/36 min, s/caldo, Phaseolus vulgaris L.   10/saudáveis  27   B       170     25,00   7    B       4
+107T   Grão-de-bico, cozido/70 min, Cicer arietinum L.                  10/saudáveis  24   B       170     38,00   9    B       4
+108T   Grão-de-bico, cozido/70 min, congelado/30 dias, Cicer            10/saudáveis  15   B       170     33,00   5    B       4
+       arietinum L.
+
+--------------------------------------------------------------------------------
+ALIMENTOS PREPARADOS E PRATOS COMBINADOS
+--------------------------------------------------------------------------------
+
+CÓD.   ALIMENTO                                                        VOL.          IG%  IG CL.  PORÇÃO  CARB    CG   CG CL.  REF.
+------ --------------------------------------------------------------- ------------- ---- ------- ------- ------- ---- ------- ----
+1002A  Arroz polido/Feijão carioca, cozidos, temperados (3:1)           15/saudáveis  55   B       150     25,36   13   M       4
+1001A  Arroz, polido, cozido, temperado, Orysa sativa L.                15/saudáveis  57   M       150     31,67   18   M       4
+1002A  Polenta, cozida/90 min, congelada/30 days, Zea mays              10/saudáveis  68   A       150     21,00   14   M       4
+1003A  Polenta, cozida/90 min, Zea mays                                 10/saudáveis  52   M       150     21,00   11   M       4
+
+--------------------------------------------------------------------------------
+BEBIDAS
+--------------------------------------------------------------------------------
+
+CÓD.   ALIMENTO                                                        VOL.          IG%  IG CL.  PORÇÃO  CARB    CG   CG CL.  REF.
+------ --------------------------------------------------------------- ------------- ---- ------- ------- ------- ---- ------- ----
+200H   Guaraná, refrigerante                                            15/saudáveis  47   B       200     20,69   10   B       4
+
+--------------------------------------------------------------------------------
+LEITE E DERIVADOS
+--------------------------------------------------------------------------------
+
+CÓD.   ALIMENTO                                                        VOL.          IG%  IG CL.  PORÇÃO  CARB    CG   CG CL.  REF.
+------ --------------------------------------------------------------- ------------- ---- ------- ------- ------- ---- ------- ----
+259G   Leite, vaca, integral, pó                                        15/saudáveis  16   B       26      10,67   2    B       4
+
+--------------------------------------------------------------------------------
+SUPLEMENTOS E FÓRMULAS PARA NUTRIÇÃO ORAL/ENTERAL
+--------------------------------------------------------------------------------
+
+ALIMENTO                                                                             VOL.          IG%  IG CL.  PORÇÃO  CARB    CG   CG CL.  REF.
+------------------------------------------------------------------------------------ ------------- ---- ------- ------- ------- ---- ------- ----
+Suplemento/fórmula para controle glicêmico – Diamax IG (líquido)                    16/saudáveis  22   B       200     16,20   4    B       4
+Suplemento/fórmula hiperproteica para cicatrização de úlceras (líquido)             16/saudáveis  35   B       200     17,00   6    B       4
+Suplemento/fórmula para controle glicêmico – Diasip choc, preparado                 16/saudáveis  49   B       200     15,00   7    B       4
+Suplemento/fórmula para controle glicêmico – Diasip baunilha, preparado             16/saudáveis  47   B       200     16,00   7    B       4
+
+
+================================================================================
+REFERÊNCIA BIBLIOGRÁFICA
+================================================================================
+
+4 – Departamento de Alimentos e Nutrição Experimental, Faculdade de Ciências Farmacêuticas,
+    USP (análises realizadas nos diversos laboratórios).
+
+
+================================================================================
+FIM DO DOCUMENTO
+================================================================================

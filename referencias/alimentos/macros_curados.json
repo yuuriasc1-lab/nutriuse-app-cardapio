@@ -1,0 +1,823 @@
+{
+  "banana": {
+    "nome": "Banana",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 109,
+      "carb": 26.7,
+      "prot": 1.3,
+      "gord": 0.2
+    },
+    "fonte": "TBCA: Banana, in natura (corrigido)"
+  },
+  "aveia em flocos": {
+    "nome": "Aveia em flocos",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 390.0,
+      "carb": 66.0,
+      "prot": 17.0,
+      "gord": 7.0
+    }
+  },
+  "bolacha de arroz": {
+    "nome": "Bolacha de arroz",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 392.0,
+      "carb": 80.0,
+      "prot": 7.2,
+      "gord": 2.0
+    }
+  },
+  "geleia morango ou frutas vermelhas s/ acucar": {
+    "nome": "Geleia Morango ou Frutas vermelhas s/ açúcar",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 252.0,
+      "carb": 60.0,
+      "prot": 0.5,
+      "gord": 0.0
+    }
+  },
+  "pao de forma integral": {
+    "nome": "Pão de forma integral",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 260.0,
+      "carb": 50.0,
+      "prot": 10.0,
+      "gord": 3.0
+    }
+  },
+  "cuscuz de milho cozido com sal": {
+    "nome": "Cuscuz de milho cozido com sal",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 120.0,
+      "carb": 26.0,
+      "prot": 3.25,
+      "gord": 0.58
+    }
+  },
+  "pao de forma": {
+    "nome": "Pão de forma",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 264.0,
+      "carb": 52.0,
+      "prot": 8.0,
+      "gord": 4.0
+    }
+  },
+  "banana em rodela": {
+    "nome": "Banana em rodela",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 109,
+      "carb": 26.7,
+      "prot": 1.3,
+      "gord": 0.2
+    },
+    "fonte": "TBCA: Banana, in natura (corrigido)"
+  },
+  "queijo mussarela": {
+    "nome": "Queijo mussarela",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 300.0,
+      "carb": 3.33,
+      "prot": 20.0,
+      "gord": 23.33
+    }
+  },
+  "pao frances": {
+    "nome": "Pão francês",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 260.0,
+      "carb": 50.0,
+      "prot": 10.0,
+      "gord": 4.0
+    }
+  },
+  "creme de ricota light": {
+    "nome": "Creme de Ricota Light",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 150.0,
+      "carb": 5.5,
+      "prot": 20.0,
+      "gord": 5.5
+    }
+  },
+  "whey protein concentrado": {
+    "nome": "Whey protein concentrado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 400.0,
+      "carb": 10.0,
+      "prot": 80.0,
+      "gord": 6.67
+    }
+  },
+  "leite de vaca desnatado": {
+    "nome": "Leite de vaca desnatado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 36.53,
+      "carb": 5.47,
+      "prot": 3.47,
+      "gord": 0.0
+    }
+  },
+  "polpa de acai puro s/ acucar - sambazon": {
+    "nome": "Polpa de açaí puro s/ açúcar - Sambazon",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 70.0,
+      "carb": 4.0,
+      "prot": 1.0,
+      "gord": 4.0
+    }
+  },
+  "ovo de galinha cozido ou mexido": {
+    "nome": "Ovo de galinha cozido ou mexido",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 140.0,
+      "carb": 1.0,
+      "prot": 12.0,
+      "gord": 10.0
+    }
+  },
+  "clara de ovo cozida ou mexida": {
+    "nome": "Clara de ovo cozida ou mexida",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 44.12,
+      "carb": 0.59,
+      "prot": 10.59,
+      "gord": 0.29
+    }
+  },
+  "goma de tapioca": {
+    "nome": "Goma de tapioca",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 357.14,
+      "carb": 88.0,
+      "prot": 0.29,
+      "gord": 0.29
+    }
+  },
+  "ovo de galinha": {
+    "nome": "Ovo de galinha",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 140.0,
+      "carb": 1.0,
+      "prot": 12.0,
+      "gord": 10.0
+    }
+  },
+  "clara de ovo": {
+    "nome": "Clara de ovo",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 44.12,
+      "carb": 0.59,
+      "prot": 10.59,
+      "gord": 0.29
+    }
+  },
+  "mamao": {
+    "nome": "Mamão",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 40.0,
+      "carb": 10.0,
+      "prot": 0.5,
+      "gord": 0.1
+    }
+  },
+  "farelo de aveia": {
+    "nome": "Farelo de aveia",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 132.67,
+      "carb": 26.67,
+      "prot": 7.33,
+      "gord": 0.67
+    }
+  },
+  "queijo minas frescal": {
+    "nome": "Queijo minas frescal",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 250.0,
+      "carb": 5.0,
+      "prot": 20.0,
+      "gord": 15.0
+    }
+  },
+  "ovo de galinha cozido": {
+    "nome": "Ovo de galinha cozido",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 140.0,
+      "carb": 1.0,
+      "prot": 12.0,
+      "gord": 10.0
+    }
+  },
+  "banana amassada": {
+    "nome": "Banana amassada",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 109,
+      "carb": 26.7,
+      "prot": 1.3,
+      "gord": 0.2
+    },
+    "fonte": "TBCA: Banana, in natura (corrigido)"
+  },
+  "leite desnatado itambe pro": {
+    "nome": "Leite Desnatado Itambé PRO",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 36.92,
+      "carb": 5.38,
+      "prot": 3.08,
+      "gord": 0.0
+    }
+  },
+  "iogurte danone natural desnatado": {
+    "nome": "Iogurte Danone Natural Desnatado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 50.0,
+      "carb": 7.5,
+      "prot": 5.0,
+      "gord": 0.0
+    }
+  },
+  "semente de chia": {
+    "nome": "Semente de chia",
+    "categoria": "Gordura",
+    "por_100g": {
+      "kcal": 500.0,
+      "carb": 20.0,
+      "prot": 20.0,
+      "gord": 40.0
+    }
+  },
+  "banana picada": {
+    "nome": "Banana picada",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 109,
+      "carb": 26.7,
+      "prot": 1.3,
+      "gord": 0.2
+    },
+    "fonte": "TBCA: Banana, in natura (corrigido)"
+  },
+  "morango picado": {
+    "nome": "Morango picado",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 32.0,
+      "carb": 7.6,
+      "prot": 0.6,
+      "gord": 0.4
+    }
+  },
+  "ovo mexido ou cozido": {
+    "nome": "Ovo mexido ou cozido",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 140.0,
+      "carb": 1.0,
+      "prot": 12.0,
+      "gord": 10.0
+    }
+  },
+  "queijo minas meia cura": {
+    "nome": "Queijo minas meia cura",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 300.0,
+      "carb": 6.67,
+      "prot": 26.67,
+      "gord": 20.0
+    }
+  },
+  "morango": {
+    "nome": "Morango",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 33.33,
+      "carb": 7.67,
+      "prot": 0.67,
+      "gord": 0.33
+    }
+  },
+  "salada de frutas s/ acucar": {
+    "nome": "Salada de Frutas s/ açúcar",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 66.0,
+      "carb": 16.0,
+      "prot": 0.79,
+      "gord": 0.3
+    }
+  },
+  "mix de castanhas": {
+    "nome": "Mix de castanhas",
+    "categoria": "Gordura",
+    "por_100g": {
+      "kcal": 579.2,
+      "carb": 38.8,
+      "prot": 14.0,
+      "gord": 42.4
+    }
+  },
+  "arroz branco cozido": {
+    "nome": "Arroz branco cozido",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 102.0,
+      "carb": 23.83,
+      "prot": 1.83,
+      "gord": 0.17
+    }
+  },
+  "feijao carioca cozido": {
+    "nome": "Feijão carioca cozido",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 133.0,
+      "carb": 26.25,
+      "prot": 9.5,
+      "gord": 0.75
+    }
+  },
+  "peito de frango grelhado": {
+    "nome": "Peito de frango grelhado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 165.0,
+      "carb": 0.0,
+      "prot": 31.0,
+      "gord": 3.6
+    },
+    "fonte": "TBCA: Frango, peito, s/ pele, grelhado (corrigido — categoria/macros)"
+  },
+  "peito de frango desfiado": {
+    "nome": "Peito de frango desfiado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 105.0,
+      "carb": 0.0,
+      "prot": 21.17,
+      "gord": 2.33
+    }
+  },
+  "tomate": {
+    "nome": "Tomate",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 18.0,
+      "carb": 3.83,
+      "prot": 1.0,
+      "gord": 0.17
+    }
+  },
+  "peito de frango s/ pele cozido": {
+    "nome": "Peito de frango s/ pele cozido",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 153.0,
+      "carb": 0.0,
+      "prot": 31.17,
+      "gord": 3.17
+    }
+  },
+  "molho de tomate natural": {
+    "nome": "Molho de tomate natural",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 45.0,
+      "carb": 9.0,
+      "prot": 1.67,
+      "gord": 1.0
+    }
+  },
+  "farinha de aveia": {
+    "nome": "Farinha de aveia",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 370.0,
+      "carb": 67.2,
+      "prot": 15.2,
+      "gord": 7.2
+    }
+  },
+  "tapioca": {
+    "nome": "Tapioca",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 357.0,
+      "carb": 88.0,
+      "prot": 0.33,
+      "gord": 0.0
+    }
+  },
+  "queijo minas meia cura ralado": {
+    "nome": "Queijo minas meia cura ralado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 300.0,
+      "carb": 6.8,
+      "prot": 26.8,
+      "gord": 20.0
+    }
+  },
+  "peito de frango cozido desfiado": {
+    "nome": "Peito de frango cozido desfiado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 153.0,
+      "carb": 0.0,
+      "prot": 30.6,
+      "gord": 3.2
+    },
+    "fonte": "TBCA: Frango, peito, s/ pele, cozido, drenado (corrigido — categoria/macros)"
+  },
+  "whey protein": {
+    "nome": "Whey protein",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 400.0,
+      "carb": 10.0,
+      "prot": 80.0,
+      "gord": 7.0
+    }
+  },
+  "leite de vaca desnatado em po": {
+    "nome": "Leite de vaca desnatado em pó",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 37.0,
+      "carb": 5.0,
+      "prot": 3.0,
+      "gord": 0.0
+    }
+  },
+  "atum": {
+    "nome": "Atum",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 110.0,
+      "carb": 0.0,
+      "prot": 25.43,
+      "gord": 0.86
+    }
+  },
+  "morango ou melancia": {
+    "nome": "Morango ou melancia",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 33.33,
+      "carb": 7.67,
+      "prot": 0.67,
+      "gord": 0.33
+    }
+  },
+  "abacaxi": {
+    "nome": "Abacaxi",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 50.0,
+      "carb": 12.3,
+      "prot": 0.5,
+      "gord": 0.1
+    },
+    "fonte": "TACO/TBCA: Abacaxi, cru (corrigido — era valor de desidratado)"
+  },
+  "maca": {
+    "nome": "Maçã",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 56.0,
+      "carb": 15.2,
+      "prot": 0.3,
+      "gord": 0.2
+    },
+    "fonte": "TACO/TBCA: Maçã, c/ casca, crua (corrigido — era valor de desidratado)"
+  },
+  "couve": {
+    "nome": "Couve",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 28.0,
+      "carb": 4.5,
+      "prot": 3.0,
+      "gord": 0.5
+    }
+  },
+  "gengibre": {
+    "nome": "Gengibre",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 80.0,
+      "carb": 17.8,
+      "prot": 1.8,
+      "gord": 0.8
+    },
+    "fonte": "TBCA: Gengibre, in natura (corrigido — era valor de gengibre em pó)"
+  },
+  "batata inglesa cozida (pure)": {
+    "nome": "Batata inglesa cozida (purê)",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 52.0,
+      "carb": 12.22,
+      "prot": 1.33,
+      "gord": 0.07
+    }
+  },
+  "molho de tomate caseiro": {
+    "nome": "Molho de tomate caseiro",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 95.0,
+      "carb": 13.6,
+      "prot": 4.0,
+      "gord": 3.0
+    }
+  },
+  "espeto de peito de frango s/ pele grelhado": {
+    "nome": "Espeto de Peito de frango s/ pele grelhado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 179.0,
+      "carb": 0.6,
+      "prot": 30.4,
+      "gord": 6.1
+    }
+  },
+  "mandioca cozida": {
+    "nome": "Mandioca cozida",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 183.0,
+      "carb": 45.33,
+      "prot": 1.0,
+      "gord": 0.33
+    }
+  },
+  "macarrao integral cozido": {
+    "nome": "Macarrão integral cozido",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 123.0,
+      "carb": 26.43,
+      "prot": 4.86,
+      "gord": 0.57
+    }
+  },
+  "patinho moido ou bife grelhado": {
+    "nome": "Patinho moído ou bife grelhado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 219.0,
+      "carb": 0.0,
+      "prot": 35.9,
+      "gord": 7.6
+    },
+    "fonte": "TACO/TBCA: Patinho, s/ gordura, grelhado (corrigido — categoria/macros)"
+  },
+  "file de frango grelhado em tiras": {
+    "nome": "Filé de frango grelhado em tiras",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 165.0,
+      "carb": 0.0,
+      "prot": 31.0,
+      "gord": 3.6
+    },
+    "fonte": "TBCA: Frango, peito, s/ pele, grelhado (corrigido — categoria/macros)"
+  },
+  "iogurte natural desnatado": {
+    "nome": "Iogurte Natural Desnatado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 48.0,
+      "carb": 7.0,
+      "prot": 4.0,
+      "gord": 0.4
+    }
+  },
+  "azeite de oliva extra virgem": {
+    "nome": "Azeite de oliva extra virgem",
+    "categoria": "Gordura",
+    "por_100g": {
+      "kcal": 900.0,
+      "carb": 0.0,
+      "prot": 0.0,
+      "gord": 100.0
+    }
+  },
+  "abobora cabotian cozida": {
+    "nome": "Abóbora cabotian cozida",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 48.0,
+      "carb": 10.2,
+      "prot": 1.53,
+      "gord": 0.6
+    }
+  },
+  "patinho grelhado moido ou grelhado": {
+    "nome": "Patinho grelhado moído ou grelhado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 219.0,
+      "carb": 0.0,
+      "prot": 35.9,
+      "gord": 7.6
+    },
+    "fonte": "TACO/TBCA: Patinho, s/ gordura, grelhado (corrigido — categoria/macros)"
+  },
+  "batata inglesa": {
+    "nome": "Batata inglesa",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 72.0,
+      "carb": 16.46,
+      "prot": 2.08,
+      "gord": 0.08
+    }
+  },
+  "iogurte integral natural (nestle)": {
+    "nome": "Iogurte integral natural (Nestlé)",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 97.0,
+      "carb": 4.0,
+      "prot": 9.0,
+      "gord": 5.0
+    }
+  },
+  "fermento em po": {
+    "nome": "Fermento em pó",
+    "categoria": "Outro",
+    "por_100g": {
+      "kcal": 176.67,
+      "carb": 43.33,
+      "prot": 0.0,
+      "gord": 0.0
+    }
+  },
+  "brocolis cozido picado": {
+    "nome": "Brócolis cozido picado",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 27.0,
+      "carb": 4.5,
+      "prot": 2.75,
+      "gord": 0.5
+    }
+  },
+  "queijo mussarela light": {
+    "nome": "Queijo mussarela light",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 300.0,
+      "carb": 3.33,
+      "prot": 20.0,
+      "gord": 23.33
+    }
+  },
+  "frango desfiado": {
+    "nome": "Frango desfiado",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 177.0,
+      "carb": 0.8,
+      "prot": 25.8,
+      "gord": 7.8
+    }
+  },
+  "pao frances sem miolo": {
+    "nome": "Pão Francês sem miolo",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 260.0,
+      "carb": 50.0,
+      "prot": 10.0,
+      "gord": 4.0
+    }
+  },
+  "torrada lev magic toast integral": {
+    "nome": "Torrada Lev Magic Toast Integral",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 395,
+      "carb": 73.6,
+      "prot": 11.5,
+      "gord": 6.4
+    },
+    "fonte": "proxy TBCA: Torrada, trigo, tradicional"
+  },
+  "iogurte corpus triplo zero": {
+    "nome": "Iogurte Corpus Triplo Zero",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 45,
+      "carb": 5.0,
+      "prot": 4.5,
+      "gord": 0.0
+    },
+    "fonte": "estimativa rótulo (triplo zero)"
+  },
+  "iogurte proteico verde campo": {
+    "nome": "Iogurte Proteico Verde Campo",
+    "categoria": "Proteína",
+    "por_100g": {
+      "kcal": 53,
+      "carb": 4.2,
+      "prot": 8.4,
+      "gord": 0.3
+    },
+    "fonte": "rótulo: 250g=21g proteína"
+  },
+  "rap": {
+    "nome": "Rap",
+    "categoria": "Carboidrato",
+    "por_100g": {
+      "kcal": 270,
+      "carb": 49.0,
+      "prot": 8.0,
+      "gord": 3.5
+    },
+    "fonte": "estimativa rótulo Rap10 Integral"
+  },
+  "creatina creapure": {
+    "nome": "Creatina Creapure",
+    "categoria": "Outro",
+    "por_100g": {
+      "kcal": 0,
+      "carb": 0,
+      "prot": 0,
+      "gord": 0
+    },
+    "fonte": "suplemento sem valor calórico"
+  },
+  "omegafor plus (vitafor)": {
+    "nome": "OMEGAFOR PLUS (Vitafor)",
+    "categoria": "Gordura",
+    "por_100g": {
+      "kcal": 900,
+      "carb": 0,
+      "prot": 0,
+      "gord": 100
+    },
+    "fonte": "óleo de peixe (ômega-3)"
+  },
+  "cafe sem acucar": {
+    "nome": "Café sem açúcar",
+    "categoria": "Outro",
+    "por_100g": {
+      "kcal": 3.0,
+      "carb": 0.5,
+      "prot": 0.1,
+      "gord": 0.0
+    },
+    "fonte": "Café preto coado, s/ açúcar (corrigido — antes casava 'café c/ leite e açúcar')"
+  },
+  "cafe": {
+    "nome": "Café sem açúcar",
+    "categoria": "Outro",
+    "por_100g": {
+      "kcal": 3.0,
+      "carb": 0.5,
+      "prot": 0.1,
+      "gord": 0.0
+    },
+    "fonte": "Café preto coado, s/ açúcar"
+  },
+  "agua": {
+    "nome": "Água",
+    "categoria": "Outro",
+    "por_100g": {
+      "kcal": 0.0,
+      "carb": 0.0,
+      "prot": 0.0,
+      "gord": 0.0
+    },
+    "fonte": "Água (corrigido — antes casava 'Coco, água')"
+  }
+}

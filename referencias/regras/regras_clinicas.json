@@ -1,0 +1,83 @@
+{
+  "versao": 1,
+  "observacao": "Regras deterministicas de apoio. Nao substituem revisao da nutricionista.",
+  "regras": [
+    {
+      "id": "diabetes",
+      "titulo": "Diabetes / resistencia insulinica",
+      "severidade": "alta",
+      "quando": {
+        "patologias": ["diabetes", "diabetico", "diabetica", "resistencia insulinica", "pre diabetes", "prediabetes"],
+        "exames": ["glicemia", "hemoglobina glicada", "hba1c", "insulina"]
+      },
+      "mensagem": "Revisar carga glicemica, acucares, sucos e carboidratos isolados.",
+      "alerta_alimentos": ["acucar", "mel", "geleia", "suco", "refrigerante", "doce", "tapioca", "farinha", "biscoito", "bolacha"],
+      "bloqueio_alimentos": [],
+      "termos_exclusao": []
+    },
+    {
+      "id": "hipertensao",
+      "titulo": "Hipertensao / controle de sodio",
+      "severidade": "alta",
+      "quando": {
+        "patologias": ["hipertensao", "hipertenso", "pressao alta"],
+        "medicamentos": ["losartana", "enalapril", "hidroclorotiazida", "atenolol", "anlodipino", "amlodipino"]
+      },
+      "mensagem": "Revisar sodio, embutidos, temperos industrializados e ultraprocessados.",
+      "alerta_alimentos": ["presunto", "peito de peru", "salame", "mortadela", "calabresa", "salsicha", "bacon", "sazon", "knorr", "maggi", "arisco", "tempero pronto", "conserva"],
+      "bloqueio_alimentos": [],
+      "termos_exclusao": []
+    },
+    {
+      "id": "lactose",
+      "titulo": "Intolerancia a lactose",
+      "severidade": "alta",
+      "quando": {
+        "intolerancias": ["lactose", "intolerancia a lactose"],
+        "alergias": ["leite"]
+      },
+      "mensagem": "Evitar leite e derivados comuns, salvo versao sem lactose validada.",
+      "alerta_alimentos": ["leite", "iogurte", "queijo", "ricota", "cottage", "mussarela", "whey"],
+      "bloqueio_alimentos": ["leite", "iogurte", "queijo", "ricota", "cottage", "mussarela"],
+      "termos_exclusao": ["leite", "iogurte", "queijo", "ricota", "cottage", "mussarela"]
+    },
+    {
+      "id": "gluten",
+      "titulo": "Doenca celiaca / restricao de gluten",
+      "severidade": "alta",
+      "quando": {
+        "patologias": ["doenca celiaca", "celiaco", "celiaca"],
+        "intolerancias": ["gluten", "trigo"]
+      },
+      "mensagem": "Evitar fontes de gluten e risco de contaminacao cruzada.",
+      "alerta_alimentos": ["trigo", "pao", "macarrao", "biscoito", "bolacha", "torrada", "aveia", "farinha"],
+      "bloqueio_alimentos": ["trigo", "pao", "macarrao", "biscoito", "bolacha", "torrada"],
+      "termos_exclusao": ["trigo", "pao", "macarrao", "biscoito", "bolacha", "torrada"]
+    },
+    {
+      "id": "renal",
+      "titulo": "Doenca renal / funcao renal alterada",
+      "severidade": "critica",
+      "quando": {
+        "patologias": ["doenca renal", "insuficiencia renal", "renal cronica", "nefropatia"],
+        "exames": ["creatinina", "ureia", "potassio", "fosforo", "albuminuria"]
+      },
+      "mensagem": "Exige revisao individual de proteina, potassio, fosforo, sodio e hidratacao.",
+      "alerta_alimentos": ["whey", "creatina", "castanha", "banana", "abacate", "feijao", "leite", "queijo"],
+      "bloqueio_alimentos": [],
+      "termos_exclusao": []
+    },
+    {
+      "id": "alergia_alimentar",
+      "titulo": "Alergia alimentar relatada",
+      "severidade": "critica",
+      "quando": {
+        "alergias": ["amendoim", "castanha", "ovo", "leite", "soja", "peixe", "camarao", "frutos do mar"]
+      },
+      "mensagem": "Alergia alimentar deve bloquear o termo relatado e exigir conferencia do cardapio.",
+      "alerta_alimentos": [],
+      "bloqueio_alimentos": [],
+      "termos_exclusao": []
+    }
+  ]
+}

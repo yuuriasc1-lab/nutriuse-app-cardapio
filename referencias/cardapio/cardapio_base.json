@@ -1,0 +1,3310 @@
+{
+  "nome_template": "Cardápio Base Padrão (convertido do Plano_alimentar.txt)",
+  "calorias_totais_estimadas": 11290,
+  "origem": "Plano_alimentar.txt",
+  "convertido_em": "2026-06-14T00:07:36",
+  "orientacoes_gerais_do_cardapio": [
+    "Marcas recomendadas de Suplementos: Essential; Pura Vida; Vitafor; Equaliv; Yosen; Nutrify; Central Nutrition; Profile Health; Cycles Nutrition; Dux; True Source; TopWay; Clean Whey; Evolution; +Mu; Integral Médica; Elemento Puro; On; Adaptogen Science; Dymatize; Growth.",
+    "Ao comprar um alimento leia a lista de ingredientes presente nos rótulos.",
+    "Sucos de frutas preferidos (sem açúcar): Morango, Maracujá, Limão, Acerola, Açaí, Frutas Vermelhas.",
+    "Utilizar Azeite de Oliva para preparação/cocção dos alimentos. O Azeite de Oliva tipo Único pode ser escolhido para cozinhar e o Extra Virgem para preparações que não necessitam de aquecimento. Atenção: utilize pouco!",
+    "Tempere a salada com limão ou vinagre de maçã, azeite de oliva extra virgem e pouco sal.",
+    "Evite ingerir líquido durante as refeições.",
+    "Adoçantes naturais recomendados: stévia pura ou taumatina.",
+    "Excluir/Evitar: álcool, refrigerantes, sucos industrializados, fritura e açúcar (branco, mascavo, demerara e de coco).",
+    "Excluir temperos industrializados com glutamato monossódico (Sazon, Knorr, Maggi, Arisco, Ajinomoto, Ajisal). Use temperos naturais: cebola, alho, sal, salsinha, cebolinha, limão, pimentas, orégano, manjericão, alecrim, tomilho, páprica, chimichurri, etc.",
+    "Mantenha as refeições organizadas e planejadas.",
+    "Controle a sua Despensa, Armários e Geladeiras!",
+    "Ao sair, priorize carnes magras, evite frituras e embutidos. Invista nas saladas.",
+    "Fique atento a nomes ocultos do açúcar nos rótulos: Sacarose, Frutose, Glicose, Glucose, Dextrose, Maltodextrina, Açúcar mascavo, Açúcar demerara, Açúcar de coco, Açúcar orgânico, Açúcar invertido, Açúcar magro, Açúcar moreno, Açúcar light, Açúcar de confeiteiro, Mel, Agave, Xarope de milho.",
+    "Evite/exclua: carnes industrializadas (almôndegas, hambúrger, nuggets), embutidos (mortadela, salame, presunto, peito de peru, calabresa, bacon). Prefira carnes in natura."
+  ],
+  "refeicoes": [
+    {
+      "nome_refeicao": "PRÉ TREINO - OPÇÃO 1 (30 a 40 minutos antes do treino)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Banana",
+          "quantidade_g": 80.0,
+          "categoria": "Carboidrato",
+          "calorias": 87.2,
+          "macros": {
+            "carboidratos_g": 21.4,
+            "proteinas_g": 1.0,
+            "gorduras_g": 0.2
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 86,
+          "opcoes_de_substituicao_listadas": [
+            "Salada de Frutas s/ açúcar - 165g",
+            "Mamão - 200g",
+            "Pera - 150g",
+            "Maçã vermelha - 140g",
+            "Maçã verde - 165g",
+            "Ameixa vermelha - 165g",
+            "Nectarina - 180g",
+            "Uva - 150g",
+            "Abacaxi - 185g",
+            "Manga - 135g",
+            "Goiaba vermelha - 160g",
+            "Laranja - 195g",
+            "Mexerica - 190g",
+            "Kiwi - 165g",
+            "Mirtilo - 145g",
+            "Melão - 370g",
+            "Melancia - 325g",
+            "Morango - 325g",
+            "Caju - 210g",
+            "Maracujá amarelo - 175g",
+            "Tâmara seca - 27g",
+            "Ameixa preta seca - 34g",
+            "Damasco seco - 34g",
+            "Uva passa preta - 30g",
+            "Cereja - 135g",
+            "Jabuticaba - 140g",
+            "Caqui - 117g",
+            "Cajá-Manga - 185g",
+            "Atemóia - 85g",
+            "Graviola - 135g",
+            "Acerola - 310g"
+          ]
+        },
+        {
+          "nome_principal": "Aveia em flocos",
+          "quantidade_g": 20.0,
+          "categoria": "Carboidrato",
+          "calorias": 78.0,
+          "macros": {
+            "carboidratos_g": 13.2,
+            "proteinas_g": 3.4,
+            "gorduras_g": 1.4
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Canela em pó",
+          "quantidade_g": 4.0,
+          "categoria": "Carboidrato",
+          "calorias": 9.7,
+          "macros": {
+            "carboidratos_g": 3.2,
+            "proteinas_g": 0.2,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Colher café cheia",
+          "gramas_por_unidade": 4.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Canela, em pó, Cinnamomum aromaticum"
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 100.0,
+          "categoria": "Outro",
+          "calorias": 3.0,
+          "macros": {
+            "carboidratos_g": 0.5,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "xícara de café",
+          "gramas_por_unidade": 50,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "PRÉ TREINO - OPÇÃO 2 (30 a 40 minutos antes do treino)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Bolacha de arroz",
+          "quantidade_g": 25.0,
+          "categoria": "Carboidrato",
+          "calorias": 98.0,
+          "macros": {
+            "carboidratos_g": 20.0,
+            "proteinas_g": 1.8,
+            "gorduras_g": 0.5
+          },
+          "medida_unidade": "unidade",
+          "gramas_por_unidade": 8,
+          "opcoes_de_substituicao_listadas": [
+            "Biscoito de Milho Integral - 20g"
+          ]
+        },
+        {
+          "nome_principal": "Geleia Morango ou Frutas vermelhas s/ açúcar",
+          "quantidade_g": 40.0,
+          "categoria": "Carboidrato",
+          "calorias": 100.8,
+          "macros": {
+            "carboidratos_g": 24.0,
+            "proteinas_g": 0.2,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 12,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 100.0,
+          "categoria": "Outro",
+          "calorias": 3.0,
+          "macros": {
+            "carboidratos_g": 0.5,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "xícara de café",
+          "gramas_por_unidade": 50,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "PRÉ TREINO - OPÇÃO 3 (30 a 40 minutos antes do treino)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Pão de forma integral",
+          "quantidade_g": 50.0,
+          "categoria": "Carboidrato",
+          "calorias": 130.0,
+          "macros": {
+            "carboidratos_g": 25.0,
+            "proteinas_g": 5.0,
+            "gorduras_g": 1.5
+          },
+          "medida_unidade": "Fatia",
+          "gramas_por_unidade": 25.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Geleia Morango ou Frutas Vermelhas s/ açúcar",
+          "quantidade_g": 25.0,
+          "categoria": "Carboidrato",
+          "calorias": 63.0,
+          "macros": {
+            "carboidratos_g": 15.0,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 12,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 100.0,
+          "categoria": "Outro",
+          "calorias": 3.0,
+          "macros": {
+            "carboidratos_g": 0.5,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "xícara de café",
+          "gramas_por_unidade": 50,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "PRÉ TREINO - OPÇÃO 4 (30 a 40 minutos antes do treino)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Cuscuz de milho cozido com sal",
+          "quantidade_g": 120.0,
+          "categoria": "Carboidrato",
+          "calorias": 134.4,
+          "macros": {
+            "carboidratos_g": 29.6,
+            "proteinas_g": 2.6,
+            "gorduras_g": 0.8
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 60,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Milho, cuscuz, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 100.0,
+          "categoria": "Outro",
+          "calorias": 3.0,
+          "macros": {
+            "carboidratos_g": 0.5,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "xícara de café",
+          "gramas_por_unidade": 50,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "PRÉ TREINO - 1 HORA ANTES (Toast de Banana)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Pão de forma",
+          "quantidade_g": 25.0,
+          "categoria": "Carboidrato",
+          "calorias": 66.0,
+          "macros": {
+            "carboidratos_g": 13.0,
+            "proteinas_g": 2.0,
+            "gorduras_g": 1.0
+          },
+          "medida_unidade": "Fatia",
+          "gramas_por_unidade": 25.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Banana em rodela",
+          "quantidade_g": 90.0,
+          "categoria": "Carboidrato",
+          "calorias": 98.1,
+          "macros": {
+            "carboidratos_g": 24.0,
+            "proteinas_g": 1.2,
+            "gorduras_g": 0.2
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 86,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Canela em pó",
+          "quantidade_g": 4.0,
+          "categoria": "Carboidrato",
+          "calorias": 9.7,
+          "macros": {
+            "carboidratos_g": 3.2,
+            "proteinas_g": 0.2,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Colher café cheia",
+          "gramas_por_unidade": 4.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Canela, em pó, Cinnamomum aromaticum"
+        },
+        {
+          "nome_principal": "Queijo mussarela",
+          "quantidade_g": 30.0,
+          "categoria": "Proteína",
+          "calorias": 90.0,
+          "macros": {
+            "carboidratos_g": 1.0,
+            "proteinas_g": 6.0,
+            "gorduras_g": 7.0
+          },
+          "medida_unidade": "Fatia",
+          "gramas_por_unidade": 30.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "PRÉ TREINO - 1 HORA E MEIA ANTES (Pão Francês com Ricota e Whey)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Pão francês",
+          "quantidade_g": 50.0,
+          "categoria": "Carboidrato",
+          "calorias": 130.0,
+          "macros": {
+            "carboidratos_g": 25.0,
+            "proteinas_g": 5.0,
+            "gorduras_g": 2.0
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 30.0,
+          "macros": {
+            "carboidratos_g": 1.1,
+            "proteinas_g": 4.0,
+            "gorduras_g": 1.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [
+            "15g Requeijão Cremoso Light",
+            "15g Creme de Queijo Minas Frescal Light",
+            "30g Queijo Cottage"
+          ]
+        },
+        {
+          "nome_principal": "Whey protein concentrado",
+          "quantidade_g": 30.0,
+          "categoria": "Proteína",
+          "calorias": 120.0,
+          "macros": {
+            "carboidratos_g": 3.0,
+            "proteinas_g": 24.0,
+            "gorduras_g": 2.0
+          },
+          "medida_unidade": "Medidor",
+          "gramas_por_unidade": 30.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Leite de vaca desnatado",
+          "quantidade_g": 150.0,
+          "categoria": "Proteína",
+          "calorias": 54.8,
+          "macros": {
+            "carboidratos_g": 8.2,
+            "proteinas_g": 5.2,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "copo",
+          "gramas_por_unidade": 200,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "PRÉ TREINO - 1 HORA E MEIA ANTES (Açaí com Banana e Whey)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Polpa de açaí puro s/ açúcar - Sambazon",
+          "quantidade_g": 100.0,
+          "categoria": "Carboidrato",
+          "calorias": 70.0,
+          "macros": {
+            "carboidratos_g": 4.0,
+            "proteinas_g": 1.0,
+            "gorduras_g": 4.0
+          },
+          "medida_unidade": "polpa",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Banana",
+          "quantidade_g": 140.0,
+          "categoria": "Carboidrato",
+          "calorias": 152.6,
+          "macros": {
+            "carboidratos_g": 37.4,
+            "proteinas_g": 1.8,
+            "gorduras_g": 0.3
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 86,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Whey protein concentrado",
+          "quantidade_g": 30.0,
+          "categoria": "Proteína",
+          "calorias": 120.0,
+          "macros": {
+            "carboidratos_g": 3.0,
+            "proteinas_g": 24.0,
+            "gorduras_g": 2.0
+          },
+          "medida_unidade": "Medidor",
+          "gramas_por_unidade": 30.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "PÓS TREINO",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Whey protein concentrado",
+          "quantidade_g": 30.0,
+          "categoria": "Proteína",
+          "calorias": 120.0,
+          "macros": {
+            "carboidratos_g": 3.0,
+            "proteinas_g": 24.0,
+            "gorduras_g": 2.0
+          },
+          "medida_unidade": "Medidor",
+          "gramas_por_unidade": 30.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Água (para diluir)",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Creatina Creapure",
+          "quantidade_g": 3.0,
+          "categoria": "Outro",
+          "calorias": 0.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 0.0,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "colher de chá rasa",
+          "gramas_por_unidade": 3,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "CAFÉ DA MANHÃ - OPÇÃO 1",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Pão de forma integral",
+          "quantidade_g": 50.0,
+          "categoria": "Carboidrato",
+          "calorias": 130.0,
+          "macros": {
+            "carboidratos_g": 25.0,
+            "proteinas_g": 5.0,
+            "gorduras_g": 1.5
+          },
+          "medida_unidade": "Fatia",
+          "gramas_por_unidade": 25.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Ovo de galinha cozido ou mexido",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 62.5,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 5.2,
+            "gorduras_g": 4.3
+          },
+          "medida_unidade": "Unidade média",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Clara de ovo cozida ou mexida",
+          "quantidade_g": 34.0,
+          "categoria": "Proteína",
+          "calorias": 19.4,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 4.6,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 34.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, clara, cozida/10 min, s/ sal"
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 30.0,
+          "macros": {
+            "carboidratos_g": 1.1,
+            "proteinas_g": 4.0,
+            "gorduras_g": 1.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [
+            "15g Requeijão Cremoso Light",
+            "15g Creme de Queijo Minas Frescal Light",
+            "30g Queijo Cottage"
+          ]
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "CAFÉ DA MANHÃ - OPÇÃO 2 (Crepioca)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Goma de tapioca",
+          "quantidade_g": 35.0,
+          "categoria": "Carboidrato",
+          "calorias": 125.0,
+          "macros": {
+            "carboidratos_g": 30.8,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 20,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Ovo de galinha",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 62.5,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 5.2,
+            "gorduras_g": 4.3
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Clara de ovo",
+          "quantidade_g": 34.0,
+          "categoria": "Proteína",
+          "calorias": 19.4,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 4.6,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 34.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, clara, cozida/10 min, s/ sal"
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 30.0,
+          "macros": {
+            "carboidratos_g": 1.1,
+            "proteinas_g": 4.0,
+            "gorduras_g": 1.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [
+            "15g Creme de Queijo Minas Frescal Light",
+            "15g Requeijão Cremoso Light",
+            "30g Cottage"
+          ]
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "CAFÉ DA MANHÃ - OPÇÃO 3 (Mamão com Aveia, Queijo e Ovo)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Mamão",
+          "quantidade_g": 200.0,
+          "categoria": "Carboidrato",
+          "calorias": 80.0,
+          "macros": {
+            "carboidratos_g": 20.0,
+            "proteinas_g": 1.0,
+            "gorduras_g": 0.2
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 170,
+          "opcoes_de_substituicao_listadas": [
+            "(mesma lista do Pré Treino Opção 1, exceto Banana: 80g)"
+          ]
+        },
+        {
+          "nome_principal": "Farelo de aveia",
+          "quantidade_g": 15.0,
+          "categoria": "Carboidrato",
+          "calorias": 19.9,
+          "macros": {
+            "carboidratos_g": 4.0,
+            "proteinas_g": 1.1,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Queijo minas frescal",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 50.0,
+          "macros": {
+            "carboidratos_g": 1.0,
+            "proteinas_g": 4.0,
+            "gorduras_g": 3.0
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 30,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Ovo de galinha cozido",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 62.5,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 5.2,
+            "gorduras_g": 4.3
+          },
+          "medida_unidade": "Unidade média",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "CAFÉ DA MANHÃ - OPÇÃO 4 (Mingau de Aveia)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Aveia em flocos",
+          "quantidade_g": 30.0,
+          "categoria": "Carboidrato",
+          "calorias": 117.0,
+          "macros": {
+            "carboidratos_g": 19.8,
+            "proteinas_g": 5.1,
+            "gorduras_g": 2.1
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Banana amassada",
+          "quantidade_g": 30.0,
+          "categoria": "Carboidrato",
+          "calorias": 32.7,
+          "macros": {
+            "carboidratos_g": 8.0,
+            "proteinas_g": 0.4,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 86,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Leite Desnatado Itambé PRO",
+          "quantidade_g": 13.0,
+          "categoria": "Proteína",
+          "calorias": 4.8,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 0.4,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "copo",
+          "gramas_por_unidade": 200,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Cacau em pó (opcional)",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Canela em pó (opcional)",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "CAFÉ DA MANHÃ - OPÇÃO 5 (Overnight Oats)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Aveia em flocos",
+          "quantidade_g": 20.0,
+          "categoria": "Carboidrato",
+          "calorias": 78.0,
+          "macros": {
+            "carboidratos_g": 13.2,
+            "proteinas_g": 3.4,
+            "gorduras_g": 1.4
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Leite de vaca desnatado",
+          "quantidade_g": 30.0,
+          "categoria": "Proteína",
+          "calorias": 11.0,
+          "macros": {
+            "carboidratos_g": 1.6,
+            "proteinas_g": 1.0,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "colheres de sopa",
+          "gramas_por_unidade": 10.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Iogurte Danone Natural Desnatado",
+          "quantidade_g": 160.0,
+          "categoria": "Proteína",
+          "calorias": 80.0,
+          "macros": {
+            "carboidratos_g": 12.0,
+            "proteinas_g": 8.0,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 160.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Semente de chia",
+          "quantidade_g": 5.0,
+          "categoria": "Gordura",
+          "calorias": 25.0,
+          "macros": {
+            "carboidratos_g": 1.0,
+            "proteinas_g": 1.0,
+            "gorduras_g": 2.0
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 12,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Banana picada",
+          "quantidade_g": 50.0,
+          "categoria": "Carboidrato",
+          "calorias": 54.5,
+          "macros": {
+            "carboidratos_g": 13.3,
+            "proteinas_g": 0.7,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 86,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Morango picado",
+          "quantidade_g": 50.0,
+          "categoria": "Carboidrato",
+          "calorias": 16.0,
+          "macros": {
+            "carboidratos_g": 3.8,
+            "proteinas_g": 0.3,
+            "gorduras_g": 0.2
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 12,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "CAFÉ DA MANHÃ - OPÇÃO 6 (Cuscuz Nordestino)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Cuscuz de milho cozido com sal",
+          "quantidade_g": 110.0,
+          "categoria": "Carboidrato",
+          "calorias": 123.2,
+          "macros": {
+            "carboidratos_g": 27.2,
+            "proteinas_g": 2.4,
+            "gorduras_g": 0.7
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 60,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Milho, cuscuz, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Ovo mexido ou cozido",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 70.0,
+          "macros": {
+            "carboidratos_g": 0.5,
+            "proteinas_g": 6.0,
+            "gorduras_g": 5.0
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Queijo minas meia cura",
+          "quantidade_g": 15.0,
+          "categoria": "Proteína",
+          "calorias": 45.0,
+          "macros": {
+            "carboidratos_g": 1.0,
+            "proteinas_g": 4.0,
+            "gorduras_g": 3.0
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 20,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Morango",
+          "quantidade_g": 60.0,
+          "categoria": "Carboidrato",
+          "calorias": 20.0,
+          "macros": {
+            "carboidratos_g": 4.6,
+            "proteinas_g": 0.4,
+            "gorduras_g": 0.2
+          },
+          "medida_unidade": "Unidades média",
+          "gramas_por_unidade": 12.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "CAFÉ DA MANHÃ - OPÇÃO 7 (Vitamina de Frutas)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Leite Desnatado Itambé PRO",
+          "quantidade_g": 13.0,
+          "categoria": "Proteína",
+          "calorias": 4.8,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 0.4,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "copo",
+          "gramas_por_unidade": 200,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Mamão",
+          "quantidade_g": 200.0,
+          "categoria": "Carboidrato",
+          "calorias": 80.0,
+          "macros": {
+            "carboidratos_g": 20.0,
+            "proteinas_g": 1.0,
+            "gorduras_g": 0.2
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 170,
+          "opcoes_de_substituicao_listadas": [
+            "Banana - 80g",
+            "Morango - 325g",
+            "Frutas Vermelhas Congeladas - 210g",
+            "Mirtilo - 145g",
+            "Manga - 135g",
+            "Maracujá amarelo - 175g",
+            "Maçã vermelha - 140g",
+            "Abacaxi - 185g",
+            "Abacate - 120g"
+          ]
+        },
+        {
+          "nome_principal": "Farelo de aveia",
+          "quantidade_g": 15.0,
+          "categoria": "Carboidrato",
+          "calorias": 19.9,
+          "macros": {
+            "carboidratos_g": 4.0,
+            "proteinas_g": 1.1,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "CAFÉ DA MANHÃ - OPÇÃO 8 (Torrada com Patê de Ovos)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Torrada Lev Magic Toast Integral",
+          "quantidade_g": 25.0,
+          "categoria": "Carboidrato",
+          "calorias": 98.8,
+          "macros": {
+            "carboidratos_g": 18.4,
+            "proteinas_g": 2.9,
+            "gorduras_g": 1.6
+          },
+          "medida_unidade": "unidade",
+          "gramas_por_unidade": 3.57,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Ovo de galinha cozido",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 125.0,
+          "macros": {
+            "carboidratos_g": 1.4,
+            "proteinas_g": 10.3,
+            "gorduras_g": 8.7
+          },
+          "medida_unidade": "Unidades média",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 30.0,
+          "macros": {
+            "carboidratos_g": 1.1,
+            "proteinas_g": 4.0,
+            "gorduras_g": 1.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [
+            "15g Requeijão Cremoso Light",
+            "15g Creme de Queijo Minas Frescal Light",
+            "30g Queijo Cottage"
+          ]
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "CAFÉ DA MANHÃ - OPÇÃO 9 (Aveioca com Ricota e Geleia)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Aveia em flocos",
+          "quantidade_g": 30.0,
+          "categoria": "Carboidrato",
+          "calorias": 117.0,
+          "macros": {
+            "carboidratos_g": 19.8,
+            "proteinas_g": 5.1,
+            "gorduras_g": 2.1
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Ovo de galinha",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 62.5,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 5.2,
+            "gorduras_g": 4.3
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 30.0,
+          "categoria": "Proteína",
+          "calorias": 45.0,
+          "macros": {
+            "carboidratos_g": 1.6,
+            "proteinas_g": 6.0,
+            "gorduras_g": 1.6
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [
+            "20g Requeijão Cremoso Light",
+            "20g Creme de Queijo Minas Frescal Light",
+            "50g Queijo Cottage"
+          ]
+        },
+        {
+          "nome_principal": "Geleia Morango ou frutas vermelhas s/ açúcar",
+          "quantidade_g": 20.0,
+          "categoria": "Carboidrato",
+          "calorias": 50.4,
+          "macros": {
+            "carboidratos_g": 12.0,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 20.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Café sem açúcar",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 1.5,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Xícara de café",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA MANHÃ - OPÇÃO 1",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Salada de Frutas s/ açúcar",
+          "quantidade_g": 165.0,
+          "categoria": "Carboidrato",
+          "calorias": 108.9,
+          "macros": {
+            "carboidratos_g": 26.4,
+            "proteinas_g": 1.3,
+            "gorduras_g": 0.5
+          },
+          "medida_unidade": "pote pequeno",
+          "gramas_por_unidade": 165,
+          "opcoes_de_substituicao_listadas": [
+            "(lista extensa - mamão, banana, pera, maçã, uva, etc.)"
+          ]
+        },
+        {
+          "nome_principal": "Mix de castanhas",
+          "quantidade_g": 25.0,
+          "categoria": "Gordura",
+          "calorias": 144.8,
+          "macros": {
+            "carboidratos_g": 9.7,
+            "proteinas_g": 3.5,
+            "gorduras_g": 10.6
+          },
+          "medida_unidade": "punhado pequeno",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Mix de castanhas, caramelizada"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA MANHÃ - OPÇÃO 2",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Iogurte Corpus Triplo Zero",
+          "quantidade_g": 170.0,
+          "categoria": "Proteína",
+          "calorias": 76.5,
+          "macros": {
+            "carboidratos_g": 8.5,
+            "proteinas_g": 7.6,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 170.0,
+          "opcoes_de_substituicao_listadas": [
+            "1 un. Iogurte Molico Triplo Zero",
+            "1 un. Iogurte Verde Campo Triplo Zero",
+            "1 un. Iogurte Canto de Minas Triplo Zero"
+          ]
+        },
+        {
+          "nome_principal": "Mix de castanhas",
+          "quantidade_g": 25.0,
+          "categoria": "Gordura",
+          "calorias": 144.8,
+          "macros": {
+            "carboidratos_g": 9.7,
+            "proteinas_g": 3.5,
+            "gorduras_g": 10.6
+          },
+          "medida_unidade": "punhado pequeno",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Mix de castanhas, caramelizada"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "ALMOÇO - OPÇÃO 1",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Arroz branco cozido",
+          "quantidade_g": 60.0,
+          "categoria": "Carboidrato",
+          "calorias": 82.8,
+          "macros": {
+            "carboidratos_g": 17.5,
+            "proteinas_g": 1.4,
+            "gorduras_g": 1.0
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [
+            "Arroz integral - 70g",
+            "Arroz negro - 50g",
+            "Abóbora cabotian - 150g",
+            "Batata doce cozida - 70g",
+            "Batata doce assada - 45g",
+            "Batata baroa cozida - 85g",
+            "Batata inglesa cozida - 135g",
+            "Batata inglesa assada - 80g",
+            "Mandioca cozida - 55g",
+            "Mandioca assada - 35g",
+            "Milho verde cozido - 60g",
+            "Macarrão integral cozido - 60g",
+            "Macarrão de arroz cozido - 70g"
+          ],
+          "match_tbca": "Arroz, polido, cozido, c/ óleo, cebola e alho, c/ sal"
+        },
+        {
+          "nome_principal": "Feijão carioca cozido",
+          "quantidade_g": 40.0,
+          "categoria": "Carboidrato",
+          "calorias": 53.2,
+          "macros": {
+            "carboidratos_g": 10.5,
+            "proteinas_g": 3.8,
+            "gorduras_g": 0.3
+          },
+          "medida_unidade": "concha pequena",
+          "gramas_por_unidade": 80,
+          "opcoes_de_substituicao_listadas": [
+            "Ervilha fresca cozida - 60g",
+            "Lentilha cozida - 30g"
+          ],
+          "match_tbca": "Feijão, carioca, cozido, drenado, s/ óleo, c/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Peito de frango grelhado",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 150.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 32.1,
+            "gorduras_g": 2.5
+          },
+          "medida_unidade": "filé médio",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Legumes (mínimo",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Salada de folhas",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "OMEGAFOR PLUS (Vitafor)",
+          "quantidade_g": 2.0,
+          "categoria": "Gordura",
+          "calorias": 18.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 0.0,
+            "gorduras_g": 2.0
+          },
+          "medida_unidade": "Cápsula",
+          "gramas_por_unidade": 1.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "ALMOÇO - OPÇÃO 2 (Carnes Pesadas)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Arroz branco cozido",
+          "quantidade_g": 60.0,
+          "categoria": "Carboidrato",
+          "calorias": 82.8,
+          "macros": {
+            "carboidratos_g": 17.5,
+            "proteinas_g": 1.4,
+            "gorduras_g": 1.0
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Arroz, polido, cozido, c/ óleo, cebola e alho, c/ sal"
+        },
+        {
+          "nome_principal": "Feijão carioca cozido",
+          "quantidade_g": 40.0,
+          "categoria": "Carboidrato",
+          "calorias": 53.2,
+          "macros": {
+            "carboidratos_g": 10.5,
+            "proteinas_g": 3.8,
+            "gorduras_g": 0.3
+          },
+          "medida_unidade": "concha pequena",
+          "gramas_por_unidade": 80,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Feijão, carioca, cozido, drenado, s/ óleo, c/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Peito de frango grelhado",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 150.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 32.1,
+            "gorduras_g": 2.5
+          },
+          "medida_unidade": "filé médio",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": [
+            "Patinho grelhado - 90g",
+            "Tilápia cozida - 145g",
+            "Lombo Suíno - 90g"
+          ],
+          "match_tbca": "Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Legumes (mínimo",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Salada de folhas",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 1 - OPÇÃO 1 (Sanduíche Natural)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Pão de Forma Integral",
+          "quantidade_g": 50.0,
+          "categoria": "Carboidrato",
+          "calorias": 130.0,
+          "macros": {
+            "carboidratos_g": 25.0,
+            "proteinas_g": 5.0,
+            "gorduras_g": 1.5
+          },
+          "medida_unidade": "Fatia",
+          "gramas_por_unidade": 25.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Peito de frango desfiado",
+          "quantidade_g": 60.0,
+          "categoria": "Proteína",
+          "calorias": 91.8,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 18.7,
+            "gorduras_g": 1.9
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [
+            "Atum ou Patinho moído"
+          ],
+          "match_tbca": "Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal"
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 30.0,
+          "macros": {
+            "carboidratos_g": 1.1,
+            "proteinas_g": 4.0,
+            "gorduras_g": 1.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [
+            "15g Requeijão Cremoso Light",
+            "15g Creme de Queijo Minas Frescal Light",
+            "30g Queijo Cottage"
+          ]
+        },
+        {
+          "nome_principal": "Cenoura ralada",
+          "quantidade_g": 30.0,
+          "categoria": "Outro",
+          "calorias": 9.3,
+          "macros": {
+            "carboidratos_g": 2.3,
+            "proteinas_g": 0.3,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "Colheres de sopa",
+          "gramas_por_unidade": 15.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Cenoura, s/ casca, crua, Brasil"
+        },
+        {
+          "nome_principal": "Alface ou Rúcula",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Tomate",
+          "quantidade_g": 60.0,
+          "categoria": "Outro",
+          "calorias": 10.8,
+          "macros": {
+            "carboidratos_g": 2.3,
+            "proteinas_g": 0.6,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "Fatias média",
+          "gramas_por_unidade": 15.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Tomate, cru, Brasil"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 1 - OPÇÃO 2 (Panqueca Salgada de Aveia - com frango)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Aveia em flocos",
+          "quantidade_g": 25.0,
+          "categoria": "Carboidrato",
+          "calorias": 97.5,
+          "macros": {
+            "carboidratos_g": 16.5,
+            "proteinas_g": 4.2,
+            "gorduras_g": 1.8
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Ovo de galinha",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 62.5,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 5.2,
+            "gorduras_g": 4.3
+          },
+          "medida_unidade": "Unidade média",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Leite de vaca desnatado",
+          "quantidade_g": 15.0,
+          "categoria": "Proteína",
+          "calorias": 5.5,
+          "macros": {
+            "carboidratos_g": 0.8,
+            "proteinas_g": 0.5,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Colher de sopa",
+          "gramas_por_unidade": 15.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Peito de frango s/ pele cozido",
+          "quantidade_g": 60.0,
+          "categoria": "Proteína",
+          "calorias": 90.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 19.3,
+            "gorduras_g": 1.5
+          },
+          "medida_unidade": "filé médio",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 30.0,
+          "macros": {
+            "carboidratos_g": 1.1,
+            "proteinas_g": 4.0,
+            "gorduras_g": 1.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Molho de tomate natural",
+          "quantidade_g": 60.0,
+          "categoria": "Outro",
+          "calorias": 10.8,
+          "macros": {
+            "carboidratos_g": 2.3,
+            "proteinas_g": 0.6,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "Colheres sopa",
+          "gramas_por_unidade": 20.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Tomate, cru, Brasil"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 1 - OPÇÃO 3 (Panqueca Salgada de Aveia - com queijo)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Farinha de aveia",
+          "quantidade_g": 25.0,
+          "categoria": "Carboidrato",
+          "calorias": 92.5,
+          "macros": {
+            "carboidratos_g": 16.8,
+            "proteinas_g": 3.8,
+            "gorduras_g": 1.8
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 12,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Ovo de galinha",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 62.5,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 5.2,
+            "gorduras_g": 4.3
+          },
+          "medida_unidade": "Unidade média",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Leite de vaca desnatado",
+          "quantidade_g": 15.0,
+          "categoria": "Proteína",
+          "calorias": 5.5,
+          "macros": {
+            "carboidratos_g": 0.8,
+            "proteinas_g": 0.5,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Colher de sopa",
+          "gramas_por_unidade": 15.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Queijo minas meia cura",
+          "quantidade_g": 30.0,
+          "categoria": "Proteína",
+          "calorias": 90.0,
+          "macros": {
+            "carboidratos_g": 2.0,
+            "proteinas_g": 8.0,
+            "gorduras_g": 6.0
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 20,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Tomate",
+          "quantidade_g": 45.0,
+          "categoria": "Outro",
+          "calorias": 8.1,
+          "macros": {
+            "carboidratos_g": 1.7,
+            "proteinas_g": 0.5,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "Fatias média",
+          "gramas_por_unidade": 15.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Tomate, cru, Brasil"
+        },
+        {
+          "nome_principal": "Rap",
+          "quantidade_g": 40.0,
+          "categoria": "Carboidrato",
+          "calorias": 108.0,
+          "macros": {
+            "carboidratos_g": 19.6,
+            "proteinas_g": 3.2,
+            "gorduras_g": 1.4
+          },
+          "medida_unidade": "Integral                1 unidade",
+          "gramas_por_unidade": 4.0,
+          "opcoes_de_substituicao_listadas": [
+            "2 fatias de Pão Integral"
+          ]
+        },
+        {
+          "nome_principal": "Peito de frango desfiado",
+          "quantidade_g": 60.0,
+          "categoria": "Proteína",
+          "calorias": 91.8,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 18.7,
+            "gorduras_g": 1.9
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal"
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 30.0,
+          "macros": {
+            "carboidratos_g": 1.1,
+            "proteinas_g": 4.0,
+            "gorduras_g": 1.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Cenoura ralada",
+          "quantidade_g": 30.0,
+          "categoria": "Outro",
+          "calorias": 9.3,
+          "macros": {
+            "carboidratos_g": 2.3,
+            "proteinas_g": 0.3,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Cenoura, s/ casca, crua, Brasil"
+        },
+        {
+          "nome_principal": "Alface ou Rúcula",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Tomate",
+          "quantidade_g": 60.0,
+          "categoria": "Outro",
+          "calorias": 10.8,
+          "macros": {
+            "carboidratos_g": 2.3,
+            "proteinas_g": 0.6,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "Fatias média",
+          "gramas_por_unidade": 15.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Tomate, cru, Brasil"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 1 - OPÇÃO 4 (Tapioca Invertida)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Tapioca",
+          "quantidade_g": 30.0,
+          "categoria": "Carboidrato",
+          "calorias": 107.1,
+          "macros": {
+            "carboidratos_g": 26.4,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 20,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Queijo minas meia cura ralado",
+          "quantidade_g": 25.0,
+          "categoria": "Proteína",
+          "calorias": 75.0,
+          "macros": {
+            "carboidratos_g": 1.7,
+            "proteinas_g": 6.7,
+            "gorduras_g": 5.0
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 10,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Ovo de galinha",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 62.5,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 5.2,
+            "gorduras_g": 4.3
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Clara de ovo",
+          "quantidade_g": 34.0,
+          "categoria": "Proteína",
+          "calorias": 19.4,
+          "macros": {
+            "carboidratos_g": 0.2,
+            "proteinas_g": 4.6,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 34.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, clara, cozida/10 min, s/ sal"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 1 - OPÇÃO 5 (Bolo/Panqueca de Banana)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Banana",
+          "quantidade_g": 70.0,
+          "categoria": "Carboidrato",
+          "calorias": 76.3,
+          "macros": {
+            "carboidratos_g": 18.7,
+            "proteinas_g": 0.9,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 86,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Farelo de aveia",
+          "quantidade_g": 25.0,
+          "categoria": "Carboidrato",
+          "calorias": 33.2,
+          "macros": {
+            "carboidratos_g": 6.7,
+            "proteinas_g": 1.8,
+            "gorduras_g": 0.2
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Ovo de galinha",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 62.5,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 5.2,
+            "gorduras_g": 4.3
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Clara de ovo",
+          "quantidade_g": 68.0,
+          "categoria": "Proteína",
+          "calorias": 38.8,
+          "macros": {
+            "carboidratos_g": 0.4,
+            "proteinas_g": 9.1,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 34.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, clara, cozida/10 min, s/ sal"
+        },
+        {
+          "nome_principal": "Água",
+          "quantidade_g": 15.0,
+          "categoria": "Outro",
+          "calorias": 0.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 0.0,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Canela em pó",
+          "quantidade_g": 4.0,
+          "categoria": "Carboidrato",
+          "calorias": 9.7,
+          "macros": {
+            "carboidratos_g": 3.2,
+            "proteinas_g": 0.2,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Colher café cheia",
+          "gramas_por_unidade": 4.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Canela, em pó, Cinnamomum aromaticum"
+        },
+        {
+          "nome_principal": "Cacau em pó s/ açúcar (opcional)",
+          "quantidade_g": 2.0,
+          "categoria": "Carboidrato",
+          "calorias": 7.2,
+          "macros": {
+            "carboidratos_g": 1.2,
+            "proteinas_g": 0.4,
+            "gorduras_g": 0.3
+          },
+          "medida_unidade": "Colher café cheia",
+          "gramas_por_unidade": 2.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Cacau, em pó, s/ açúcar, Theobroma cacao"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 1 - OPÇÃO 6 (Tapioca Recheada)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Goma de tapioca",
+          "quantidade_g": 50.0,
+          "categoria": "Carboidrato",
+          "calorias": 178.6,
+          "macros": {
+            "carboidratos_g": 44.0,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 20,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Peito de frango cozido desfiado",
+          "quantidade_g": 60.0,
+          "categoria": "Proteína",
+          "calorias": 91.8,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 18.7,
+            "gorduras_g": 1.9
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [
+            "Atum, Patinho moído, ou 1 ovo inteiro + 2 claras"
+          ],
+          "match_tbca": "Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal"
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 30.0,
+          "macros": {
+            "carboidratos_g": 1.1,
+            "proteinas_g": 4.0,
+            "gorduras_g": 1.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [
+            "15g Requeijão Cremoso Light",
+            "15g Creme de Queijo Minas Frescal Light",
+            "30g Queijo Cottage"
+          ]
+        },
+        {
+          "nome_principal": "Tomate",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 1 - OPÇÃO 7 (Panqueca de Morango)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Ovo de galinha",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 62.5,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 5.2,
+            "gorduras_g": 4.3
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Farelo de aveia",
+          "quantidade_g": 15.0,
+          "categoria": "Carboidrato",
+          "calorias": 19.9,
+          "macros": {
+            "carboidratos_g": 4.0,
+            "proteinas_g": 1.1,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Leite de vaca desnatado",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 7.3,
+          "macros": {
+            "carboidratos_g": 1.1,
+            "proteinas_g": 0.7,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "copo",
+          "gramas_por_unidade": 200,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Whey protein",
+          "quantidade_g": 10.0,
+          "categoria": "Proteína",
+          "calorias": 40.0,
+          "macros": {
+            "carboidratos_g": 1.0,
+            "proteinas_g": 8.0,
+            "gorduras_g": 0.7
+          },
+          "medida_unidade": "medidor",
+          "gramas_por_unidade": 30,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Leite de vaca desnatado em pó",
+          "quantidade_g": 10.0,
+          "categoria": "Proteína",
+          "calorias": 3.7,
+          "macros": {
+            "carboidratos_g": 0.5,
+            "proteinas_g": 0.3,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Whey protein concentrado",
+          "quantidade_g": 15.0,
+          "categoria": "Proteína",
+          "calorias": 60.0,
+          "macros": {
+            "carboidratos_g": 1.5,
+            "proteinas_g": 12.0,
+            "gorduras_g": 1.0
+          },
+          "medida_unidade": "medidor",
+          "gramas_por_unidade": 30,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Leite de vaca desnatado em pó",
+          "quantidade_g": 10.0,
+          "categoria": "Proteína",
+          "calorias": 3.7,
+          "macros": {
+            "carboidratos_g": 0.5,
+            "proteinas_g": 0.3,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Morango",
+          "quantidade_g": 100.0,
+          "categoria": "Carboidrato",
+          "calorias": 33.3,
+          "macros": {
+            "carboidratos_g": 7.7,
+            "proteinas_g": 0.7,
+            "gorduras_g": 0.3
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 12,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Pasta de Castanha de Caju Cookies - Eat Clean",
+          "quantidade_g": 20.0,
+          "categoria": "Gordura",
+          "calorias": 116.4,
+          "macros": {
+            "carboidratos_g": 6.0,
+            "proteinas_g": 3.6,
+            "gorduras_g": 8.8
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 20,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Castanha de caju, crua, s/ sal, Brasil"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 1 - OPÇÃO 8 (Torrada com Patê de Atum)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Torrada Lev Magic Toast Integral",
+          "quantidade_g": 25.0,
+          "categoria": "Carboidrato",
+          "calorias": 98.8,
+          "macros": {
+            "carboidratos_g": 18.4,
+            "proteinas_g": 2.9,
+            "gorduras_g": 1.6
+          },
+          "medida_unidade": "unidade",
+          "gramas_por_unidade": 3.57,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Atum",
+          "quantidade_g": 70.0,
+          "categoria": "Proteína",
+          "calorias": 80.5,
+          "macros": {
+            "carboidratos_g": 1.2,
+            "proteinas_g": 18.1,
+            "gorduras_g": 0.4
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 20,
+          "opcoes_de_substituicao_listadas": [
+            "Peito de frango desfiado"
+          ],
+          "match_tbca": "Peixe, água salgada, atum, sólido, conserva, light"
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 25.0,
+          "categoria": "Proteína",
+          "calorias": 37.5,
+          "macros": {
+            "carboidratos_g": 1.4,
+            "proteinas_g": 5.0,
+            "gorduras_g": 1.4
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [
+            "20g Requeijão Cremoso Light",
+            "20g Creme de Queijo Minas Frescal Light",
+            "40g Queijo Cottage"
+          ]
+        },
+        {
+          "nome_principal": "Morango ou melancia",
+          "quantidade_g": 150.0,
+          "categoria": "Carboidrato",
+          "calorias": 50.0,
+          "macros": {
+            "carboidratos_g": 11.5,
+            "proteinas_g": 1.0,
+            "gorduras_g": 0.5
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 12,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 1 - OPÇÃO 9 (Iogurte Proteico com Banana e Aveia)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Banana",
+          "quantidade_g": 80.0,
+          "categoria": "Carboidrato",
+          "calorias": 87.2,
+          "macros": {
+            "carboidratos_g": 21.4,
+            "proteinas_g": 1.0,
+            "gorduras_g": 0.2
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 86,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Farelo de aveia",
+          "quantidade_g": 10.0,
+          "categoria": "Carboidrato",
+          "calorias": 13.3,
+          "macros": {
+            "carboidratos_g": 2.7,
+            "proteinas_g": 0.7,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Iogurte Proteico Verde Campo",
+          "quantidade_g": 250.0,
+          "categoria": "Proteína",
+          "calorias": 132.5,
+          "macros": {
+            "carboidratos_g": 10.5,
+            "proteinas_g": 21.0,
+            "gorduras_g": 0.8
+          },
+          "medida_unidade": "G Proteína      1 Unidade",
+          "gramas_por_unidade": 11.9,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 2 - OPÇÃO 1",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Salada de Frutas s/ açúcar",
+          "quantidade_g": 165.0,
+          "categoria": "Carboidrato",
+          "calorias": 108.9,
+          "macros": {
+            "carboidratos_g": 26.4,
+            "proteinas_g": 1.3,
+            "gorduras_g": 0.5
+          },
+          "medida_unidade": "pote pequeno",
+          "gramas_por_unidade": 165,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "LANCHE DA TARDE 2 - OPÇÃO 2 (Suco Verde Detox)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Abacaxi",
+          "quantidade_g": 100.0,
+          "categoria": "Carboidrato",
+          "calorias": 50.0,
+          "macros": {
+            "carboidratos_g": 12.3,
+            "proteinas_g": 0.5,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Maçã",
+          "quantidade_g": 50.0,
+          "categoria": "Carboidrato",
+          "calorias": 28.0,
+          "macros": {
+            "carboidratos_g": 7.6,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "unidade média",
+          "gramas_por_unidade": 130,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Couve",
+          "quantidade_g": 20.0,
+          "categoria": "Carboidrato",
+          "calorias": 5.6,
+          "macros": {
+            "carboidratos_g": 0.9,
+            "proteinas_g": 0.6,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "Folha média",
+          "gramas_por_unidade": 20.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Gengibre",
+          "quantidade_g": 5.0,
+          "categoria": "Carboidrato",
+          "calorias": 4.0,
+          "macros": {
+            "carboidratos_g": 0.9,
+            "proteinas_g": 0.1,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "fatia fina",
+          "gramas_por_unidade": 5,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Hortelã",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "JANTAR - OPÇÃO 1",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Arroz branco cozido",
+          "quantidade_g": 60.0,
+          "categoria": "Carboidrato",
+          "calorias": 82.8,
+          "macros": {
+            "carboidratos_g": 17.5,
+            "proteinas_g": 1.4,
+            "gorduras_g": 1.0
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Arroz, polido, cozido, c/ óleo, cebola e alho, c/ sal"
+        },
+        {
+          "nome_principal": "Feijão carioca cozido",
+          "quantidade_g": 40.0,
+          "categoria": "Carboidrato",
+          "calorias": 53.2,
+          "macros": {
+            "carboidratos_g": 10.5,
+            "proteinas_g": 3.8,
+            "gorduras_g": 0.3
+          },
+          "medida_unidade": "concha pequena",
+          "gramas_por_unidade": 80,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Feijão, carioca, cozido, drenado, s/ óleo, c/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Peito de frango grelhado",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 150.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 32.1,
+            "gorduras_g": 2.5
+          },
+          "medida_unidade": "filé médio",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Legumes (mínimo",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Salada de folhas",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "JANTAR - OPÇÃO 2 (Carnes Pesadas)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Arroz branco cozido",
+          "quantidade_g": 60.0,
+          "categoria": "Carboidrato",
+          "calorias": 82.8,
+          "macros": {
+            "carboidratos_g": 17.5,
+            "proteinas_g": 1.4,
+            "gorduras_g": 1.0
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Arroz, polido, cozido, c/ óleo, cebola e alho, c/ sal"
+        },
+        {
+          "nome_principal": "Feijão carioca cozido",
+          "quantidade_g": 40.0,
+          "categoria": "Carboidrato",
+          "calorias": 53.2,
+          "macros": {
+            "carboidratos_g": 10.5,
+            "proteinas_g": 3.8,
+            "gorduras_g": 0.3
+          },
+          "medida_unidade": "concha pequena",
+          "gramas_por_unidade": 80,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Feijão, carioca, cozido, drenado, s/ óleo, c/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Peito de frango grelhado",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 150.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 32.1,
+            "gorduras_g": 2.5
+          },
+          "medida_unidade": "filé médio",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Legumes (mínimo",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Salada de folhas",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "JANTAR - OPÇÃO 3 (Escondidinho)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Batata inglesa cozida (purê)",
+          "quantidade_g": 135.0,
+          "categoria": "Carboidrato",
+          "calorias": 70.2,
+          "macros": {
+            "carboidratos_g": 16.5,
+            "proteinas_g": 1.8,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "unidade pequena",
+          "gramas_por_unidade": 60,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Batata, inglesa, s/ casca, cozida, drenada, s/ óleo, c/ sal"
+        },
+        {
+          "nome_principal": "Peito de frango desfiado ou Patinho Moído",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 153.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 31.2,
+            "gorduras_g": 3.1
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal"
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 20.0,
+          "categoria": "Proteína",
+          "calorias": 30.0,
+          "macros": {
+            "carboidratos_g": 1.1,
+            "proteinas_g": 4.0,
+            "gorduras_g": 1.1
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Molho de tomate caseiro",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 9.0,
+          "macros": {
+            "carboidratos_g": 1.9,
+            "proteinas_g": 0.5,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Tomate, cru, Brasil"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "JANTAR - OPÇÃO 4 (Espeto com Mandioca)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Espeto de Peito de frango s/ pele grelhado",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 150.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 32.1,
+            "gorduras_g": 2.5
+          },
+          "medida_unidade": "espeto",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Mandioca cozida",
+          "quantidade_g": 60.0,
+          "categoria": "Carboidrato",
+          "calorias": 72.0,
+          "macros": {
+            "carboidratos_g": 17.8,
+            "proteinas_g": 0.4,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "pedaço médio",
+          "gramas_por_unidade": 60,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Mandioca (aipim, macaxeira), s/ casca, cozida, drenada, s/ óleo, c/ sal"
+        },
+        {
+          "nome_principal": "Vinagrete",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Salada de Folhas",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "JANTAR - OPÇÃO 5 (Macarronada Integral)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Macarrão integral cozido",
+          "quantidade_g": 70.0,
+          "categoria": "Carboidrato",
+          "calorias": 71.4,
+          "macros": {
+            "carboidratos_g": 16.7,
+            "proteinas_g": 1.2,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "escumadeira",
+          "gramas_por_unidade": 70,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Macarrão, arroz, cozido, s/ óleo, s/ sal"
+        },
+        {
+          "nome_principal": "Molho de tomate caseiro",
+          "quantidade_g": 50.0,
+          "categoria": "Outro",
+          "calorias": 9.0,
+          "macros": {
+            "carboidratos_g": 1.9,
+            "proteinas_g": 0.5,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Tomate, cru, Brasil"
+        },
+        {
+          "nome_principal": "Patinho moído ou bife grelhado",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 267.0,
+          "macros": {
+            "carboidratos_g": 0.3,
+            "proteinas_g": 32.3,
+            "gorduras_g": 15.2
+          },
+          "medida_unidade": "bife médio",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": [
+            "100g Peito de Frango desfiado"
+          ],
+          "match_tbca": "Carne, boi, patinho, s/ gordura, grelhada, c/ manteiga, s/ sal"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "JANTAR - OPÇÃO 6 (Salada com Croutons)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Folhas variadas",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Filé de frango grelhado em tiras",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 150.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 32.1,
+            "gorduras_g": 2.5
+          },
+          "medida_unidade": "filé médio",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Pão de forma",
+          "quantidade_g": 38.0,
+          "categoria": "Carboidrato",
+          "calorias": 100.3,
+          "macros": {
+            "carboidratos_g": 19.8,
+            "proteinas_g": 3.0,
+            "gorduras_g": 1.5
+          },
+          "medida_unidade": "% integral (tostar e fazer croutons)        1 Fatia e 1/2",
+          "gramas_por_unidade": 0.38,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Iogurte Natural Desnatado",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 24.0,
+          "macros": {
+            "carboidratos_g": 3.5,
+            "proteinas_g": 2.0,
+            "gorduras_g": 0.2
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Azeite de oliva extra virgem",
+          "quantidade_g": 8.0,
+          "categoria": "Gordura",
+          "calorias": 72.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 0.0,
+            "gorduras_g": 8.0
+          },
+          "medida_unidade": "colher de sopa rasa",
+          "gramas_por_unidade": 8.0,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "JANTAR - OPÇÃO 7 (Nhoque de Abóbora)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Abóbora cabotian cozida",
+          "quantidade_g": 150.0,
+          "categoria": "Carboidrato",
+          "calorias": 75.0,
+          "macros": {
+            "carboidratos_g": 16.2,
+            "proteinas_g": 2.2,
+            "gorduras_g": 1.1
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 30,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Abóbora, cabotian (japonesa), s/ casca, cozida, drenada, s/ óleo, s/ sal, Brasil"
+        },
+        {
+          "nome_principal": "Farinha de aveia",
+          "quantidade_g": 36.0,
+          "categoria": "Carboidrato",
+          "calorias": 133.2,
+          "macros": {
+            "carboidratos_g": 24.2,
+            "proteinas_g": 5.5,
+            "gorduras_g": 2.6
+          },
+          "medida_unidade": "Colheres sopa",
+          "gramas_por_unidade": 18.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Ovo de galinha",
+          "quantidade_g": 50.0,
+          "categoria": "Proteína",
+          "calorias": 62.5,
+          "macros": {
+            "carboidratos_g": 0.7,
+            "proteinas_g": 5.2,
+            "gorduras_g": 4.3
+          },
+          "medida_unidade": "Unidade",
+          "gramas_por_unidade": 50.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Ovo, galinha, inteiro, cozido, c/ sal"
+        },
+        {
+          "nome_principal": "Patinho grelhado moído ou grelhado",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 267.0,
+          "macros": {
+            "carboidratos_g": 0.3,
+            "proteinas_g": 32.3,
+            "gorduras_g": 15.2
+          },
+          "medida_unidade": "bife médio",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, boi, patinho, s/ gordura, grelhada, c/ manteiga, s/ sal"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "JANTAR - OPÇÃO 8 (Sopa de Frango)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Peito de frango desfiado",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 153.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 31.2,
+            "gorduras_g": 3.1
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal"
+        },
+        {
+          "nome_principal": "Batata inglesa",
+          "quantidade_g": 130.0,
+          "categoria": "Carboidrato",
+          "calorias": 67.6,
+          "macros": {
+            "carboidratos_g": 15.9,
+            "proteinas_g": 1.7,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "unidade pequena",
+          "gramas_por_unidade": 60,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Batata, inglesa, s/ casca, cozida, drenada, s/ óleo, c/ sal"
+        },
+        {
+          "nome_principal": "Cenoura, brócolis, vagem e couve cozidos",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": "folha média",
+          "gramas_por_unidade": 20,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "JANTAR - OPÇÃO 9 (Pizza - 1x por semana)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Farinha de aveia",
+          "quantidade_g": 18.0,
+          "categoria": "Carboidrato",
+          "calorias": 66.6,
+          "macros": {
+            "carboidratos_g": 12.1,
+            "proteinas_g": 2.7,
+            "gorduras_g": 1.3
+          },
+          "medida_unidade": "Colher sopa",
+          "gramas_por_unidade": 18.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Iogurte integral natural (Nestlé)",
+          "quantidade_g": 60.0,
+          "categoria": "Proteína",
+          "calorias": 58.2,
+          "macros": {
+            "carboidratos_g": 2.4,
+            "proteinas_g": 5.4,
+            "gorduras_g": 3.0
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Fermento em pó",
+          "quantidade_g": 3.0,
+          "categoria": "Outro",
+          "calorias": 5.3,
+          "macros": {
+            "carboidratos_g": 1.3,
+            "proteinas_g": 0.0,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "Colher de chá",
+          "gramas_por_unidade": 3.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Brócolis cozido picado",
+          "quantidade_g": 80.0,
+          "categoria": "Outro",
+          "calorias": 21.6,
+          "macros": {
+            "carboidratos_g": 3.6,
+            "proteinas_g": 2.2,
+            "gorduras_g": 0.4
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 20,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Brócolis, flor, cozido, drenado, s/ óleo, c/ sal"
+        },
+        {
+          "nome_principal": "Tomate",
+          "quantidade_g": 180.0,
+          "categoria": "Outro",
+          "calorias": 32.4,
+          "macros": {
+            "carboidratos_g": 6.9,
+            "proteinas_g": 1.9,
+            "gorduras_g": 0.3
+          },
+          "medida_unidade": "Fatias média",
+          "gramas_por_unidade": 15.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Tomate, cru, Brasil"
+        },
+        {
+          "nome_principal": "Queijo mussarela light",
+          "quantidade_g": 60.0,
+          "categoria": "Proteína",
+          "calorias": 180.0,
+          "macros": {
+            "carboidratos_g": 2.0,
+            "proteinas_g": 12.0,
+            "gorduras_g": 14.0
+          },
+          "medida_unidade": "Fatias média",
+          "gramas_por_unidade": 30.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Frango desfiado",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 153.0,
+          "macros": {
+            "carboidratos_g": 0.0,
+            "proteinas_g": 31.2,
+            "gorduras_g": 3.1
+          },
+          "medida_unidade": "colher de sopa cheia",
+          "gramas_por_unidade": 25,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal"
+        },
+        {
+          "nome_principal": "Molho de tomate natural",
+          "quantidade_g": 80.0,
+          "categoria": "Outro",
+          "calorias": 14.4,
+          "macros": {
+            "carboidratos_g": 3.1,
+            "proteinas_g": 0.8,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Tomate, cru, Brasil"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "JANTAR - OPÇÃO 10 (Lanche Caseiro - 1x por semana)",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Pão Francês sem miolo",
+          "quantidade_g": 30.0,
+          "categoria": "Carboidrato",
+          "calorias": 78.0,
+          "macros": {
+            "carboidratos_g": 15.0,
+            "proteinas_g": 3.0,
+            "gorduras_g": 1.2
+          },
+          "medida_unidade": "unidade",
+          "gramas_por_unidade": 30.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Hambúrguer de Patinho",
+          "quantidade_g": 100.0,
+          "categoria": "Proteína",
+          "calorias": 267.0,
+          "macros": {
+            "carboidratos_g": 0.3,
+            "proteinas_g": 32.3,
+            "gorduras_g": 15.2
+          },
+          "medida_unidade": "bife médio",
+          "gramas_por_unidade": 100,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Carne, boi, patinho, s/ gordura, grelhada, c/ manteiga, s/ sal"
+        },
+        {
+          "nome_principal": "Queijo Mussarela",
+          "quantidade_g": 15.0,
+          "categoria": "Proteína",
+          "calorias": 45.0,
+          "macros": {
+            "carboidratos_g": 0.5,
+            "proteinas_g": 3.0,
+            "gorduras_g": 3.5
+          },
+          "medida_unidade": "Fatia",
+          "gramas_por_unidade": 15.0,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Creme de Ricota Light",
+          "quantidade_g": 15.0,
+          "categoria": "Proteína",
+          "calorias": 22.5,
+          "macros": {
+            "carboidratos_g": 0.8,
+            "proteinas_g": 3.0,
+            "gorduras_g": 0.8
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Alface",
+          "quantidade_g": 0.0,
+          "categoria": "Outro",
+          "calorias": 0,
+          "macros": {
+            "carboidratos_g": 0,
+            "proteinas_g": 0,
+            "gorduras_g": 0
+          },
+          "medida_unidade": null,
+          "gramas_por_unidade": null,
+          "opcoes_de_substituicao_listadas": []
+        },
+        {
+          "nome_principal": "Tomate",
+          "quantidade_g": 60.0,
+          "categoria": "Outro",
+          "calorias": 10.8,
+          "macros": {
+            "carboidratos_g": 2.3,
+            "proteinas_g": 0.6,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "Fatias média",
+          "gramas_por_unidade": 15.0,
+          "opcoes_de_substituicao_listadas": [],
+          "match_tbca": "Tomate, cru, Brasil"
+        }
+      ]
+    },
+    {
+      "nome_refeicao": "CEIA",
+      "horario": null,
+      "observacoes_da_refeicao": null,
+      "alimentos": [
+        {
+          "nome_principal": "Mamão",
+          "quantidade_g": 120.0,
+          "categoria": "Carboidrato",
+          "calorias": 48.0,
+          "macros": {
+            "carboidratos_g": 12.0,
+            "proteinas_g": 0.6,
+            "gorduras_g": 0.1
+          },
+          "medida_unidade": "fatia média",
+          "gramas_por_unidade": 170,
+          "opcoes_de_substituicao_listadas": [
+            "Salada de Frutas - 99g",
+            "Banana - 48g",
+            "Pera - 90g",
+            "Maçã vermelha - 84g",
+            "Maçã verde - 99g",
+            "Ameixa vermelha - 99g",
+            "Nectarina - 108g",
+            "Uva - 90g",
+            "Abacaxi - 111g",
+            "Manga - 81g",
+            "Goiaba vermelha - 96g",
+            "Laranja - 117g",
+            "Mexerica - 114g",
+            "Kiwi - 99g",
+            "Mirtilo - 87g",
+            "Melão - 222g",
+            "Melancia - 195g",
+            "Morango - 195g",
+            "Caju - 126g",
+            "Maracujá amarelo - 105g",
+            "Tâmara seca - 16.2g",
+            "Ameixa preta seca - 20.4g",
+            "Damasco seco - 20.4g",
+            "Uva passa - 18g",
+            "Cereja - 81g",
+            "Jabuticaba - 84g",
+            "Caqui - 70.2g",
+            "Cajá-Manga - 111g",
+            "Atemóia - 51g",
+            "Graviola - 81g",
+            "Acerola - 186g"
+          ]
+        },
+        {
+          "nome_principal": "Leite de vaca desnatado em pó",
+          "quantidade_g": 25.0,
+          "categoria": "Proteína",
+          "calorias": 9.2,
+          "macros": {
+            "carboidratos_g": 1.2,
+            "proteinas_g": 0.8,
+            "gorduras_g": 0.0
+          },
+          "medida_unidade": "colher de sopa",
+          "gramas_por_unidade": 15,
+          "opcoes_de_substituicao_listadas": []
+        }
+      ]
+    }
+  ]
+}

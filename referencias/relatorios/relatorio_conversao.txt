@@ -1,0 +1,289 @@
+RELATÓRIO DE CONVERSÃO — 14/06/2026 00:07
+Confira especialmente os itens marcados BAIXA/MÉDIA.
+
+Refeições: 43 | Confiança -> ALTA 177, MÉDIA 1, BAIXA 0, livre 20
+
+
+### PRÉ TREINO - OPÇÃO 1 (30 a 40 minutos antes do treino)
+  [ALTA (curado)] Banana (80.0g) = 87.2kcal
+  [ALTA (curado)] Aveia em flocos (20.0g) = 78.0kcal
+  [ALTA (TBCA 81%)] Canela em pó (4.0g) = 9.7kcal  -> TBCA: Canela, em pó, Cinnamomum aromaticum
+  [ALTA (curado)] Café sem açúcar (100.0g) = 3.0kcal
+
+### PRÉ TREINO - OPÇÃO 2 (30 a 40 minutos antes do treino)
+  [ALTA (curado)] Bolacha de arroz (25.0g) = 98.0kcal
+  [ALTA (curado)] Geleia Morango ou Frutas vermelhas s/ açúcar (40.0g) = 100.8kcal
+  [ALTA (curado)] Café sem açúcar (100.0g) = 3.0kcal
+
+### PRÉ TREINO - OPÇÃO 3 (30 a 40 minutos antes do treino)
+  [ALTA (curado)] Pão de forma integral (50.0g) = 130.0kcal
+  [ALTA (curado)] Geleia Morango ou Frutas Vermelhas s/ açúcar (25.0g) = 63.0kcal
+  [ALTA (curado)] Café sem açúcar (100.0g) = 3.0kcal
+
+### PRÉ TREINO - OPÇÃO 4 (30 a 40 minutos antes do treino)
+  [ALTA (staple)] Cuscuz de milho cozido com sal (120.0g) = 134.4kcal  -> TBCA: Milho, cuscuz, cozido, c/ sal
+  [ALTA (curado)] Café sem açúcar (100.0g) = 3.0kcal
+
+### PRÉ TREINO - 1 HORA ANTES (Toast de Banana)
+  [ALTA (curado)] Pão de forma (25.0g) = 66.0kcal
+  [ALTA (curado)] Banana em rodela (90.0g) = 98.1kcal
+  [ALTA (TBCA 81%)] Canela em pó (4.0g) = 9.7kcal  -> TBCA: Canela, em pó, Cinnamomum aromaticum
+  [ALTA (curado)] Queijo mussarela (30.0g) = 90.0kcal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+
+### PRÉ TREINO - 1 HORA E MEIA ANTES (Pão Francês com Ricota e Whey)
+  [ALTA (curado)] Pão francês (50.0g) = 130.0kcal
+  [ALTA (curado)] Creme de Ricota Light (20.0g) = 30.0kcal
+  [ALTA (curado)] Whey protein concentrado (30.0g) = 120.0kcal
+  [ALTA (curado)] Leite de vaca desnatado (150.0g) = 54.8kcal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+
+### PRÉ TREINO - 1 HORA E MEIA ANTES (Açaí com Banana e Whey)
+  [ALTA (curado)] Polpa de açaí puro s/ açúcar - Sambazon (100.0g) = 70.0kcal
+  [ALTA (curado)] Banana (140.0g) = 152.6kcal
+  [ALTA (curado)] Whey protein concentrado (30.0g) = 120.0kcal
+
+### PÓS TREINO
+  [ALTA (curado)] Whey protein concentrado (30.0g) = 120.0kcal
+  [livre/0g] Água (para diluir) (0.0g) = 0kcal
+  [ALTA (curado)] Creatina Creapure (3.0g) = 0.0kcal
+
+### CAFÉ DA MANHÃ - OPÇÃO 1
+  [ALTA (curado)] Pão de forma integral (50.0g) = 130.0kcal
+  [ALTA (staple)] Ovo de galinha cozido ou mexido (50.0g) = 62.5kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (staple)] Clara de ovo cozida ou mexida (34.0g) = 19.4kcal  -> TBCA: Ovo, galinha, clara, cozida/10 min, s/ sal
+  [ALTA (curado)] Creme de Ricota Light (20.0g) = 30.0kcal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+
+### CAFÉ DA MANHÃ - OPÇÃO 2 (Crepioca)
+  [ALTA (curado)] Goma de tapioca (35.0g) = 125.0kcal
+  [ALTA (staple)] Ovo de galinha (50.0g) = 62.5kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (staple)] Clara de ovo (34.0g) = 19.4kcal  -> TBCA: Ovo, galinha, clara, cozida/10 min, s/ sal
+  [ALTA (curado)] Creme de Ricota Light (20.0g) = 30.0kcal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+
+### CAFÉ DA MANHÃ - OPÇÃO 3 (Mamão com Aveia, Queijo e Ovo)
+  [ALTA (curado)] Mamão (200.0g) = 80.0kcal
+  [ALTA (curado)] Farelo de aveia (15.0g) = 19.9kcal
+  [ALTA (curado)] Queijo minas frescal (20.0g) = 50.0kcal
+  [ALTA (staple)] Ovo de galinha cozido (50.0g) = 62.5kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+
+### CAFÉ DA MANHÃ - OPÇÃO 4 (Mingau de Aveia)
+  [ALTA (curado)] Aveia em flocos (30.0g) = 117.0kcal
+  [ALTA (curado)] Banana amassada (30.0g) = 32.7kcal
+  [ALTA (curado)] Leite Desnatado Itambé PRO (13.0g) = 4.8kcal
+  [livre/0g] Cacau em pó (opcional) (0.0g) = 0kcal
+  [livre/0g] Canela em pó (opcional) (0.0g) = 0kcal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+
+### CAFÉ DA MANHÃ - OPÇÃO 5 (Overnight Oats)
+  [ALTA (curado)] Aveia em flocos (20.0g) = 78.0kcal
+  [ALTA (curado)] Leite de vaca desnatado (30.0g) = 11.0kcal
+  [ALTA (curado)] Iogurte Danone Natural Desnatado (160.0g) = 80.0kcal
+  [ALTA (curado)] Semente de chia (5.0g) = 25.0kcal
+  [ALTA (curado)] Banana picada (50.0g) = 54.5kcal
+  [ALTA (curado)] Morango picado (50.0g) = 16.0kcal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+
+### CAFÉ DA MANHÃ - OPÇÃO 6 (Cuscuz Nordestino)
+  [ALTA (staple)] Cuscuz de milho cozido com sal (110.0g) = 123.2kcal  -> TBCA: Milho, cuscuz, cozido, c/ sal
+  [ALTA (curado)] Ovo mexido ou cozido (50.0g) = 70.0kcal
+  [ALTA (curado)] Queijo minas meia cura (15.0g) = 45.0kcal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+  [ALTA (curado)] Morango (60.0g) = 20.0kcal
+
+### CAFÉ DA MANHÃ - OPÇÃO 7 (Vitamina de Frutas)
+  [ALTA (curado)] Leite Desnatado Itambé PRO (13.0g) = 4.8kcal
+  [ALTA (curado)] Mamão (200.0g) = 80.0kcal
+  [ALTA (curado)] Farelo de aveia (15.0g) = 19.9kcal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+
+### CAFÉ DA MANHÃ - OPÇÃO 8 (Torrada com Patê de Ovos)
+  [ALTA (curado)] Torrada Lev Magic Toast Integral (25.0g) = 98.8kcal
+  [ALTA (staple)] Ovo de galinha cozido (100.0g) = 125.0kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (curado)] Creme de Ricota Light (20.0g) = 30.0kcal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+
+### CAFÉ DA MANHÃ - OPÇÃO 9 (Aveioca com Ricota e Geleia)
+  [ALTA (curado)] Aveia em flocos (30.0g) = 117.0kcal
+  [ALTA (staple)] Ovo de galinha (50.0g) = 62.5kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (curado)] Creme de Ricota Light (30.0g) = 45.0kcal
+  [ALTA (curado)] Geleia Morango ou frutas vermelhas s/ açúcar (20.0g) = 50.4kcal
+  [ALTA (curado)] Café sem açúcar (50.0g) = 1.5kcal
+
+### LANCHE DA MANHÃ - OPÇÃO 1
+  [ALTA (curado)] Salada de Frutas s/ açúcar (165.0g) = 108.9kcal
+  [ALTA (staple)] Mix de castanhas (25.0g) = 144.8kcal  -> TBCA: Mix de castanhas, caramelizada
+
+### LANCHE DA MANHÃ - OPÇÃO 2
+  [ALTA (curado)] Iogurte Corpus Triplo Zero (170.0g) = 76.5kcal
+  [ALTA (staple)] Mix de castanhas (25.0g) = 144.8kcal  -> TBCA: Mix de castanhas, caramelizada
+
+### ALMOÇO - OPÇÃO 1
+  [ALTA (staple)] Arroz branco cozido (60.0g) = 82.8kcal  -> TBCA: Arroz, polido, cozido, c/ óleo, cebola e alho, c/ sal
+  [ALTA (staple)] Feijão carioca cozido (40.0g) = 53.2kcal  -> TBCA: Feijão, carioca, cozido, drenado, s/ óleo, c/ sal, Brasil
+  [ALTA (staple)] Peito de frango grelhado (100.0g) = 150.0kcal  -> TBCA: Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil
+  [livre/0g] Legumes (mínimo (0.0g) = 0kcal
+  [livre/0g] Salada de folhas (0.0g) = 0kcal
+  [ALTA (curado)] OMEGAFOR PLUS (Vitafor) (2.0g) = 18.0kcal
+
+### ALMOÇO - OPÇÃO 2 (Carnes Pesadas)
+  [ALTA (staple)] Arroz branco cozido (60.0g) = 82.8kcal  -> TBCA: Arroz, polido, cozido, c/ óleo, cebola e alho, c/ sal
+  [ALTA (staple)] Feijão carioca cozido (40.0g) = 53.2kcal  -> TBCA: Feijão, carioca, cozido, drenado, s/ óleo, c/ sal, Brasil
+  [ALTA (staple)] Peito de frango grelhado (100.0g) = 150.0kcal  -> TBCA: Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil
+  [livre/0g] Legumes (mínimo (0.0g) = 0kcal
+  [livre/0g] Salada de folhas (0.0g) = 0kcal
+
+### LANCHE DA TARDE 1 - OPÇÃO 1 (Sanduíche Natural)
+  [ALTA (curado)] Pão de Forma Integral (50.0g) = 130.0kcal
+  [ALTA (staple)] Peito de frango desfiado (60.0g) = 91.8kcal  -> TBCA: Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal
+  [ALTA (curado)] Creme de Ricota Light (20.0g) = 30.0kcal
+  [ALTA (staple)] Cenoura ralada (30.0g) = 9.3kcal  -> TBCA: Cenoura, s/ casca, crua, Brasil
+  [livre/0g] Alface ou Rúcula (0.0g) = 0kcal
+  [ALTA (staple)] Tomate (60.0g) = 10.8kcal  -> TBCA: Tomate, cru, Brasil
+
+### LANCHE DA TARDE 1 - OPÇÃO 2 (Panqueca Salgada de Aveia - com frango)
+  [ALTA (curado)] Aveia em flocos (25.0g) = 97.5kcal
+  [ALTA (staple)] Ovo de galinha (50.0g) = 62.5kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (curado)] Leite de vaca desnatado (15.0g) = 5.5kcal
+  [ALTA (staple)] Peito de frango s/ pele cozido (60.0g) = 90.0kcal  -> TBCA: Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil
+  [ALTA (curado)] Creme de Ricota Light (20.0g) = 30.0kcal
+  [ALTA (staple)] Molho de tomate natural (60.0g) = 10.8kcal  -> TBCA: Tomate, cru, Brasil
+
+### LANCHE DA TARDE 1 - OPÇÃO 3 (Panqueca Salgada de Aveia - com queijo)
+  [ALTA (curado)] Farinha de aveia (25.0g) = 92.5kcal
+  [ALTA (staple)] Ovo de galinha (50.0g) = 62.5kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (curado)] Leite de vaca desnatado (15.0g) = 5.5kcal
+  [ALTA (curado)] Queijo minas meia cura (30.0g) = 90.0kcal
+  [ALTA (staple)] Tomate (45.0g) = 8.1kcal  -> TBCA: Tomate, cru, Brasil
+  [ALTA (curado)] Rap (40.0g) = 108.0kcal
+  [ALTA (staple)] Peito de frango desfiado (60.0g) = 91.8kcal  -> TBCA: Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal
+  [ALTA (curado)] Creme de Ricota Light (20.0g) = 30.0kcal
+  [ALTA (staple)] Cenoura ralada (30.0g) = 9.3kcal  -> TBCA: Cenoura, s/ casca, crua, Brasil
+  [livre/0g] Alface ou Rúcula (0.0g) = 0kcal
+  [ALTA (staple)] Tomate (60.0g) = 10.8kcal  -> TBCA: Tomate, cru, Brasil
+
+### LANCHE DA TARDE 1 - OPÇÃO 4 (Tapioca Invertida)
+  [ALTA (curado)] Tapioca (30.0g) = 107.1kcal
+  [ALTA (curado)] Queijo minas meia cura ralado (25.0g) = 75.0kcal
+  [ALTA (staple)] Ovo de galinha (50.0g) = 62.5kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (staple)] Clara de ovo (34.0g) = 19.4kcal  -> TBCA: Ovo, galinha, clara, cozida/10 min, s/ sal
+
+### LANCHE DA TARDE 1 - OPÇÃO 5 (Bolo/Panqueca de Banana)
+  [ALTA (curado)] Banana (70.0g) = 76.3kcal
+  [ALTA (curado)] Farelo de aveia (25.0g) = 33.2kcal
+  [ALTA (staple)] Ovo de galinha (50.0g) = 62.5kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (staple)] Clara de ovo (68.0g) = 38.8kcal  -> TBCA: Ovo, galinha, clara, cozida/10 min, s/ sal
+  [ALTA (curado)] Água (15.0g) = 0.0kcal
+  [ALTA (TBCA 81%)] Canela em pó (4.0g) = 9.7kcal  -> TBCA: Canela, em pó, Cinnamomum aromaticum
+  [MÉDIA (TBCA 65%)] Cacau em pó s/ açúcar (opcional) (2.0g) = 7.2kcal  -> TBCA: Cacau, em pó, s/ açúcar, Theobroma cacao
+
+### LANCHE DA TARDE 1 - OPÇÃO 6 (Tapioca Recheada)
+  [ALTA (curado)] Goma de tapioca (50.0g) = 178.6kcal
+  [ALTA (staple)] Peito de frango cozido desfiado (60.0g) = 91.8kcal  -> TBCA: Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal
+  [ALTA (curado)] Creme de Ricota Light (20.0g) = 30.0kcal
+  [livre/0g] Tomate (0.0g) = 0kcal
+
+### LANCHE DA TARDE 1 - OPÇÃO 7 (Panqueca de Morango)
+  [ALTA (staple)] Ovo de galinha (50.0g) = 62.5kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (curado)] Farelo de aveia (15.0g) = 19.9kcal
+  [ALTA (curado)] Leite de vaca desnatado (20.0g) = 7.3kcal
+  [ALTA (curado)] Whey protein (10.0g) = 40.0kcal
+  [ALTA (curado)] Leite de vaca desnatado em pó (10.0g) = 3.7kcal
+  [ALTA (curado)] Whey protein concentrado (15.0g) = 60.0kcal
+  [ALTA (curado)] Leite de vaca desnatado em pó (10.0g) = 3.7kcal
+  [ALTA (curado)] Morango (100.0g) = 33.3kcal
+  [ALTA (staple)] Pasta de Castanha de Caju Cookies - Eat Clean (20.0g) = 116.4kcal  -> TBCA: Castanha de caju, crua, s/ sal, Brasil
+
+### LANCHE DA TARDE 1 - OPÇÃO 8 (Torrada com Patê de Atum)
+  [ALTA (curado)] Torrada Lev Magic Toast Integral (25.0g) = 98.8kcal
+  [ALTA (staple)] Atum (70.0g) = 80.5kcal  -> TBCA: Peixe, água salgada, atum, sólido, conserva, light
+  [ALTA (curado)] Creme de Ricota Light (25.0g) = 37.5kcal
+  [ALTA (curado)] Morango ou melancia (150.0g) = 50.0kcal
+
+### LANCHE DA TARDE 1 - OPÇÃO 9 (Iogurte Proteico com Banana e Aveia)
+  [ALTA (curado)] Banana (80.0g) = 87.2kcal
+  [ALTA (curado)] Farelo de aveia (10.0g) = 13.3kcal
+  [ALTA (curado)] Iogurte Proteico Verde Campo (250.0g) = 132.5kcal
+
+### LANCHE DA TARDE 2 - OPÇÃO 1
+  [ALTA (curado)] Salada de Frutas s/ açúcar (165.0g) = 108.9kcal
+
+### LANCHE DA TARDE 2 - OPÇÃO 2 (Suco Verde Detox)
+  [ALTA (curado)] Abacaxi (100.0g) = 50.0kcal
+  [ALTA (curado)] Maçã (50.0g) = 28.0kcal
+  [ALTA (curado)] Couve (20.0g) = 5.6kcal
+  [ALTA (curado)] Gengibre (5.0g) = 4.0kcal
+  [livre/0g] Hortelã (0.0g) = 0kcal
+
+### JANTAR - OPÇÃO 1
+  [ALTA (staple)] Arroz branco cozido (60.0g) = 82.8kcal  -> TBCA: Arroz, polido, cozido, c/ óleo, cebola e alho, c/ sal
+  [ALTA (staple)] Feijão carioca cozido (40.0g) = 53.2kcal  -> TBCA: Feijão, carioca, cozido, drenado, s/ óleo, c/ sal, Brasil
+  [ALTA (staple)] Peito de frango grelhado (100.0g) = 150.0kcal  -> TBCA: Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil
+  [livre/0g] Legumes (mínimo (0.0g) = 0kcal
+  [livre/0g] Salada de folhas (0.0g) = 0kcal
+
+### JANTAR - OPÇÃO 2 (Carnes Pesadas)
+  [ALTA (staple)] Arroz branco cozido (60.0g) = 82.8kcal  -> TBCA: Arroz, polido, cozido, c/ óleo, cebola e alho, c/ sal
+  [ALTA (staple)] Feijão carioca cozido (40.0g) = 53.2kcal  -> TBCA: Feijão, carioca, cozido, drenado, s/ óleo, c/ sal, Brasil
+  [ALTA (staple)] Peito de frango grelhado (100.0g) = 150.0kcal  -> TBCA: Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil
+  [livre/0g] Legumes (mínimo (0.0g) = 0kcal
+  [livre/0g] Salada de folhas (0.0g) = 0kcal
+
+### JANTAR - OPÇÃO 3 (Escondidinho)
+  [ALTA (staple)] Batata inglesa cozida (purê) (135.0g) = 70.2kcal  -> TBCA: Batata, inglesa, s/ casca, cozida, drenada, s/ óleo, c/ sal
+  [ALTA (staple)] Peito de frango desfiado ou Patinho Moído (100.0g) = 153.0kcal  -> TBCA: Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal
+  [ALTA (curado)] Creme de Ricota Light (20.0g) = 30.0kcal
+  [ALTA (staple)] Molho de tomate caseiro (50.0g) = 9.0kcal  -> TBCA: Tomate, cru, Brasil
+
+### JANTAR - OPÇÃO 4 (Espeto com Mandioca)
+  [ALTA (staple)] Espeto de Peito de frango s/ pele grelhado (100.0g) = 150.0kcal  -> TBCA: Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil
+  [ALTA (staple)] Mandioca cozida (60.0g) = 72.0kcal  -> TBCA: Mandioca (aipim, macaxeira), s/ casca, cozida, drenada, s/ óleo, c/ sal
+  [livre/0g] Vinagrete (0.0g) = 0kcal
+  [livre/0g] Salada de Folhas (0.0g) = 0kcal
+
+### JANTAR - OPÇÃO 5 (Macarronada Integral)
+  [ALTA (staple)] Macarrão integral cozido (70.0g) = 71.4kcal  -> TBCA: Macarrão, arroz, cozido, s/ óleo, s/ sal
+  [ALTA (staple)] Molho de tomate caseiro (50.0g) = 9.0kcal  -> TBCA: Tomate, cru, Brasil
+  [ALTA (staple)] Patinho moído ou bife grelhado (100.0g) = 267.0kcal  -> TBCA: Carne, boi, patinho, s/ gordura, grelhada, c/ manteiga, s/ sal
+
+### JANTAR - OPÇÃO 6 (Salada com Croutons)
+  [livre/0g] Folhas variadas (0.0g) = 0kcal
+  [ALTA (staple)] Filé de frango grelhado em tiras (100.0g) = 150.0kcal  -> TBCA: Carne, frango, peito, s/ pele, grelhada, s/ óleo, s/ sal, Brasil
+  [ALTA (curado)] Pão de forma (38.0g) = 100.3kcal
+  [ALTA (curado)] Iogurte Natural Desnatado (50.0g) = 24.0kcal
+  [ALTA (curado)] Azeite de oliva extra virgem (8.0g) = 72.0kcal
+
+### JANTAR - OPÇÃO 7 (Nhoque de Abóbora)
+  [ALTA (staple)] Abóbora cabotian cozida (150.0g) = 75.0kcal  -> TBCA: Abóbora, cabotian (japonesa), s/ casca, cozida, drenada, s/ óleo, s/ sal, Brasil
+  [ALTA (curado)] Farinha de aveia (36.0g) = 133.2kcal
+  [ALTA (staple)] Ovo de galinha (50.0g) = 62.5kcal  -> TBCA: Ovo, galinha, inteiro, cozido, c/ sal
+  [ALTA (staple)] Patinho grelhado moído ou grelhado (100.0g) = 267.0kcal  -> TBCA: Carne, boi, patinho, s/ gordura, grelhada, c/ manteiga, s/ sal
+
+### JANTAR - OPÇÃO 8 (Sopa de Frango)
+  [ALTA (staple)] Peito de frango desfiado (100.0g) = 153.0kcal  -> TBCA: Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal
+  [ALTA (staple)] Batata inglesa (130.0g) = 67.6kcal  -> TBCA: Batata, inglesa, s/ casca, cozida, drenada, s/ óleo, c/ sal
+  [livre/0g] Cenoura, brócolis, vagem e couve cozidos (0.0g) = 0kcal
+
+### JANTAR - OPÇÃO 9 (Pizza - 1x por semana)
+  [ALTA (curado)] Farinha de aveia (18.0g) = 66.6kcal
+  [ALTA (curado)] Iogurte integral natural (Nestlé) (60.0g) = 58.2kcal
+  [ALTA (curado)] Fermento em pó (3.0g) = 5.3kcal
+  [ALTA (staple)] Brócolis cozido picado (80.0g) = 21.6kcal  -> TBCA: Brócolis, flor, cozido, drenado, s/ óleo, c/ sal
+  [ALTA (staple)] Tomate (180.0g) = 32.4kcal  -> TBCA: Tomate, cru, Brasil
+  [ALTA (curado)] Queijo mussarela light (60.0g) = 180.0kcal
+  [ALTA (staple)] Frango desfiado (100.0g) = 153.0kcal  -> TBCA: Carne, frango, peito, s/ pele, cozida, drenada, s/ óleo, c/ sal
+  [ALTA (staple)] Molho de tomate natural (80.0g) = 14.4kcal  -> TBCA: Tomate, cru, Brasil
+
+### JANTAR - OPÇÃO 10 (Lanche Caseiro - 1x por semana)
+  [ALTA (curado)] Pão Francês sem miolo (30.0g) = 78.0kcal
+  [ALTA (staple)] Hambúrguer de Patinho (100.0g) = 267.0kcal  -> TBCA: Carne, boi, patinho, s/ gordura, grelhada, c/ manteiga, s/ sal
+  [ALTA (curado)] Queijo Mussarela (15.0g) = 45.0kcal
+  [ALTA (curado)] Creme de Ricota Light (15.0g) = 22.5kcal
+  [livre/0g] Alface (0.0g) = 0kcal
+  [ALTA (staple)] Tomate (60.0g) = 10.8kcal  -> TBCA: Tomate, cru, Brasil
+
+### CEIA
+  [ALTA (curado)] Mamão (120.0g) = 48.0kcal
+  [ALTA (curado)] Leite de vaca desnatado em pó (25.0g) = 9.2kcal

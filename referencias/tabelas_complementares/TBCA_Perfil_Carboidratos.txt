@@ -1,0 +1,530 @@
+====================================================================================================
+TABELA BRASILEIRA DE COMPOSIÇÃO DE ALIMENTOS (TBCA) – VERSÃO 7.0 (2019)
+Tabelas Complementares – Perfil de Carboidratos
+Rede Brasileira de Dados de Composição de Alimentos (Brasilfoods)
+Universidade de São Paulo (USP) | Food Research Center (FoRC)/CEPID/FAPESP
+====================================================================================================
+
+====================================================================================================
+INFORMAÇÕES GERAIS
+====================================================================================================
+
+Citação sugerida:
+Tabela Brasileira de Composição de Alimentos (TBCA). Tabelas Complementares – Perfil de
+carboidratos. Universidade de São Paulo (USP). Food Research Center (FoRC). Versão 7.0. São
+Paulo, 2019. [Acesso em: xxxx ]. Disponível em: http://www.fcf.usp.br/tbca/
+É permitida a reprodução total ou parcial do material, desde que seja citada a fonte. Não é permitida
+a comercialização. Não é permitido a alteração total ou mesmo parcial do conteúdo (Creative
+Commons NonCommercial-NoDerivatives (CC BY-NC-ND 4.0)).
+A Tabela Brasileira de Composição de Alimentos, versão 7.0 foi preparada com a colaboração de:
+Franco M. Lajolo (Coordenador, Pesquisador do FoRC)
+Elizabete Wenzel de Menezes (Vice coordenadora, Pesquisadora do FoRC)
+Eliana Bistriche Giuntini (Pesquisadora do FoRC)
+Kristy Soraya Coelho (Pesquisadora do FoRC)
+Agradecimentos:
+Aos órgãos de fomento: FAPESP, CAPES, CNPq, FAO
+Às indústrias de alimentos e laboratórios que colaboraram no fornecimento de informações.
+
+--------------------------------------------------------------------------------
+TABELA COMPLEMENTAR – PERFIL DE CARBOIDRATOS
+--------------------------------------------------------------------------------
+
+Tabela complementar
+Perfil de carboidratos
+O cálculo de carboidratos por diferença não é o ideal, mas ainda é adotado pela maior parte das tabelas
+de composição de alimentos. Cabe ressaltar que além de não fornecer informação individual de cada tipo de
+carboidrato presente no alimento, pode agregar erros cumulativos das demais análises e até interferir no
+cálculo de energia (FAO/WHO, 1998). Dessa forma para ensaios clínicos é importante que os vários
+componentes dos carboidratos sejam determinados individualmente.
+O conhecimento das diferentes frações de carboidratos presentes nos alimentos auxilia a seleção dos
+mesmos, visando à diminuição de risco de doenças crônicas não transmissíveis (DCNT) como diabetes tipo
+2, obesidade, doenças cardiovasculares, determinados tipos de câncer entre outras (WHO/FAO, 2003;
+Barclay et al., 2008; Buyken et al., 2010; Aune et al., 2016; Vinoy et al., 2016). Entre os disponíveis estão os
+açúcares solúveis e o amido disponível, que são rapidamente absorvidos e proporcionam um rápido aumento
+de glicose plasmática fornecendo energia rapidamente, mas que também provocam rápida liberação de
+insulina para levar essa glicose ao interior das células. Repetidos os picos de glicemia e de insulina podem
+ser comprometer a saúde ao longo do tempo. Os carboidratos não disponíveis ou fibra alimentar, que agrupam
+componentes que não são absorvidos, mas que podem ser fermentados no intestino grosso, proporcionam
+um aumento moderado de glicose e insulina plasmática, o que traz benefícios à saúde humana.
+Adicionalmente, no processo de fermentação dos carboidratos não disponíveis ocorre a produção de ácidos
+graxos de cadeia curta (AGCC), os quais tem a capacidade de modular a microbiota intestinal. Os AGCC
+afetam vários processos fisiológicos e podem contribuir para a saúde e doença do hospedeiro, por exemplo
+o butirato promove a multiplicação celular nas células normais e inibe nas células cancerígenas (Koh et al.,
+2016).
+Assim informações sobre carboidratos disponíveis e não disponíveis devem estar acessíveis ao público
+sempre que possível.
+Uma parte do amido que é consumido não é digerido e absorvido pelo organismo humano é chamado
+de amido resistente (AR), pois resiste à ação das enzimas digestivas (Englyst et al., 1992). O conhecimento
+de que a digestão do amido pode variar em extensão e em velocidade é de grande importância, uma vez que
+tem implicações na resposta glicêmica produzida pelos alimentos, na fermentação que ocorre no intestino
+grosso e, consequentemente em doenças como diabetes e obesidade (FAO/WHO, 1998; Bodinham et al.,
+2014; Lockyer; Nugent, 2017).
+O AR faz parte da fibra alimentar e é subdividido em 5 tipos, de acordo com suas características:
+- AR1: amido fisicamente inacessível, presente em grãos parcialmente triturados de cereais e
+leguminosas, tem sua resistência diminuída por trituração e pela mastigação;
+- AR2: grânulos de amido nativo ou não gelatinizado, resistente à hidrólise por alfa-amilase, presente
+em batata crua, banana verde e amidos com alta concentração de amilose. Sofrem modificações em suas
+concentrações de acordo com o processamento dos alimentos e o cozimento;
+- AR3: amido retrogradado, que pode ser proveniente de batatas, pães, flocos de milho cozidos e
+resfriados e de outros produtos com tratamento térmico prolongado ou repetitivo;
+- AR4: amido quimicamente modificado, que não é encontrado naturalmente nos alimentos, somente
+em alimentos e bebidas aos quais foi adicionado.
+- AR5: trata-se do complexo amilose-lipídeo, quando a amilose e as longas cadeias de amilopectina
+formam complexos helicoidais com os ácidos graxos, o que dificultaria a ação da alfa-amilase.
+Para esta tabela complementar foram utilizados os seguintes métodos analíticos.
+Açúcares solúveis: foram determinados por metodologia descrita por Cordenunsi et al., 2008. Glicose,
+frutose e sacarose (Sigma, Chemical CO, Saint Louis, MO, USA) foram utilizadas como material de referência.
+A determinação foi feita em triplicata, e os resultados foram expressos em g por 100 g de amostra na base
+integral.
+Amido resistente (AR): foi quantificado baseado no método AOAC 2002.02 (McCleary et al., 2002). A
+determinação final de glicose livre foi realizada pelo método enzimático (glicoseoxidase/ peroxidase/ABTS)
+(Bergmeyer; Bernet, 1974). Padrões de referência, fornecidos no kit Megazyme ou amostra de feijão carioca
+cozida (in house), foram utilizados na análise. O total de AR foi calculado pela multiplicação da glicose livre
+por 0,9. A determinação foi feita em triplicata, e os resultados foram expressos em g por 100 g de amostra na
+base integral.
+Amido total (AT) e amido disponível (AD): o AT foi quantificado de acordo com Cordenunsi e Lajolo (1995).
+A determinação final do teor de glicose livre foi realizada pelo método enzimático (glicoseoxidase/
+peroxidase/ABTS) (Bergmeyer; Bernet, 1974). O amido (Sigma S-1514) foi utilizado como material de
+referência padrão. O total de amido foi calculado pela multiplicação da glicose livre por 0,9. A determinação
+foi feita em triplicata, e os resultados foram expressos em g por 100 g de amostra na base integral. A
+concentração de amido disponível foi obtida pela diferença entre amido total e resistente (AD = AT - AR).
+Fibra alimentar: As fibras solúvel, insolúvel e total foram determinadas pelo método enzímico-gravimétrico
+AOAC 991.43 (Horwitz; Latimer, 2006). O método é baseado na determinação do resíduo resultante da
+eliminação do amido e da proteína de amostras previamente desengorduradas, por meio de hidrólise alcalina,
+hidrólise enzimática e posterior precipitação das fibras solúveis na presença de etanol 78%. A determinação
+foi feita em quadruplicata, e os resultados foram expressos em g por 100 g de amostra na base integral.
+Frutanos: Os frutanos totais foram extraídos a partir de 1,0 g de amostra por duas vezes com água destilada
+(10 mL) a 80 ºC, por 15 min, posteriormente a solução foi centrifugada. Os sobrenadantes foram combinados
+e seu volume completado com água (50 ou 100 mL) em temperatura ambiente. Os frutanos foram
+determinados pelo método AOAC 999.03 (McCleary; Blakeney, 1999; McCleary; Rossiter, 2004), usando
+fructan kit (Megazyme International Ireland Ltd, Wicklow, Ireland). A determinação foi feita em triplicata e os
+resultados foram expressos em g por 100 g de amostra na base integral.
+Dados de glicose; frutose; sacarose; lactose; açúcares disponíveis totais (somatória de glicose, frutose,
+sacarose, lactose); amido total; amido resistente; amido disponível; carboidratos disponíveis (somatória de
+amido disponível, açúcares disponíveis totais, outros), em alimentos brasileiros foram compilados de dados
+internos de laboratórios da FCF/USP e de publicações científicas e estão disponíveis na TBCA em formato
+.pdf para consulta ou impressão. Para consultar dos dados do perfil de carboidratos, eles estão agrupados
+em Carboidratos disponíveis (Quadro 1) e Carboidratos não disponíveis (Quadro 2).
+
+--------------------------------------------------------------------------------
+REFERÊNCIAS BIBLIOGRÁFICAS (METODOLOGIA)
+--------------------------------------------------------------------------------
+
+Referências Bibliográficas
+Aune, D.; Keum, N.; Giovannucci, E.; al. Nut consumption and risk of cardiovascular disease, total cancer, all
+cause and cause-specific mortality: a systematic review and dose response meta-analysis of prospective
+studies. BMC Med., n. 14, art no. 207, 2016.
+Barclay, A. W.; Petocz, P.; McMillan-Price, J.; et al. Glycemic index, glycemic load, and chronic disease risk -
+a meta-analysis of observational studies. Am. J. Clin. Nutr., v. 87, n. 3, p. 627-37, 2008.
+Bergmeyer, H. U.; Bernet, E. Determination of glucose with oxidase and peroxidase. Bergmeyer, H. U. (ed).
+Methods Enzymatic Analysis, 2a ed., New York: Academic Press, 1974. p. 1205-15.
+Bodinham, C. L.; Smith, L.; Thomas, E. L.; et al. Efficacy of increased resistant starch consumption in human
+type 2 diabetes. Endocr. Connect., v. 3, n. 2, p. 75-84, 2014.
+Buyken, A. E.; Mitchell, P.; Ceriello, A.; Brand-Miller, J. Optimal dietary approaches for prevention of type 2
+diabetes: a life-course perspective. Diabetologia, v. 53, n. 3, p. 406-18, 2010.
+Cordenunsi, B. R.; Shiga, T. M.; Lajolo, F. M. Non-starch polysaccharides composition of two cultivars of
+banana (Musa acuminata L.: cvs Mysore and Nanicão). Carb. Polym. v. 71, p. 26-31, 2008.
+Cordenunsi, B. R.; Lajolo, F. M. Starch transformation during banana ripening: sucrose synthase and
+sucrose phosphate synthase. J. Agric. Food Chem., v. 43, n. 2, p. 347-51, 1995.
+Englyst, H. N.; Kingman, S. M.; Cummings, J. H. Classification and measurement of nutritionally important
+starch fractions. Eur. J. Clin. Nutr., v. 46 Suppl 2, p. S33-50, 1992.
+FAO/WHO (Food and Agriculture Organization/World Health Organization). Carbohydrates in human
+nutrition: report of a joint FAO/WHO expert consultation, April 14-18, 1997. Rome: FAO. 140 p. 1998.
+Horwitz, W.; Latimer Jr, G. W. (Ed.). Official methods of analysis of AOAC International. 18th ed, rev. 1.
+Gaithersburg, MD, USA: AOAC International, 2006.
+Koh, A.; De Vadder, F.; Kovatcheva-Datchary, P.; Bäckhed, F. From dietary fiber to host physiology: short-
+chain fatty acids as key bacterial metabolites. Cell, v. 165, n. 2, p. 1332-45, 2016.
+Lockyer, S.; Nugent, A. P. Health effects of resistant starch. Nutr. Bull., v. 42, p. 10-41, 2017.
+McCleary, B. V.; Blakeney, A. B. Measurement of inulin and oligofructan. Cereal Food World., v. 44, p. 398-
+406, 1999.
+McCleary, B. V.; McNally, M.; Rossiter, P. Measurement of resistant starch by enzymatic digestion in starch
+selected plant materials: collaborative study. J. AOAC Int., v. 85, n. 5, p. 1103-11, 2002.
+McCleary, B. V.; Rossiter, P. Measurement of novel dietary fibres. J. AOAC Int., v. 87, p. 707-11, 2004.
+Vinoy, S.; Laville, M.; Feskens, E. J. M. Slow-release carbohydrates: growing evidence on metabolic
+responses and public health interest. Summary of the symposium held at the 12th European Nutrition
+Conference (FENS 2015). Food Nutr. Res., v. 60: art. N. 31662, 2016.
+WHO/FAO (World Health Organization/Food and Agriculture Organization). Diet, nutrition and prevention of
+chronic diseases. WHO Technical Report Series, 916. Geneve: 149 p. 2003.
+
+====================================================================================================
+QUADRO 1 – CONTEÚDO DE CARBOIDRATO DISPONÍVEL POR 100g DE ALIMENTO (PARTE COMESTÍVEL)
+====================================================================================================
+
+CÓD.      ALIMENTO                                                      n    UMI méd    UMI dev    GLIC méd   GLIC dev   FRUT méd   FRUT dev   LACT méd   LACT dev   SACR méd   SACR dev   AÇÚC TOT   AÇÚC RED   AMID TOT   AMID TOT dev   AMID DISP   CARB DISP   REF   
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+646A      Arroz, integral, Orysa sativa L., cozido/28 min               1    65,75      —          0,01       —          0,00       —          —          —          0,01       —          0,02       —          29,92      —          29,09      29,11      4        
+645A      Arroz, polido, Orysa sativa L., cozido/28 min                 1    75,47      —          0,04       —          0,01       —          —          —          0,05       —          0,10       —          20,41      —          19,76      19,86      4        
+734A      Aveia, farelo, Oat bran                                       1    8,66       0,15       0,00       —          0,00       —          —          —          0,84       —          0,89       —          45,29      0,11       42,03      —          4        
+732A      Aveia, flocos, Quaker                                         1    9,86       0,12       0,01       —          0,00       —          —          —          0,56       —          0,57       —          51,23      0,45       48,81      —          4        
+735A      Aveia, flocos, sabor maçã c/ canela, Vitaly Bionutri          1    8,66       0,15       1,45       —          0,18       —          —          —          20,27      —          21,91      —          37,62      2,11       35,30      —          4        
+642A      Biscoito, doce, maisena                                       1    2,88       —          0,92       —          0,71       —          —          —          14,48      —          16,11      —          46,57      —          44,17      60,27      4        
+644A      Biscoito, salgado, cream cracker                              1    3,42       —          0,47       —          0,31       —          —          —          12,66      —          0,80       —          57,80      —          56,13      56,94      4        
+728A      Macarrão, espaghete, cozido/20 min                            1    70,35      —          0,02       —          0,02       —          —          —          0,04       —          0,07       —          25,53      —          24,86      24,83      4        
+727A      Milho, cozida/45 min, Zea mays                                1    76,56      —          0,03       —          0,05       —          —          —          0,03       —          0,11       —          19,77      —          18,87      18,98      4        
+745A      Milho, verde, in natura                                       9    61,08      —          —          —          —          —          —          —          —          —          9,76       5,54       —          19,44      —          —          389      
+743A      Milho, verde, in natura, AG1051                               1    58,60      —          —          —          —          —          —          —          —          —          7,63       4,50       —          17,55      —          —          389      
+744A      Milho, verde, in natura, AG4051                               1    56,73      —          —          —          —          —          —          —          —          —          7,93       6,24       —          16,90      —          —          389      
+739A      Milho, verde, in natura, AL25                                 1    61,90      —          —          —          —          —          —          —          —          —          9,69       4,12       —          17,28      —          —          389      
+737A      Milho, verde, in natura, CO32                                 1    63,30      —          —          —          —          —          —          —          —          —          10,26      5,41       —          23,13      —          —          389      
+740A      Milho, verde, in natura, Dow170                               1    61,87      —          —          —          —          —          —          —          —          —          7,97       5,62       —          18,90      —          —          389      
+736A      Milho, verde, in natura, Dow270                               1    64,07      —          —          —          —          —          —          —          —          —          9,05       6,30       —          19,73      —          —          4        
+742A      Milho, verde, in natura, P3232                                1    60,47      —          —          —          —          —          —          —          —          —          8,19       6,17       —          19,16      —          —          389      
+741A      Milho, verde, in natura, SHS4040                              1    60,87      —          —          —          —          —          —          —          —          —          9,65       6,13       —          21,84      —          —          389      
+738A      Milho, verde, in natura, UFVM3                                1    61,93      —          —          —          —          —          —          —          —          —          8,46       5,36       —          20,51      —          —          389      
+733A      Mingau, instantâneo, arroz e aveia, Mingo                     1    3,98       0,25       —          —          —          —          —          —          —          —          13,39      —          65,11      0,71       63,00      —          4        
+731A      Pão, trigo, forma, 7 Grãos, light, Plus Vita                  1    40,73      —          0,27       —          0,26       —          —          —          0,04       —          0,57       —          31,07      —          27,32      27,89      4        
+730A      Pão, trigo, forma, Cenoura, light, Plus Vita                  1    41,23      —          0,45       —          0,55       —          —          —          0,03       —          1,02       —          30,05      —          27,30      28,32      4        
+729A      Pão, trigo, forma, tradicional, Pullman/Plus Vita             1    36,23      —          1,33       —          1,65       —          —          —          0,05       —          3,03       —          41,18      —          38,89      41,92      4        
+640A      Pão, trigo, francês                                           1    29,86      —          0,02       —          0,05       —          —          —          0,02       —          0,09       —          43,16      —          40,84      40,93      4        
+1058B     Alho, Alliun sativum L.                                       1    68,11      0,01       —          —          —          —          —          —          —          —          —          —          —          4        
+1081B     Batata, cozida/33 min, Solanum tuberosun                      1    85,07      —          0,04       —          0,02       —          —          —          0,13       —          0,18       —          12,52      —          12,02      12,20      4        
+1040B     Batata, inglesa, cozida/20 min, Solanum tuberosum L,          1    82,21      —          0,20       —          0,08       —          —          —          0,18       —          0,46       —          10,26      —          9,93       10,39      4        
+1088B     Cebola, Alliun cepa L.                                        1    88,38      0,07       —          —          —          —          —          —          —          —          —          —          —          —          —          4        
+1050B     Mandioca, amarela, cozida/30 min, Manihot esculenta Crantz    1    62,65      —          0,89       —          0,86       —          —          —          1,55       —          3,30       —          26,80      —          26,12      29,42      4        
+1040B     Mandioca, farinha, torrada                                    1    2,88       —          0,17       —          0,09       —          —          —          1,22       —          1,47       —          81,06      —          78,80      80,27      389      
+1079B     Mandioquinha, cozida/15 min, Arracacia xanthorrhiza           1    76,25      —          0,10       —          0,10       —          —          —          0,81       —          1,01       —          16,39      —          16,17      17,18      4        
+1061B     Pinhão, Araucaria angustifolia, cozido/60 min, sem casca      1    50,35      —          0,56       —          0,03       —          —          —          0,05       —          0,64       —          34,48      —          31,21      31,85      4        
+1080B     Pinhão, Araucaria angustifolia, cozido/90 min, c/ casca       1    50,35      —          0,56       —          0,03       —          —          —          0,05       —          0,64       —          34,48      —          31,21      31,85      4        
+1060B     Pinhão, Araucaria angustifolia, cru                           1    49,50      —          2,25       —          0,07       —          —          —          0,11       —          2,43       —          36,28      —          —          2,43       4        
+1087B     Yacon, Polymnya sonchifolia                                   10   90,49      9,05       —          —          —          —          —          —          —          —          —          —          —          —          —          —          4        
+720C      Abacaxi, Ananas comosus, Perola, cerne, in natura             1    78,09      —          1,50       —          1,70       —          —          —          —          —          —          —          —          9,40       —          12,60      4        
+721C      Abacaxi, Ananas comosus, Perola, polpa e cerne, in natura     1    85,00      —          0,69       —          0,89       —          —          —          —          —          —          —          —          5,80       —          7,38       4        
+719C      Abacaxi, Ananas comosus, Perola, polpa, in natura             1    86,05      —          0,60       —          0,80       —          —          —          —          —          —          —          —          5,40       —          6,80       4        
+745C      Amora silvestre, Rubus rosaefoluis                            1    85,00      —          4,24       0,18       2,47       0,13       —          —          —          —          —          —          —          0,20       0,02       4        
+77C       Amora-preta, geléia, Rubus sp, guarani                        —    46,44      0,62       —          —          —          —          —          —          —          —          —          —          —          —          —          46,79      392      
+82C       Amora-preta, geléia, Rubus sp, brazos                         —    43,22      1,01       —          —          —          —          —          —          —          —          —          —          —          —          —          51,77      392      
+76C       Amora-preta, geléia, Rubus sp, caingangue                     —    45,23      1,34       —          —          —          —          —          —          —          —          —          —          —          —          —          44,56      392      
+79C       Amora-preta, geléia, Rubus sp, cherokee                       1    42,84      0,45       —          —          —          —          —          —          —          —          —          —          —          —          —          47,22      392      
+78C       Amora-preta, geléia, Rubus sp, comanche                       —    45,78      0,33       —          —          —          —          —          —          —          —          —          —          —          —          —          45,77      392      
+80C       Amora-preta, geléia, Rubus sp, seleção 97                     1    49,82      2,89       —          —          —          —          —          —          —          —          —          —          —          —          —          41,96      392      
+81C       Amora-preta, geléia, Rubus sp, tupy                           —    44,50      0,37       —          —          —          —          —          —          —          —          —          —          —          —          —          46,34      392      
+838C      Amora-preta, polpa, suco, Rubus sp, cherokee                  —    90,74      0,14       —          —          —          —          —          —          —          —          —          —          —          —          —          5,86       391      
+835C      Amora-preta, polpa, suco, Rubus sp, comanche                  —    91,77      0,25       —          —          —          —          —          —          —          —          —          —          —          —          —          4,23       391      
+833C      Amora-preta, polpa, suco, Rubus sp, guarani                   —    90,47      0,26       —          —          —          —          —          —          —          —          —          —          —          —          —          5,92       391      
+837C      Amora-preta, polpa, suco, Rubus sp, seleção 97                —    91,59      0,28       —          —          —          —          —          —          —          —          —          —          —          —          —          4,90       391      
+836C      Amora-preta, polpa, suco, Rubus sp, tupy                      —    91,37      0,20       —          —          —          —          —          —          —          —          —          —          —          —          —          4,72       391      
+834C      Amora-preta, polpa,suco, Rubus sp, caingangue                 —    90,88      0,08       —          —          —          —          —          —          —          —          —          —          —          —          —          5,04       391      
+822C      Araçá-boi, Eugenia stipitata                                  —    96,00      —          0,13       —          1,36       —          —          —          —          —          —          —          —          0,69       —          —          385      
+823C      Bacuri, Platonia insignis                                     —    78,90      —          3,27       —          3,29       —          —          —          —          —          —          —          —          3,90       —          —          385      
+842C      Banana, figo, madura, Musa spp                                1    68,10      0,10       43,15      0,40       40,67      0,46       —          —          —          —          —          —          —          56,45      0,64       14,03      4, 388   
+831C      Banana, Maçã, verde, farinha                                  —    3,91       0,37       —          —          —          —          —          —          —          —          —          —          —          —          —          —          387      
+734C      Banana, mysore, madura, Musa spp                              2    77,00      —          2,23       —          2,19       —          —          —          —          —          —          —          —          5,31       —          9,70       384      
+839C      Banana, mysore, madura, Musa spp                              1    76,60      0,20       1,94       0,01       1,65       0,02       —          —          —          —          —          —          —          4,19       0,08       7,77       4, 388   
+830C      Banana, Mysore, verde, farinha                                —    4,92       0,45       —          —          —          —          —          —          —          —          —          —          —          —          —          —          387      
+730C      Banana, nanica, madura, Musa spp                              2    79,00      —          2,72       —          2,73       —          —          —          —          —          —          —          —          15,21      —          20,60      384      
+827C      Banana, Nanica, verde, farinha                                —    6,17       0,13       —          —          —          —          —          —          —          —          —          —          —          —          —          —          387      
+731C      Banana, nanicão, madura, Musa spp                             2    75,90      —          2,93       —          3,16       —          —          —          —          —          —          —          —          14,05      —          11,30      384, 388 
+828C      Banana, Nanicão, verde, farinha                               —    4,17       0,42       —          —          —          —          —          —          —          —          —          —          —          —          —          —          387      
+732C      Banana, ouro colatina, madura, Musa spp                       1    —          —          3,45       —          3,27       —          —          —          —          —          —          —          —          12,01      —          18,70      384      
+832C      Banana, Ouro colatina, verde, farinha                         —    —          —          —          —          —          —          —          —          —          —          —          —          —          —          —          —          387      
+736C      Banana, ouro da mata, madura, Musa spp                        1    —          —          2,73       —          2,96       —          —          —          —          —          —          —          —          10,76      —          16,40      384      
+826C      Banana, Ouro da mata, verde, farinha                          —    4,69       0,36       —          —          —          —          —          —          —          —          —          —          —          —          —          —          387      
+840C      Banana, pacovan, madura, Musa spp                             1    75,10      0,10       1,93       0,09       1,96       0,11       —          —          —          —          —          —          —          68,23      3,92       10,72      4, 388   
+733C      Banana, prata anã, madura, Musa spp                           1    —          —          2,36       —          2,38       —          —          —          —          —          —          —          —          9,12       —          13,90      384      
+829C      Banana, Prata anã, verde, farinha                             —    4,97       0,40       —          —          —          —          —          —          —          —          —          —          —          —          —          —          387      
+735C      Banana, prata comum, madura, Musa spp                         2    71,10      —          1,71       —          1,82       —          —          —          —          —          —          —          —          12,71      —          19,50      384, 388 
+825C      Banana, Prata comum, verde, farinha                           —    5,58       0,43       —          —          —          —          —          —          —          —          —          —          —          —          —          —          387      
+716C      Banana, prata, madura, Musa ssp                               1    72,03      —          5,41       0,41       5,03       0,21       —          —          —          —          —          —          —          13,50      1,26       8,02       4        
+841C      Banana, terra, madura, Musa spp                               1    61,80      0,20       0,60       0,00       0,50       0,00       —          —          —          —          —          —          —          8,02       0,00       9,22       4, 388   
+824C      Cupuaçu, Theobroma grandiflorum                               —    87,90      —          0,83       —          1,06       —          —          —          —          —          —          —          —          4,19       —          —          385      
+715C      Laranja, suco                                                 1    88,62      —          1,68       —          1,90       —          —          —          —          —          —          —          —          3,26       —          6,83       4        
+714C      Maçã, fuji, c/ casca, Malus sylvestris Mill                   1    83,61      —          2,20       —          5,07       —          —          —          —          —          —          —          —          3,08       —          10,36      4        
+738C      Mamão, maduro, Carica papaya L., Solo                         1    —          2,20       —          2,70       —          —          —          —          —          —          —          —          4,40       —          —          384      
+717C      Mamão, papaya, Carica papaya L.                               1    83,74      —          4,08       —          3,97       —          —          —          —          —          —          —          —          0,72       —          8,77       4        
+737C      Mamão, verde,Carica papaya L., Solo                           1    —          —          1,90       —          2,50       —          —          —          —          —          —          —          —          5,00       —          —          384      
+723C      Manga, Haden, Mangífera indica, L.                            1    —          —          0,54       0,00       3,15       0,18       —          —          —          —          —          —          —          8,80       0,09       12,49      4, 386   
+726C      Manga, Keitt, Mangífera indica, L                             1    —          —          0,66       0,02       2,75       0,80       —          —          —          —          —          —          —          2,75       0,80       6,16       4, 386   
+725C      Manga, Palmer, Mangífera indica, L.                           1    —          —          0,59       0,06       2,79       0,91       —          —          —          —          —          —          —          6,41       0,21       9,79       4, 386   
+724C      Manga, Tommy, Mangífera indica, L.                            1    —          —          0,44       0,00       2,40       0,09       —          —          —          —          —          —          —          9,05       0,00       11,89      4, 386   
+722C      Manga, Van Dyke, Mangífera indica, L.                         1    —          —          0,05       0,09       2,32       0,95       —          —          —          —          —          —          —          4,92       1,15       7,29       4, 386   
+746C      Morango, Fragaria ananassa Duch                               1    91,00      —          1,70       —          1,90       —          —          —          —          —          —          —          —          1,80       —          —          4        
+744C      Morango, Fragaria ananassa Dush, Campineiro                   1    92,80      0,20       1,37       0,39       1,57       0,37       —          —          —          —          —          —          —          0,85       0,29       3,79       4, 383   
+741C      Morango, Fragaria ananassa Dush, Dover                        1    93,10      0,10       1,52       0,08       1,85       0,01       —          —          —          —          —          —          —          0,91       0,03       4,28       4, 383   
+739C      Morango, Fragaria ananassa Dush, Mazi                         1    91,20      0,20       0,71       0,01       1,33       0,35       —          —          —          —          —          —          —          0,66       0,12       2,70       4, 383   
+740C      Morango, Fragaria ananassa Dush, Oso Grande                   1    90,50      3,00       1,73       0,02       1,93       0,04       —          —          —          —          —          —          —          1,80       0,07       5,46       4, 383   
+742C      Morango, Fragaria ananassa Dush, Pajaro                       1    90,80      1,30       0,95       0,05       1,32       0,07       —          —          —          —          —          —          —          0,81       0,05       3,09       4, 383   
+743C      Morango, Fragaria ananassa Dush, Toyonoka                     1    89,70      0,20       1,50       0,27       1,59       0,18       —          —          —          —          —          —          —          1,32       0,21       4,41       4, 383   
+729C      Pêssego, centenário, Prunus persica                           1    84,78      0,11       0,17       —          0,44       —          —          —          —          —          —          —          —          6,14       6,75       4        
+727C      Pêssego, douradão, Prunus persica                             1    87,20      0,40       0,36       0,13       0,77       0,24       —          —          —          —          —          —          —          4,08       0,23       5,21       4        
+728C      Pêssego, joia, Prunus persica                                 1    89,68      0,64       0,50       0,17       1,32       0,26       —          —          —          —          —          —          —          1,70       0,74       3,52       4        
+259G      Leite, vaca, pó                                               1    3,56       —          —          —          0,76       —          24,75      —          15,51      —          41,02      —          —          —          41,02      4        
+75K       Mel, região de Goiás                                          15   —          —          —          —          —          —          —          1,32       —          76,70      75,40      —          —          —          390      
+368R      Guaraná, refrigerante                                         1    89,26      —          0,36       —          0,34       —          —          —          9,65       —          10,35      —          —          —          10,35      4        
+1000A     Arroz polido/Feijão carioca, cozidos, temperados (3:1)        1    67,57      —          —          —          —          —          —          —          —          —          —          —          19,02      —          16,91      16,91      4        
+1001A     Arroz, polido, cozido, Orysa sativa L., temperado             1    71,12      —          —          —          —          —          —          —          —          —          —          —          22,49      —          21,12      21,12      4        
+301T      Feijão, carioca, cozido, Phaseolus vulgaris, temperado        1    67,91      —          —          —          —          —          —          —          —          —          —          —          10,21      —          7,05       7,05       4        
+1002A     Polenta, cozida/90 min, congelada/30 days, Zea mays           1    79,69      —          —          —          —          —          —          —          —          —          0,15       —          15,03      —          14,05      14,20      4        
+1003A     Polenta, cozida/90 min, Zea mays                              1    80,36      —          0,04       —          0,02       —          —          —          0,09       —          0,15       —          14,48      —          13,66      13,81      4        
+103T      Ervilha, cozida/30 min, Pisum sativum L.                      1    66,40      —          0,00       —          0,01       —          —          —          0,19       —          0,19       —          20,73      —          19,18      19,37      4        
+105T      Feijão, carioca, cozido/36 min, congelado/ 30 dias, Phaseolus vulgaris L., s/caldo  1    61,98      —          —          —          —          —          —          —          —          —          0,38       —          16,08      —          13,42      13,80      4        
+104T      Feijão, carioca, cozido/36 min, Phaseolus vulgaris L, s/caldo  1    62,49      —          —          —          —          —          —          —          0,37       —          0,38       —          15,87      —          14,09      14,47      4        
+107T      Grão-de-bico, cozido/70 min, Cicer arietinum L,               1    59,20      —          —          —          —          —          —          —          0,36       —          0,37       —          24,40      —          22,01      22,38      4        
+108T      Grão-de-bico, cozido/70 min, congelado/30dias, Cicer arietinum L.  1    63,70      —          —          —          —          —          —          —          —          —          0,37       —          21,17      —          18,88      19,25      4        
+106T      Lentilha, cozida/ 21 min, Lens culinaria                      1    67,70      —          —          —          0,01       —          —          —          0,15       —          0,17       —          19,06      —          17,45      17,62      4        
+
+Colunas (em ordem): Umidade média (g) | Umidade desvio | Glicose média (g) | Glicose desvio | Frutose média (g) | Frutose desvio | Lactose média (g) | Lactose desvio | Sacarose média (g) | Sacarose desvio | Açúcares Totais Disponíveis média (g) | Açúcares Redutores média | Amido Total média (g) | Amido Total desvio | Amido Disponível média (g) | Carboidratos Totais Disponíveis média (g) | Referências
+
+--------------------------------------------------------------------------------
+REFERÊNCIAS DO QUADRO 1:
+--------------------------------------------------------------------------------
+4 – Departamento de Alimentos e Nutrição Experimental, Faculdade de Ciências Farmacêuticas, USP (análises realizadas nos diversos laboratórios).
+383 – Cordenunsi, B.R.; Nascimento, J.R.O.; Genovese, M.I.; Lajolo, F.M. Influence of cultivar on quality parameters and chemical composition of strawberry fruits grown in
+384 – Mota, R.V. da; Lajolo, F.M.; Cordenunsi, B.R. Composição em carboidratos de alguns cultivares de banana (Musa spp) durante o amadurecimento. Ciênc. Tecnol.
+385 – Rogez, H.; Buchant, R.; Mignolet, E.; Sousa, J.N.S.; Silva, E.M.; Lavondelle, Y. Chemichal Composition of the pulp three typical Amazonian fruits: Araça-boi (Eugenia
+386 – Bernardes-Silva, A.P.F.; Lajolo, F.M.; Cordenunsi B.R. Evolução dos Teores de amido e açúcares solúveis durante o desenvolvimento e amadurecimento de diferentes
+387 – Mota, R.V.; Lajolo, F.M.; Ciacco, C.; Cordenunsi, B.R. Composition and functional properties of banana flour from differente varieties. Starch/Stärke. n. 52, v. 2-3, p.
+388 – Agopian, R.G.D.; Soares, C.A.; Purgatto, E.; Cordenunsi, B.R.; Lajolo, F.M. Identification of fructooligosaccharides in different banana cultivars. J. Agric. Food Chem. n.
+389 – Caniato, F.F.; Galvão, L.C.C.; Finger, F.L.; Puiatti, M.; Oliveira, D.A.; Juliano Lino Ferreira, J.L. Quantificação de açúcares solúveis totais, açúcares redutores e amido
+390 – Silva, R.N.; Monteiro, V.N.; Alcanfor, J.D'A. X.; Assis, E.M.; Asquieri, E.R. Comparação de métodos para a determinação de açúcares redutores e totais em mel. Ciênc.
+
+====================================================================================================
+QUADRO 2 – CONTEÚDO DE CARBOIDRATO NÃO DISPONÍVEL POR 100g DE ALIMENTO (PARTE COMESTÍVEL)
+====================================================================================================
+
+CÓD.      ALIMENTO                                                                n    UMI méd    UMI dev    AR méd     AR dev     FA INSOL méd   FA INSOL dev   FA SOL méd   FA SOL dev   FA TOT méd   FA TOT dev   FRUTAN méd   FRUTAN dev   REF   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+174A      Arroz, integral, cozido/29 min, congelado/1 dia, Orysa sativa           3    72,67        —            1,12         0,01         —            —            —            —            —            —            —            —            4          
+267A      Arroz, integral, cozido/29 min, congelado/30 dias, Orysa sativa         3    71,29        —            1,57         0,07         —            —            —            —            —            —            —            —            4          
+268A      Arroz, integral, cozido/29 min, congelado/7 dias, Orysa sativa          2    72,67        —            1,43         0,01         —            —            —            —            —            —            —            —            4          
+266A      Arroz, integral, cozido/29 min, Orysa sativa                            4    75,29        —            0,63         0,03         —            —            —            —            —            —            —            —            4          
+175A      Arroz, integral, cozido29 min, refrigerado/1 dia, Orysa sativa          3    73,00        —            1,15         0,04         —            —            —            —            —            —            —            —            4          
+279A      Arroz, integral, Orysa sativa L., cozido/28 min                         1    75,47        —            0,83         —            1,27         0,05         0,23         0,05         1,50         0,10         —            —            4          
+171A      Arroz, polido, cozido/16 min, congelado/1 dia, Orysa sativa             3    77,74        —            0,77         0,02         —            —            —            —            —            —            —            —            4          
+270A      Arroz, polido, cozido/16 min, congelado/30 dias, Orysa sativa           3    66,35        —            1,16         0,10         —            —            —            —            —            —            —            —            4          
+271A      Arroz, polido, cozido/16 min, congelado/7 dias, Orysa sativa            3    66,93        —            1,12         0,10         —            —            —            —            —            —            —            —            4          
+269A      Arroz, polido, cozido/16 min, Orysa sativa                              5    71,55        —            0,66         0,25         —            —            —            —            —            —            —            —            4          
+172A      Arroz, polido, cozido/16 min, refrigerado/1 dia, Orysa sativa           2    77,00        —            0,55         0,02         —            —            —            —            —            —            —            —            4          
+645A      Arroz, polido, Orysa sativa L., cozido/28 min                           1    75,47        —            0,65         —            1,23         —            0,22         —            1,47         —            —            —            4          
+734A      Aveia, farelo, Oat bran                                                 1    8,66         0,15         3,26         0,12         —            —            —            —            —            —            —            —            4          
+161A      Aveia, farinha, "Mac Bits", Avena sativa                                3    9,80         —            1,78         0,04         —            —            —            —            —            —            —            —            4          
+162A      Aveia, fibras, "Oat Bran", Avena sativa                                 2    9,60         —            1,19         0,05         —            —            —            —            —            —            —            —            4          
+160A      Aveia, flocos, finos, "Float", Avena sativa                             2    9,80         —            0,77         0,04         —            —            —            —            —            —            —            —            4          
+159A      Aveia, flocos, finos, instantâneo, "Float", Avena sativa                2    9,80         —            1,69         0,05         —            —            —            —            —            —            —            —            4          
+158A      Aveia, flocos, grossos, Avena sativa                                    2    9,50         —            2,85         0,14         —            —            —            —            —            —            —            —            4          
+732A      Aveia, flocos, Quaker                                                   1    9,86         0,12         2,41         0,05         —            —            —            —            —            —            —            —            4          
+735A      Aveia, flocos, sabor maçã c/ canela, Vitaly Bionutri                    1    8,66         0,15         2,32         0,14         —            —            —            —            —            —            —            —            4          
+642A      Biscoito, doce, maisena                                                 1    2,88         —            2,40         —            —            —            —            —            —            —            —            4          
+290A      Biscoito, doce, trigo                                                   2    3,60         —            1,74         0,00         —            —            —            —            —            —            —            —            4          
+644A      Biscoito, salgado, cream cracker                                        1    3,42         —            1,67         —            —            —            —            —            —            —            —            4          
+289A      Biscoito, salgado, trigo, água                                          3    5,19         —            1,20         0,08         —            —            —            —            —            —            —            —            4          
+720A      Bolo, laranja                                                           2    20,89        —            0,00         0,00         —            —            —            —            —            —            —            —            4          
+128A      Centeio, integral, farinha                                              2    7,90         —            —            —            17,40        —            4,50         —            21,90        —            —            —            247        
+176A      Cereal matinal, aveia, c/ amêndoa e mel, "Honey Nut o's"                2    5,15         —            0,33         0,04         —            —            —            —            —            —            —            —            4          
+166A      Cereal matinal, milho, "Corn Flakes"                                    10   5,07         —            2,69         0,31         —            —            —            —            —            —            —            —            4          
+131A      Cereal matinal, milho, flocos                                           2    7,82         —            —            —            3,78         —            0,71         —            4,49         —            —            —            184        
+272A      Macarrão, cozido/9 min                                                  4    65,17        —            0,42         0,12         —            —            —            —            —            —            —            —            4          
+168A      Macarrão, cozido/9 min, congelado/1 dia                                 2    65,01        —            0,45         0,00         —            —            —            —            —            —            —            —            4          
+273A      Macarrão, cozido/9 min, congelado/30 dias                               3    70,35        —            0,66         0,04         —            —            —            —            —            —            —            —            4          
+274A      Macarrão, cozido/9 min, congelado/7 dias                                3    68,42        —            0,50         0,01         —            —            —            —            —            —            —            —            4          
+169A      Macarrão, cozido/9 min, refrigerado/1 dia                               3    63,28        —            0,52         0,06         —            —            —            —            —            —            —            —            4          
+728A      Macarrão, espaguete, cozido/20 min                                      1    70,35        —            0,67         —            0,52         —            0,54         —            1,09         —            —            —            4          
+727A      Milho, cozida/45 min, Zea mays                                          1    76,56        —            0,90         —            2,74         —            0,01         —            2,81         —            —            —            4          
+276A      Milho, cozido/25 min, congelado/30 dias, Zea mays                       2    73,52        —            1,17         0,00         —            —            —            —            —            —            —            —            4          
+277A      Milho, cozido/25 min, congelado/7 dias, Zea mays                        2    76,04        —            1,03         0,00         —            —            —            —            —            —            —            —            4          
+275A      Milho, cozido/25 min, Zea mays                                          5    72,62        —            1,05         0,21         —            —            —            —            —            —            —            —            4          
+145A      Milho, farelo, Zea mays                                                 2    10,97        —            —            —            61,47        0,28         1,28         0,15         62,75        0,28         —            —            4          
+281A      Milho, farinha, amarela, Zea mays                                       2    2,54         —            2,46         0,05         —            —            —            —            —            —            —            —            4          
+194A      Milho, fibra, "Corn Bran", Zea mays                                     2    3,04         —            0,00         0,00         —            —            —            —            —            —            —            —            4          
+197A      Milho, fubá, cozido/10 min, congelado/1 dia, Zea mays                   2    67,12        —            1,26         0,00         —            —            —            —            —            —            —            —            4          
+199A      Milho, fubá, cozido/10 min, congelado/30 dias, Zea mays                 2    66,58        —            1,30         0,00         —            —            —            —            —            —            —            —            4          
+198A      Milho, fubá, cozido/10 min, congelado/7 dias, Zea mays                  2    67,32        —            1,24         0,00         —            —            —            —            —            —            —            —            4          
+196A      Milho, fubá, cozido/10 min, refrigerado/1 dia, Zea mays                 2    68,75        —            1,19         0,00         —            —            —            —            —            —            —            —            4          
+195A      Milho, fubá, cozido/10 min, Zea mays                                    2    67,20        —            1,26         0,00         —            —            —            —            —            —            —            —            4          
+4A        Milho, fubá, cozido/20 min, Zea mays                                    2    73,10        —            —            —            1,30         —            0,10         —            1,40         —            —            —            247        
+149A      Milho, fubá, cru, Zea mays                                              2    10,52        —            —            —            1,91         0,10         1,76         0,16         3,67         0,20         —            —            4          
+156A      Milho, verde, enlatado, drenado, Zea mays                               2    78,80        —            —            —            3,24         —            0,16         —            3,40         —            —            —            4          
+733A      Mingau, instântaneo, arroz e aveia, Mingo                               1    3,98         0,25         2,11         0,19         —            —            —            —            —            —            —            —            4          
+731A      Pão, trigo, forma, 7 Grãos, light, Plus Vita                            1    40,73        —            2,29         —            —            —            —            8,91         —            —            —            4          
+98A       Pão, trigo, forma, c/ fibras, "Diet Bread"                              2    38,60        —            1,05         0,07         —            —            —            —            —            —            —            4          
+730A      Pão, trigo, forma, Cenoura, light, Plus Vita                            1    41,23        —            2,75         —            —            —            —            —            10,27        —            —            —            4          
+99A       Pão, trigo, forma, integral, c/ fibra, "Quadradinho"                    2    33,74        —            1,23         0,10         —            —            —            —            —            —            —            —            4          
+94A       Pão, trigo, forma, s/ casca                                             3    35,99        —            1,07         0,10         —            —            —            —            —            —            —            —            4          
+729A      Pão, trigo, forma, traditional, Pullman/Plus Vita                       1    36,23        —            2,29         —            —            —            —            —            2,57         —            —            —            4          
+5A        Pão, trigo, francês                                                     3    24,50        1,34         0,04         1,90         —            1,30         —            32,0         —            —            —            4, 247     
+640A      Pão, trigo, francês                                                     1    29,86        2,32         —            —            —            —            —            —            —            —            —            4          
+100A      Pão, trigo/centeio, forma, integral                                     3    34,24        —            1,15         0,08         —            —            —            —            —            —            —            —            4          
+101A      Pão, trigo/centeio, forma, preto                                        3    34,48        —            0,74         0,05         —            —            —            —            —            —            —            —            4          
+146A      Trigo, farelo                                                           2    9,26         —            0,73         0,03         —            —            —            —            —            —            —            —            4          
+179A      Trigo, farelo                                                           2    11,00        —            —            —            43,20        —            3,80         —            47,00        —            —            —            247        
+178A      Trigo, integral                                                         3    5,17         —            0,00         0,13         —            —            —            —            —            —            —            —            4          
+193A      Trigo, farinha, Triticum vulgare                                        3    9,46         —            —            —            1,37         0,15         1,48         0,17         2,85         0,23         —            —            4          
+2B        Abóbora, moranga, crua, Cucurbita moschata DU                           2    95,14        —            —            —            1,41         —            0,53         —            1,94         —            —            —            4, 5       
+8B        Alface, lisa, Lactuca sativa L.                                         2    96,80        —            —            —            1,10         —            0,10         —            1,20         —            —            —            247        
+1058B     Alho, Alliun sativum L.                                                 1    68,11        0,01         —            —            —            —            —            —            —            —            20,27        4          
+1087B     Anil trepador, Cissus sicyoides                                         1    5,03         —            —            —            —            —            —            —            32,04        0,54         —            —            4          
+513B      Batata, cozida/18 min, congelado/1 dia, Solanum tuberosum L.            2    84,96        —            1,02         0,04         —            —            —            —            —            —            —            —            4          
+794B      Batata, cozida/18 min, congelado/30 dias, Solanum tuberosum L.          3    84,61        —            1,13         0,04         —            —            —            —            —            —            —            —            4          
+795B      Batata, cozida/18 min, congelado/7 dias, Solanum tuberosum L.           2    85,33        —            1,12         0,01         —            —            —            —            —            —            —            —            4          
+514B      Batata, cozida/18 min, refrigerado/1 dia, Solanum tuberosum L.          2    83,34        —            1,02         0,04         —            —            —            —            —            —            —            —            4          
+793B      Batata, cozida/18 min, Solanum tuberosum L.                             6    85,37        —            0,48         0,04         —            —            —            —            —            —            —            —            4          
+1081B     Batata, cozida/33 min, Solanum tuberosun                                1    85,07        —            0,50         —            0,88         —            0,45         —            1,34         —            —            —            4          
+95B       Batata, doce, crua, Ipomoea batatas L.                                  2    65,90        —            —            —            3,13         —            0,74         —            3,87         —            —            —            4          
+95B       Batata, doce, crua, Ipomoea batatas L.                                  3    65,90        —            2,23         0,11         —            —            —            —            —            —            —            —            4          
+1040B     Batata, inglesa, cozida/20 min, Solanum tuberosum L,                    1    82,21        —            0,33         —            —            —            —            —            —            —            —            —            4          
+137B      Beterraba, cozida/40 min, Beta vulgaris                                 2    92,85        —            —            —            1,70         —            0,54         —            2,24         —            —            —            4, 51      
+101B      Brócolos, cru, Brassica oleracea L.                                     2    94,10        —            —            —            1,74         0,19         0,43         0,00         2,17         0,02         —            —            4          
+100B      Cará, cru, Dioscorea bulbifera L.                                       2    73,80        —            —            1,74         0,02         0,60         0,02         2,34         0,04         —            —            4          
+1088B     Cebola, Alliun cepa L.                                                  1    88,38        0,07         —            —            —            —            —            —            —            —            2,43         —            4          
+140B      Cebola, crua, Allium cepa L.                                            2    87,80        —            —            —            1,30         —            0,30         —            1,30         —            —            —            51, 247    
+87B       Chuchu, cru, Sechium edule                                              2    95,10        —            —            —            1,00         —            1,00         —            1,33         —            —            —            4          
+94B       Couve-flor, crua, Brassica oleracea L.                                  2    93,86        —            —            —            1,60         —            0,45         —            2,05         —            —            —            4          
+156B      Espinafre, cozido/5 min, Spinacia oleracea                              2    94,76        —            —            —            1,24         —            0,36         —            1,60         —            —            —            4, 51      
+1084B     Folha de licuri (Syagrus coronata)                                      1    8,91         —            —            —            70,05        1,36         2,34         0,84         72,39        1,50         —            —            4          
+1083B     Folha de licurioba (Syagrus vagans)                                     1    9,83         —            —            —            73,10        1,26         1,60         0,62         74,70        1,08         —            —            4          
+1050B     Mandioca, amarela, cozida/30 min, Manihot esculenta Crantz              1    62,65        —            0,68         —            —            —            —            —            —            —            —            —            4          
+99B       Mandioca, amarela, crua, Manihot esculenta Crantz                       2    71,30        —            0,66         0,05         1,43         0,03         0,51         0,03         1,94         0,06         —            —            4          
+608B      Mandioca, cozida/50 min, congelado/30 dias, Manihot dulcis              2    72,46        —            0,34         0,02         —            —            —            —            —            —            —            —            4          
+607B      Mandioca, cozida/50 min, congelado/7 dias, Manihot dulcis               2    63,85        —            0,38         0,00         —            —            —            —            —            —            —            —            4          
+28B       Mandioca, farinha, crua, Manihot esculenta Crantz                       3    7,60         —            0,55         0,15         5,00         —            1,20         —            6,20         —            —            —            4,247      
+1040B     Mandioca, farinha, torrada                                              1    2,88         —            2,26         —            —            —            —            —            —            —            —            —            389        
+605B      Mandioca, frita/15 min, Manihot dulcis                                  2    25,34        —            1,31         0,04         —            —            —            —            —            —            —            —            4          
+510B      Mandioca, resíduo da extração do amido, cozida/3 min, congelado/1 dia, Manihot dulcis  3    6,22         —            1,20         0,11         —            —            —            —            —            —            —            —            4          
+509B      Mandioca, resíduo da extração do amido, cozida/3 min, Manihot dulcis    3    5,91         —            1,00         0,07         —            —            —            —            —            —            —            —            4          
+511B      Mandioca, resíduo da extração do amido, cozida/3 min, refrigerado/1 dia, Manihot dulcis  2    5,67         —            1,14         0,05         —            —            —            —            —            —            —            —            4          
+1079B     Mandioquinha, cozida/15 min, Arracacia xanthorrhiza                     1    76,25        —            0,22         —            —            —            —            —            —            —            —            —            4          
+1061B     Pinhão, Araucaria angustifolia, cozido/60 min, sem casca                1    50,35        —            3,27         —            5,17         —            0,55         —            5,72         —            —            —            4          
+1080B     Pinhão, Araucaria angustifolia, cozido/90 min, c/ casca                 1    50,35        —            3,27         —            5,17         —            0,55         —            5,72         —            —            —            4          
+1060B     Pinhão, Araucaria angustifolia, cru                                     1    49,50        —            —            —            4,26         —            0,63         —            4,89         —            —            —            4          
+1085B     Polpa de licuri (Syagrus coronata)                                      1    20,73        —            —            —            22,99        0,54         6,70         0,50         29,69        0,24         —            —            4          
+98B       Repolho, branco, cru, Brassica oleracea L.                              2    95,44        —            —            —            1,10         —            0,24         —            1,34         —            —            —            4          
+1086B     Semente de licuri (Syagrus coronata)                                    1    12,03        —            —            —            22,61        0,39         1,00         0,42         23,61        0,42         —            —            4          
+557B      Tomate, s/ semente, cru, Lycopersicum esculentum                        4    95,50        —            —            —            0,80         —            0,30         —            1,10         —            —            —            247        
+1087B     Yacon, Polymnya sonchifolia                                             10   90,49        9,05         —            —            1,01         —            0,16         —            1,17         —            3,70         —            4          
+720C      Abacaxi, Ananas comosus, Perola, cerne, in natura                       1    78,09        —            —            —            1,76         —            0,11         —            1,87         —            —            —            4          
+721C      Abacaxi, Ananas comosus, Perola, polpa e cerne, in natura               1    85,00        —            0,00         —            0,88         —            0,03         —            0,91         —            0,15         —            4          
+719C      Abacaxi, Ananas comosus, Perola, polpa, in natura                       1    86,05        —            0,00         —            0,78         —            0,02         —            0,80         —            0,16         —            4          
+44C       Acerola, polpa, Malpighia punicifolia                                   2    92,00        —            —            —            —            —            —            —            2,49         0,17         —            —            174        
+745C      Amora silvestre, Rubus rosaefoluis                                      1    85,00        —            —            —            2,00         0,03         1,04         0,03         3,14         —            —            —            4          
+822C      Araçá-boi, Eugenia stipitata                                            —    96,00        —            —            —            —            —            —            —            1,56         —            —            —            385        
+823C      Bacuri, Platonia insignis                                               —    78,90        —            —            —            —            —            —            —            5,86         —            —            —            385        
+831C      Banana, Maçã, verde, farinha                                            —    3,91         0,37         —            —            8,86         0,30         2,43         0,16         11,29        —            —            —            387        
+461C      Banana, mysore, farinha, verde, liofilizada, Musa ssp                   3    8,50         —            31,55        2,75         —            —            —            —            —            —            —            —            4          
+830C      Banana, Mysore, verde, farinha                                          4,92  0,45         —            —            12,56        0,20         2,98         0,29         15,54        —            —            —            387        
+456C      Banana, mysore, verde, Musa ssp                                         3    69,76        —            10,31        0,90         —            —            —            —            —            —            —            —            4          
+8C        Banana, nanica, Musa paradisíaca                                        1    77,30        —            —            —            1,20         —            0,60         —            1,80         —            —            —            247        
+827C      Banana, Nanica, verde, farinha                                          6,17  0,13         —            —            5,37         0,20         2,39         0,10         7,76         —            —            —            387        
+485C      Banana, nanicão, farinha, verde, liofilizada, Musa ssp                  2    9,81         —            23,65        0,17         —            —            —            —            —            —            —            —            4          
+731C      Banana, nanicão, madura, Musa spp                                       2    75,90        —            —            —            —            —            —            —            —            —            0,09         —            384, 388   
+482C      Banana, nanicão, madura, Musa ssp                                       2    74,34        —            3,75         0,02         —            —            —            —            —            —            —            —            4          
+828C      Banana, Nanicão, verde, farinha                                         4,17  0,42         —            —            4,10         0,10         2,18         0,09         6,28         —            —            —            387        
+484C      Banana, nanicão, verde, Musa ssp                                        2    72,13        —            7,31         0,18         —            —            —            —            —            —            —            —            4          
+462C      Banana, ouro colatina, farinha, verde, liofilizada, Musa ssp            2    8,50         —            32,49        1,82         —            —            —            —            —            —            —            —            4          
+457C      Banana, ouro colatina, verde, Musa ssp                                  2    69,89        —            10,57        0,59         —            —            —            —            —            —            —            —            4          
+826C      Banana, Ouro da mata, verde, farinha                                    —    4,69         0,36         —            —            6,85         0,20         2,10         0,15         8,95         —            —            —            387        
+829C      Banana, Prata anã, verde, farinha                                       —    4,97         0,40         —            —            6,55         0,20         2,31         0,13         8,86         —            —            —            387        
+825C      Banana, Prata comum, verde, farinha                                     —    5,58         0,43         —            —            7,41         0,40         3,05         0,12         10,46        —            —            —            387        
+62C       Caju, polpa, Anacardium occidentale                                     2    87,80        —            —            —            —            —            —            —            3,17         0,07         —            —            174        
+422C      Caju, polpa, congelada, Anacardium occidentale                          2    87,80        —            —            —            —            —            —            —            2,30         0,15         —            —            174        
+824C      Cupuaçu, Theobroma grandiflorum                                         —    87,90        —            —            —            —            —            —            —            1,73         —            —            —            385        
+424C      Fruta-do-conde, polpa, congelada, Annona squamosa L.                    2    79,80        —            —            —            —            —            —            —            4,16         0,57         —            —            174        
+423C      Graviola, polpa, congelada, Annona muricata L.                          2    87,12        —            —            —            —            —            —            —            2,47         0,22         —            —            174        
+21C       Laranja, pêra, Citrus aurantium                                         2    91,00        —            —            —            1,70         —            0,50         —            2,20         —            —            —            247        
+483C      Maçã, gala, madura, Malus sylvestris                                    2    83,43        —            0,12         0,00         —            —            —            —            —            —            —            —            4          
+417C      Maçã, gala, Malus sylvestris                                            2    85,20        —            —            —            1,50         —            0,70         —            2,20         —            —            —            247        
+723C      Manga, Haden, Mangífera indica, L.                                      1    —            —            —            —            0,52         0,05         0,02         0,01         0,54         —            —            —            4, 386     
+725C      Manga, Palmer, Mangífera indica, L.                                     1    —            —            —            —            0,81         0,05         0,16         0,10         0,97         —            —            —            4, 386     
+724C      Manga, Tommy, Mangífera indica, L.                                      1    —            —            —            —            0,99         0,06         0,18         0,10         1,17         —            —            —            4, 386     
+729C      Pêssego, centenário, Prunus persica                                     1    84,78        0,11         —            —            1,59         1,08         2,67         —            —            —            4          
+727C      Pêssego, douradão, Prunus persica                                       1    87,20        0,40         —            —            1,83         0,05         0,97         0,06         2,80         —            —            —            4          
+140G      Iogurte, natural                                                        2    88,90        —            0,00         0,00         —            —            —            —            —            —            —            —            4          
+25R       Pudim, coco, cozido                                                     2    72,15        —            0,28         0,00         —            —            —            —            —            —            —            —            4          
+24R       Salgadinho, milho, extrusado                                            2    0,00         —            1,80         0,09         —            —            —            —            —            —            —            —            4          
+1000A     Arroz polido/Feijão carioca, cozidos, temperados (3:1)                  1    67,57        —            2,11         —            —            —            —            —            —            —            —            —            4          
+1001A     Arroz, polido, cozido, Orysa sativa L., temperado                       1    71,12        —            1,37         —            —            —            —            —            —            —            —            —            4          
+301T      Feijão, carioca, cozido, Phaseolus vulgaris, temperado                  1    67,91        —            3,16         —            —            —            —            —            —            —            —            —            4          
+1002A     Polenta, cozida/90 min, congelada/30 days, Zea mays                     1    79,69        —            0,98         —            —            —            —            —            —            —            —            —            4          
+1003A     Polenta, cozida/90 min, Zea mays                                        1    80,36        —            0,82         —            1,10         —            0,08         —            1,18         —            —            —            4          
+33T       Ervilha, cozida/18 min, congelado/1 dia, Pisum sativum                  2    64,46        —            2,07         0,16         —            —            —            —            —            —            —            —            4          
+34T       Ervilha, cozida/18 min, congelado/30 dias, Pisum sativum                3    67,06        —            1,88         0,05         —            —            —            —            —            —            —            —            4          
+35T       Ervilha, cozida/18 min, congelado/7 dias, Pisum sativum                 3    66,79        —            1,88         0,11         —            —            —            —            —            —            —            —            4          
+86T       Ervilha, cozida/18 min, Pisum sativum                                   6    64,54        —            1,55         0,04         —            —            —            —            —            —            —            —            4          
+36T       Ervilha, cozida/18 min, refrigerado/1 dia, Pisum sativum                3    65,00        —            1,97         0,08         —            —            —            —            —            —            —            —            4          
+103T      Ervilha, cozida/30 min, Pisum sativum L.                                1    66,40        —            1,55         —            4,44         —            0,28         —            4,70         —            —            —            4          
+24T       Ervilha, verde, seca, cozida/30 min, Pisum sativum L.                   1    66,40        —            —            —            4,58         0,08         0,29         0,07         4,87         —            —            —            4          
+105T      Feijão, carioca, cozido/36 min, congelado/ 30 dias, Phaseolus vulgaris L., s/caldo  1    61,98        —            2,66         —            —            —            —            —            —            —            —            —            4          
+104T      Feijão, carioca, cozido/36 min, Phaseolus vulgaris L, s/caldo           1    62,49        —            1,78         —            7,23         —            1,80         —            9,00         —            —            —            4          
+61T       Feijão, cozido/100 min, congelado/30 dias, Phaseolus vulgaris L., Iraí  2    67,88        —            1,83         0,00         —            —            —            —            —            —            —            —            4          
+62T       Feijão, cozido/100 min, congelado/7 dias, Phaseolus vulgaris L., Iraí   3    67,88        —            1,85         0,05         —            —            —            —            —            —            —            —            4          
+60T       Feijão, cozido/100 min, Phaseolus vulgaris L., Iraí                     2    67,88        —            1,64         0,08         —            —            —            —            —            —            —            —            4          
+41T       Feijão, cozido/128 min, congelado/30 dias, Phaseolus vulgaris L., Corrente  2    73,14        —            —            —            —            —            —            —            —            —            —            —            4          
+42T       Feijão, cozido/128 min, congelado/7 dias, Phaseolus vulgaris L., Corrente  2    73,14        —            —            —            —            —            —            —            —            —            —            —            4          
+40T       Feijão, cozido/128 min, Phaseolus vulgaris L., Corrente                 2    73,14        —            —            —            —            —            —            —            —            —            —            —            4          
+58T       Feijão, cozido/135 min, congelado/30 dias, Phaseolus vulgaris L., Ipa-8  2    70,96        —            1,85         0,01         —            —            —            —            —            —            —            —            4          
+59T       Feijão, cozido/135 min, congelado/7 dias, Phaseolus vulgaris L., Ipa-8  2    70,96        —            1,80         0,00         —            —            —            —            —            —            —            —            4          
+57T       Feijão, cozido/135 min, Phaseolus vulgaris L., Ipa-8                    3    70,96        —            1,65         0,05         —            —            —            —            —            —            —            —            4          
+67T       Feijão, cozido/39 min, congelado/30 dias, Phaseolus vulgaris L., Ouro Branco  2    76,96        —            1,09         0,01         —            —            —            —            —            —            —            —            4          
+68T       Feijão, cozido/39 min, congelado/7 dias, Phaseolus vulgaris L., Ouro Branco  2    76,96        —            1,03         0,01         —            —            —            —            —            —            —            —            4          
+66T       Feijão, cozido/39 min, Phaseolus vulgaris L., Ouro Branco               3    76,96        —            0,89         0,04         —            —            —            —            —            —            —            —            4          
+44T       Feijão, cozido/40 min, congelado/30 dias, Phaseolus vulgaris L., Engopa 201  2    70,97        —            1,60         0,01         —            —            —            —            —            —            —            —            4          
+45T       Feijão, cozido/40 min, congelado/7 dias, Phaseolus vulgaris L., Engopa 201  2    70,97        —            1,57         0,03         —            —            —            —            —            —            —            —            4          
+43T       Feijão, cozido/40 min, Phaseolus vulgaris L., Engopa 201                2    70,97        —            1,46         0,05         —            —            —            —            —            —            —            —            4          
+52T       Feijão, cozido/45 min, congelado/30 dias, Phaseolus vulgaris L., FT-Tarumã  3    66,89        —            2,01         0,02         —            —            —            —            —            —            —            —            4          
+53T       Feijão, cozido/45 min, congelado/7 dias, Phaseolus vulgaris L., FT-Tarumã  2    66,89        —            1,92         0,05         —            —            —            —            —            —            —            —            4          
+5T        Feijão, cozido/45 min, Phaseolus vulgaris L., Carioca                   14   77,20        —            1,02         0,14         —            —            —            —            —            —            —            —            4          
+51T       Feijão, cozido/45 min, Phaseolus vulgaris L., FT-Tarumã                 2    66,89        —            1,60         0,09         —            —            —            —            —            —            —            —            4          
+73T       Feijão, cozido/53 min, congelado/30 dias, Phaseolus vulgaris L., Rudá   2    78,56        —            1,29         0,01         —            —            —            —            —            —            —            —            4          
+74T       Feijão, cozido/53 min, congelado/7 dias, Phaseolus vulgaris L., Rudá    2    78,56        —            1,23         0,03         —            —            —            —            —            —            —            —            4          
+72T       Feijão, cozido/53 min, Phaseolus vulgaris L., Rudá                      2    78,56        —            1,02         0,01         —            —            —            —            —            —            —            —            4          
+55T       Feijão, cozido/54 min, congelado/30 dias, Phaseolus vulgaris L., Iapar-65  2    71,44        —            1,63         0,04         —            —            —            —            —            —            —            —            4          
+56T       Feijão, cozido/54 min, congelado/7 dias, Phaseolus vulgaris L., Iapar-65  3    71,44        —            1,58         0,02         —            —            —            —            —            —            —            —            4          
+54T       Feijão, cozido/54 min, Phaseolus vulgaris L., Iapar-65                  3    71,44        —            1,47         0,08         —            —            —            —            —            —            —            —            4          
+38T       Feijão, cozido/60 min, congelado/30 dias, Phaseolus vulgaris L., Carioca  6    67,17        —            1,93         0,04         —            —            —            —            —            —            —            —            4          
+39T       Feijão, cozido/60 min, congelado/7 dias, Phaseolus vulgaris L., Carioca  5    66,40        —            1,85         0,12         —            —            —            —            —            —            —            —            4          
+37T       Feijão, cozido/60 min, Phaseolus vulgaris L., Carioca                   5    65,95        —            1,84         0,22         —            —            —            —            —            —            —            —            4          
+70T       Feijão, cozido/69 min, congelado/30 dias, Phaseolus vulgaris L., Roxo-90  2    73,01        —            1,61         0,02         —            —            —            —            —            —            —            —            4          
+71T       Feijão, cozido/69 min, congelado/7 dias, Phaseolus vulgaris L., Roxo-90  2    73,01        —            1,59         0,01         —            —            —            —            —            —            —            —            4          
+69T       Feijão, cozido/69 min, Phaseolus vulgaris L., Roxo-90                   3    73,01        —            1,30         0,02         —            —            —            —            —            —            —            —            4          
+76T       Feijão, cozido/84 min, congelado/30 dias, Phaseolus vulgaris L., Safira  3    67,30        —            1,94         0,05         —            —            —            —            —            —            —            —            4          
+77T       Feijão, cozido/84 min, congelado/7 dias, Phaseolus vulgaris L., Safira  3    67,30        —            1,72         0,04         —            —            —            —            —            —            —            —            4          
+75T       Feijão, cozido/84 min, Phaseolus vulgaris L., Safira                    3    67,30        —            1,62         0,05         —            —            —            —            —            —            —            —            4          
+64T       Feijão, cozido/89 min, congelado/30 dias, Phaseolus vulgaris L., Novo Jalo  2    78,96        —            1,13         0,03         —            —            —            —            —            —            —            —            4          
+65T       Feijão, cozido/89 min, congelado/7 dias, Phaseolus vulgaris L., Novo Jalo  2    78,96        —            1,07         0,04         —            —            —            —            —            —            —            —            4          
+63T       Feijão, cozido/89 min, Phaseolus vulgaris L., Novo Jalo                 2    78,96        —            1,01         0,03         —            —            —            —            —            —            —            —            4          
+46T       Feijão, farinha, autoclavado, Phaseolus vulgaris L.                     3    6,57         —            3,22         0,10         —            —            —            —            —            —            —            —            4          
+47T       Feijão, farinha, cozido/132 min, Phaseolus vulgaris L.                  3    1,99         —            4,04         0,08         —            —            —            —            —            —            —            —            4          
+48T       Feijão, farinha, cru, Phaseolus vulgaris L.                             2    6,43         —            12,63        0,93         —            —            —            —            —            —            —            —            4          
+49T       Feijão, farinha, extrusado, Phaseolus vulgaris L.                       2    4,33         —            2,01         0,08         —            —            —            —            —            —            —            —            4          
+50T       Feijão, farinha, liofilizado, Phaseolus vulgaris L.                     3    4,53         —            2,84         0,11         —            —            —            —            —            —            —            —            4          
+101T      Feijão, mungo preto, Vigna mungo                                        1    7,41         —            —            —            13,20        0,23         6,39         0,35         20,59        0,44         —            —            4          
+100T      Feijão, mungo verde, Vigna radiata                                      1    7,05         —            —            —            11,19        0,22         2,38         0,28         13,57        0,29         —            —            4          
+30T       Feijão, preto, cozido, Phaseolus vulgaris L.                            2    76,60        —            —            —            4,40         —            1,60         —            6,00         —            —            —            247        
+78T       Grão de bico, cozido/60 min, Cicer arietinum L.                         3    59,20        —            2,39         0,10         —            —            —            —            —            —            —            —            4          
+79T       Grão de bico, cozido/60 min, congelado/30 dias, Cicer arietinum L.      2    63,20        —            2,31         0,13         —            —            —            —            —            —            —            —            4          
+80T       Grão de bico, cozido/60 min, congelado/7 dias, Cicer arietinum L.       3    61,17        —            2,45         0,19         —            —            —            —            —            —            —            —            4          
+88T       Grão de bico, cozido/70 min, Cicer arietinum L.                         1    59,20        —            —            —            5,64         0,13         0,53         0,08         6,17         —            —            —            4          
+13T       Grão de bico, cru, Cicer arietinum L., IAC- Marrocos                    4    10,80        —            9,59         0,12         —            —            —            —            —            —            —            —            4          
+14T       Grão de bico, farinha, desengordurado, cozido, Cicer arietinum L.       4    11,00        —            5,92         0,44         —            —            —            —            —            —            —            —            4          
+15T       Grão de bico, farinha, desengordurado, cru, Cicer arietinum L., IAC-Marrocos  4    9,70         —            8,91         0,11         —            —            —            —            —            —            —            —            4          
+16T       Grão de bico, farinha, desengordurado, extrusado, Cicer arietinum L., IAC-Marrocos  4    9,40         —            1,32         0,04         —            —            —            —            —            —            —            —            4          
+107T      Grão-de-bico, cozido/70 min, Cicer arietinum L,                         1    59,20        —            2,39         —            5,35         —            0,50         —            5,71         —            —            —            4          
+108T      Grão-de-bico, cozido/70 min, congelado/30dias, Cicer arietinum L.       1    63,70        —            2,29         —            —            —            —            —            —            —            —            —            4          
+106T      Lentilha, cozida/ 21 min, Lens culinaria                                1    67,70        —            1,61         —            4,38         —            0,48         —            4,85         —            —            —            4          
+82T       Lentilha, cozida/18 min, congelado/1 dia, Lens culinaris                3    71,72        —            1,60         0,06         —            —            —            —            —            —            —            —            4          
+83T       Lentilha, cozida/18 min, congelado/30 dias, Lens culinaris              3    67,74        —            2,16         0,15         —            —            —            —            —            —            —            —            4          
+84T       Lentilha, cozida/18 min, congelado/7 dias, Lens culinaris               2    71,73        —            1,71         0,01         —            —            —            —            —            —            —            —            4          
+81T       Lentilha, cozida/18 min, Lens culinaris                                 4    68,00        —            1,49         0,18         —            —            —            —            —            —            —            —            4          
+85T       Lentilha, cozida/18 min, refrigerado/1 dia, Lens culinaris              2    69,51        —            1,36         0,07         —            —            —            —            —            —            —            —            4          
+17T       Lentilha, cozida/20 min, Lens esculenta                                 1    67,70        —            —            —            4,53         0,10         0,49         0,04         5,02         —            —            —            4          
+102T      Soja, casca                                                             1    2,92         —            —            —            71,00        0,56         3,83         0,49         77,81        0,41         —            —            4          
+89T       Soja, farinha, desengordurada, Glycine max                              1    10,20        —            —            —            19,40        —            2,10         —            21,50        —            —            —            247        
+31T       Soja, fibra                                                             2    —            —            —            —            52,48        —            1,38         53,86        —            —            —            4          
+
+Colunas (em ordem): Umidade média (g) | Umidade desvio | Amido Resistente média (g) | Amido Resistente desvio | Fibra Alimentar Insolúvel média (g) | FA Insolúvel desvio | Fibra Alimentar Solúvel média (g) | FA Solúvel desvio | Fibra Alimentar Total média (g) | FA Total desvio | Frutanos média (g) | Frutanos desvio | Referências
+
+--------------------------------------------------------------------------------
+REFERÊNCIAS DO QUADRO 2:
+--------------------------------------------------------------------------------
+4 – Departamento de Alimentos e Nutrição Experimental, Faculdade de Ciências Farmacêuticas, USP (análises realizadas nos diversos laboratórios).
+5 – Silva, M.E.M.P.; Penteado, M.V.C. Teores de vitamina C em alimentos de consumo habitual na região de São Paulo. Dissertação de mestrado - FCF - USP, 1999.
+51 – Mendez, M.H.M.; Derivi, S.C.N.; Rodriguez, M.C.R.; Fernandes, M.L. Tabela de composição de alimentos. EDUFF: Rio de Janeiro, 1995.
+174 – Salgado, M.S.; Guerra, N.B.; Filho, A.B. Polpa de Fruta congelada: efeito do processamento sobre o conteúdo de fibra alimentar. Revista de Nutrição PUCCAMP. n.
+247 – Filisetti-Cozzi, T.M.C.C.; Lajolo, F.M. Fibra alimentar insolúvel, solúvel e total em alimentos brasileiros. Revista de Farmacia e Bioquimica da USP. n. 27, v. 1, p. 85-99,
+384 – Mota, R.V. da; Lajolo, F.M.; Cordenunsi, B.R. Composição em carboidratos de alguns cultivares de banana (Musa spp) durante o amadurecimento. Ciênc. Tecnol.
+385 – Rogez, H.; Buchant, R.; Mignolet, E.; Sousa, J.N.S.; Silva, E.M.; Lavondelle, Y. Chemichal Composition of the pulp three typical Amazonian fruits: Araça-boi (Eugenia
+386 – Bernardes-Silva, A.P.F.; Lajolo, F.M.; Cordenunsi B.R. Evolução dos Teores de amido e açúcares solúveis durante o desenvolvimento e amadurecimento de diferentes
+387 – Mota, R.V.; Lajolo, F.M.; Ciacco, C.; Cordenunsi, B.R. Composition and functional properties of banana flour from differente varieties. Starch/Stärke. n. 52, v. 2-3, p.
+389 – Caniato, F.F.; Galvão, L.C.C.; Finger, F.L.; Puiatti, M.; Oliveira, D.A.; Juliano Lino Ferreira, J.L. Quantificação de açúcares solúveis totais, açúcares redutores e amido
+
+====================================================================================================
+FIM DO DOCUMENTO
+====================================================================================================

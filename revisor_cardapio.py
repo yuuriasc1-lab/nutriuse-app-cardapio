@@ -42,6 +42,31 @@ def _alertas_substituicoes(slots):
 def _alertas_metas(slots, totais, metas):
     validacao = motor.validar_resultado(slots, totais, metas)
     alertas = []
+    rotulos = {
+        "kcal": ("Calorias", "kcal"),
+        "carboidratos_g": ("Carboidrato", "g"),
+        "proteinas_g": ("Proteína", "g"),
+        "gorduras_g": ("Gordura", "g"),
+    }
+    for chave, item in validacao.get("excedentes", {}).items():
+        titulo, unidade = rotulos[chave]
+        alertas.append({
+            "severidade": "critica",
+            "titulo": f"{titulo}: limite excedido",
+            "descricao": (
+                f"Atingido {item['atingido']:.1f} {unidade} para um limite "
+                f"de {item['limite']:.1f} {unidade}."
+            ),
+        })
+    for opcao in validacao.get("opcoes_excedentes", []):
+        alertas.append({
+            "severidade": "critica",
+            "titulo": "Alternativa acima do limite da refeição",
+            "descricao": (
+                f"{opcao['slot']} · {opcao['opcao']}: "
+                + ", ".join(opcao["excedentes"].keys())
+            ),
+        })
     for chave, titulo in [
         ("kcal", "Calorias"),
         ("carboidratos_g", "Carboidrato"),

@@ -3,36 +3,24 @@
 motor.py — Motor de cálculo clínico e geração do cardápio
 ==========================================================
 
-Lógica PURA (sem Streamlit, sem IA), seguindo o processo descrito em
-"DOCUMENTO PARA CRIAÇÃO DO CARDÁPIO.md":
+Lógica pura (sem Streamlit e sem IA):
 
-    1. TMB (Mifflin-St Jeor)
+    1. TMB (Harris-Benedict revisada, 1984)
     2. GET = TMB × Fator de Atividade Física (FAF)
-    3. Meta calórica final definida pela nutricionista (GET é referência)
-    4. Metas de MACRO (Regras de Ouro do documento):
-         - Proteína: g/kg de peso corporal       (ancorada primeiro)
-         - Gordura : % das calorias totais
-         - Carboidrato: preenche o restante das calorias
-         - Fibra: meta informativa (~14 g / 1000 kcal)
-    5. Geração do cardápio: usa o template da nutricionista como esqueleto de
-       refeições e reescala a gramatura de cada alimento por MACRO (não por um
-       fator calórico único), respeitando aversões/alergias (lógica de
-       substituição "Isabela/Yuri" por regra de três).
+    3. Tetos exatos de kcal, carboidrato, proteína e gordura definidos pela
+       nutricionista
+    4. Geração a partir do cardápio-base da Marcela, preservando seus alimentos,
+       refeições e opções
+    5. Otimização conjunta das porções, sem ultrapassar nenhum dos quatro tetos
+    6. TBCA usada somente como apoio em substituições pontuais
 
-Como cada alimento é arquivado com uma `categoria` (Carboidrato/Proteína/
-Gordura/Outro), aplicamos um fator de escala POR MACRONUTRIENTE:
-
-    fator_carb = meta_carb_g / (carb fornecido pelos alimentos-carboidrato)
-    fator_prot = meta_prot_g / (prot fornecida pelos alimentos-proteína)
-    fator_gord = meta_gord_g / (gord fornecida pelos alimentos-gordura)
-
-Cada alimento é escalado pelo fator do macro que ele representa. Itens "Outro"
-(café, temperos, vegetais livres) não são escalados. Como um alimento carrega
-macros secundários, os totais finais não são exatos — por isso a função devolve
-os TOTAIS ATINGIDOS vs as METAS, para a nutricionista conferir e ajustar.
+As quantidades profissionais mantêm precisão decimal de 0,1 g. A apresentação
+ao paciente usa valores inteiros arredondados para baixo. Alterar uma porção
+reescala de forma proporcional suas calorias e seus macronutrientes.
 """
 
 import json
+import math
 import os
 import re
 import unicodedata
@@ -190,6 +178,42 @@ def normalizar_texto(texto):
     return "".join(c for c in texto if not unicodedata.combining(c))
 
 
+def eh_salada_ou_legume(alimento_ou_nome):
+    """Identifica saladas/vegetais que podem receber orientação textual."""
+    if isinstance(alimento_ou_nome, dict):
+        nome = alimento_ou_nome.get("nome_principal", "")
+    else:
+        nome = alimento_ou_nome or ""
+    nome_norm = normalizar_texto(nome)
+    if "fruta" in nome_norm:
+        return False
+    return any(
+        termo in nome_norm
+        for termo in ("salada", "legume", "folha", "verdura", "vegetais")
+    )
+
+
+def normalizar_alimento_livre(alimento):
+    """Migra itens livres antigos e define a orientação padrão da Marcela."""
+    novo = dict(alimento)
+    nome = str(novo.get("nome_principal", "") or "")
+    nome_norm = normalizar_texto(nome)
+    if nome_norm.startswith("legumes (minimo") and ")" not in nome:
+        novo["nome_principal"] = "Legumes"
+        novo.setdefault("orientacao_paciente", "À vontade (mínimo 100 g)")
+
+    macros = novo.get("macros") or {}
+    sem_nutrientes = not any([
+        float(novo.get("calorias", 0) or 0),
+        *(float(macros.get(chave, 0) or 0) for chave in (
+            "carboidratos_g", "proteinas_g", "gorduras_g"
+        )),
+    ])
+    if eh_salada_ou_legume(novo) and sem_nutrientes:
+        novo.setdefault("orientacao_paciente", "À vontade")
+    return novo
+
+
 def numero_br_para_float(valor):
     """Converte '23,1' / 'NA' / 'Tr' -> float (0.0 quando inválido/ausente)."""
     if valor is None:
@@ -226,10 +250,18 @@ def carregar_template():
     with open(caminho, "r", encoding="utf-8") as f:
         dados = json.load(f)
     calorias = dados.get("calorias_totais_estimadas") or dados.get("calorias_totais") or 0
+    refeicoes = []
+    for refeicao in dados.get("refeicoes", []):
+        refeicao_normalizada = dict(refeicao)
+        refeicao_normalizada["alimentos"] = [
+            normalizar_alimento_livre(alimento)
+            for alimento in refeicao.get("alimentos", [])
+        ]
+        refeicoes.append(refeicao_normalizada)
     return {
         "nome": dados.get("nome_template", "Cardápio Base"),
         "calorias_totais": float(calorias),
-        "refeicoes": dados.get("refeicoes", []),
+        "refeicoes": refeicoes,
     }
 
 
@@ -295,19 +327,194 @@ def _extrair_macros_tbca(nutrientes):
 # ---------------------------------------------------------------------------
 
 def calcular_tmb(peso_kg, altura_cm, idade, genero):
-    """TMB por Mifflin-St Jeor."""
-    base = (10 * peso_kg) + (6.25 * altura_cm) - (5 * idade)
-    return base + (5 if normalizar_texto(genero) == "masculino" else -161)
+    """TMB por Harris-Benedict revisada (1984)."""
+    if normalizar_texto(genero) == "masculino":
+        return 88.362 + (13.397 * peso_kg) + (4.799 * altura_cm) - (5.677 * idade)
+    return 447.593 + (9.247 * peso_kg) + (3.098 * altura_cm) - (4.330 * idade)
+
+
+KCAL_POR_GRAMA_META = {
+    "meta_prot_g": 4.0,
+    "meta_carb_g": 4.0,
+    "meta_gord_g": 9.0,
+}
+DISTRIBUICAO_ENERGETICA_PADRAO = {
+    "meta_prot_g": 0.25,
+    "meta_carb_g": 0.50,
+    "meta_gord_g": 0.25,
+}
+
+
+def calorias_dos_macros(proteina_g, carboidrato_g, gordura_g):
+    """Calcula energia pelos fatores de Atwater (4/4/9)."""
+    return (
+        4.0 * max(float(proteina_g or 0), 0.0)
+        + 4.0 * max(float(carboidrato_g or 0), 0.0)
+        + 9.0 * max(float(gordura_g or 0), 0.0)
+    )
+
+
+def _piso_decimo(valor):
+    """Uma casa decimal sem arredondar para cima."""
+    return math.floor(max(float(valor or 0), 0.0) * 10 + 1e-9) / 10.0
+
+
+def _ajustar_decimos_ao_teto(ideais, alvo_kcal, ajustaveis):
+    """Escolhe os décimos mais próximos sem ultrapassar o teto energético."""
+    ajustaveis = tuple(ajustaveis)
+    base = {
+        chave: (
+            _piso_decimo(valor)
+            if chave in ajustaveis
+            else round(max(float(valor or 0), 0.0), 1)
+        )
+        for chave, valor in ideais.items()
+    }
+    melhor = dict(base)
+    melhor_objetivo = None
+    for mascara in range(1 << len(ajustaveis)):
+        candidato = dict(base)
+        for indice, chave in enumerate(ajustaveis):
+            if mascara & (1 << indice):
+                candidato[chave] = round(candidato[chave] + 0.1, 1)
+        energia = sum(
+            candidato[chave] * KCAL_POR_GRAMA_META[chave]
+            for chave in KCAL_POR_GRAMA_META
+        )
+        if energia > alvo_kcal + 1e-9:
+            continue
+        erro_distribuicao = sum(
+            (
+                (candidato[chave] - ideais[chave])
+                * KCAL_POR_GRAMA_META[chave]
+            ) ** 2
+            for chave in KCAL_POR_GRAMA_META
+        )
+        objetivo = (round(alvo_kcal - energia, 9), erro_distribuicao)
+        if melhor_objetivo is None or objetivo < melhor_objetivo:
+            melhor = candidato
+            melhor_objetivo = objetivo
+    return melhor
+
+
+def readequar_metas_macros(meta_kcal, proteina_g, carboidrato_g, gordura_g,
+                           ancora="meta_kcal"):
+    """Readequa macros de forma reativa sem exceder a meta calórica.
+
+    Quando a âncora é `meta_kcal`, os três macros são escalados mantendo a
+    distribuição energética atual. Quando a âncora é um macro, esse valor é
+    preservado e a energia restante é redistribuída entre os outros dois na
+    proporção vigente. Os valores derivados usam uma casa decimal para baixo,
+    portanto a energia dos macros nunca ultrapassa `meta_kcal`.
+    """
+    if ancora not in {"meta_kcal", *KCAL_POR_GRAMA_META}:
+        raise ValueError(f"Âncora de readequação inválida: {ancora!r}.")
+
+    alvo_kcal = max(float(meta_kcal or 0), 0.0)
+    valores = {
+        "meta_prot_g": max(float(proteina_g or 0), 0.0),
+        "meta_carb_g": max(float(carboidrato_g or 0), 0.0),
+        "meta_gord_g": max(float(gordura_g or 0), 0.0),
+    }
+    limitado = False
+    mensagem = ""
+
+    if ancora == "meta_kcal":
+        energia_atual = sum(
+            valores[chave] * fator
+            for chave, fator in KCAL_POR_GRAMA_META.items()
+        )
+        if energia_atual > 0:
+            ideais = {
+                chave: valor * alvo_kcal / energia_atual
+                for chave, valor in valores.items()
+            }
+        else:
+            ideais = {
+                chave: (
+                    alvo_kcal
+                    * DISTRIBUICAO_ENERGETICA_PADRAO[chave]
+                    / KCAL_POR_GRAMA_META[chave]
+                )
+                for chave in KCAL_POR_GRAMA_META
+            }
+        ajustados = _ajustar_decimos_ao_teto(
+            ideais, alvo_kcal, KCAL_POR_GRAMA_META
+        )
+    else:
+        fator_ancora = KCAL_POR_GRAMA_META[ancora]
+        solicitado = round(valores[ancora], 1)
+        maximo_ancora = _piso_decimo(alvo_kcal / fator_ancora)
+        valor_ancora = min(solicitado, maximo_ancora)
+        limitado = valor_ancora < solicitado - 1e-9
+        energia_restante = max(
+            alvo_kcal - (valor_ancora * fator_ancora), 0.0
+        )
+        outras = [chave for chave in KCAL_POR_GRAMA_META if chave != ancora]
+        energia_outros = sum(
+            valores[chave] * KCAL_POR_GRAMA_META[chave]
+            for chave in outras
+        )
+        if energia_outros > 0:
+            pesos = {
+                chave: (
+                    valores[chave] * KCAL_POR_GRAMA_META[chave]
+                    / energia_outros
+                )
+                for chave in outras
+            }
+        else:
+            soma_padrao = sum(
+                DISTRIBUICAO_ENERGETICA_PADRAO[chave]
+                for chave in outras
+            )
+            pesos = {
+                chave: DISTRIBUICAO_ENERGETICA_PADRAO[chave] / soma_padrao
+                for chave in outras
+            }
+        ideais = {ancora: valor_ancora}
+        for chave in outras:
+            ideais[chave] = (
+                energia_restante * pesos[chave]
+                / KCAL_POR_GRAMA_META[chave]
+            )
+        ajustados = _ajustar_decimos_ao_teto(
+            ideais, alvo_kcal, outras
+        )
+        if limitado:
+            rotulos = {
+                "meta_prot_g": "Proteína",
+                "meta_carb_g": "Carboidrato",
+                "meta_gord_g": "Gordura",
+            }
+            mensagem = (
+                f"{rotulos[ancora]} limitada a {valor_ancora:.1f} g: "
+                "um valor maior ultrapassaria sozinho o limite calórico."
+            )
+
+    return {
+        **ajustados,
+        "kcal_macros": round(calorias_dos_macros(
+            ajustados["meta_prot_g"],
+            ajustados["meta_carb_g"],
+            ajustados["meta_gord_g"],
+        ), 1),
+        "limitado": limitado,
+        "mensagem": mensagem,
+    }
 
 
 def calcular_metas(peso_kg, altura_cm, idade, genero, fator_atividade, objetivo,
                    ajuste_kcal=None, prot_g_kg=None, perc_gordura=PERC_GORDURA_PADRAO,
-                   meta_kcal_manual=None):
+                   meta_kcal_manual=None, meta_prot_g_manual=None,
+                   meta_carb_g_manual=None, meta_gord_g_manual=None):
     """Calcula TMB, GET, meta calórica e metas de macro.
 
     A meta calórica pode ser definida diretamente pela nutricionista. Quando
     `meta_kcal_manual` não é informado, o cálculo legado usa GET + ajuste_kcal.
-    Proteína e gordura continuam ajustáveis para recalcular os macros.
+    As metas de proteína, carboidrato e gordura também podem ser informadas
+    diretamente em gramas. Sem valores manuais, são usadas as sugestões por
+    g/kg, percentual de gordura e carboidrato residual.
 
     Retorna um dicionário com todos os valores calculados.
     """
@@ -325,23 +532,35 @@ def calcular_metas(peso_kg, altura_cm, idade, genero, fator_atividade, objetivo,
         ajuste_kcal = meta_kcal - get
 
     # Regras de Ouro: proteína ancorada por kg -> gordura por % -> carbo restante.
-    prot_g = prot_g_kg * peso_kg
-    gord_g = (perc_gordura * meta_kcal) / 9.0
-    kcal_restante = meta_kcal - (prot_g * 4) - (gord_g * 9)
-    carb_g = max(kcal_restante, 0) / 4.0
-    fibra_g = (meta_kcal / 1000.0) * 14.0  # recomendação informativa
+    prot_sugerida_g = prot_g_kg * peso_kg
+    gord_sugerida_g = (perc_gordura * meta_kcal) / 9.0
+    kcal_restante = meta_kcal - (prot_sugerida_g * 4) - (gord_sugerida_g * 9)
+    carb_sugerido_g = max(kcal_restante, 0) / 4.0
+
+    prot_g = (prot_sugerida_g if meta_prot_g_manual is None
+              else max(float(meta_prot_g_manual), 0.0))
+    carb_g = (carb_sugerido_g if meta_carb_g_manual is None
+              else max(float(meta_carb_g_manual), 0.0))
+    gord_g = (gord_sugerida_g if meta_gord_g_manual is None
+              else max(float(meta_gord_g_manual), 0.0))
+    fibra_g = (meta_kcal / 1000.0) * 14.0
+    kcal_macros = (4 * carb_g) + (4 * prot_g) + (9 * gord_g)
+    prot_g_kg_real = prot_g / peso_kg if peso_kg else 0.0
+    perc_gordura_real = (gord_g * 9 / meta_kcal) if meta_kcal else 0.0
 
     return {
+        "formula_tmb": "Harris-Benedict revisada (1984)",
         "tmb": round(tmb),
         "get": round(get),
         "ajuste_kcal": round(ajuste_kcal),
         "meta_kcal": round(meta_kcal),
-        "prot_g_kg": prot_g_kg,
-        "perc_gordura": perc_gordura,
+        "prot_g_kg": round(prot_g_kg_real, 3),
+        "perc_gordura": round(perc_gordura_real, 4),
         "meta_prot_g": round(prot_g, 1),
         "meta_gord_g": round(gord_g, 1),
         "meta_carb_g": round(carb_g, 1),
         "meta_fibra_g": round(fibra_g, 1),
+        "kcal_macros": round(kcal_macros, 1),
     }
 
 
@@ -447,7 +666,7 @@ def escalar_alimento(alimento, fatores):
     qtd_orig = alimento.get("quantidade_g", 0) or 0
     macros_orig = alimento.get("macros", {}) or {}
 
-    novo = dict(alimento)
+    novo = com_referencia_nutricional(alimento)
     novo["quantidade_original_g"] = qtd_orig
     novo["quantidade_g"] = round(qtd_orig * fator, 1)
     novo["calorias"] = round((alimento.get("calorias", 0) or 0) * fator, 1)
@@ -461,6 +680,597 @@ def escalar_alimento(alimento, fatores):
 
 
 # ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# 3.1 AJUSTE CONJUNTO COM LIMITES RÍGIDOS
+# ---------------------------------------------------------------------------
+
+CHAVES_NUTRICIONAIS = ("kcal", "carboidratos_g", "proteinas_g", "gorduras_g")
+META_POR_CHAVE = {
+    "kcal": "meta_kcal",
+    "carboidratos_g": "meta_carb_g",
+    "proteinas_g": "meta_prot_g",
+    "gorduras_g": "meta_gord_g",
+}
+PESO_OTIMIZACAO = {
+    "kcal": 1.5,
+    "carboidratos_g": 1.0,
+    "proteinas_g": 1.25,
+    "gorduras_g": 1.0,
+}
+PRECISAO_PROFISSIONAL_G = 0.1
+
+
+def nutrientes_alimento(alimento):
+    """Vetor nutricional padronizado de um alimento."""
+    macros = alimento.get("macros", {}) or {}
+    return {
+        "kcal": float(alimento.get("calorias", 0) or 0),
+        "carboidratos_g": float(macros.get("carboidratos_g", 0) or 0),
+        "proteinas_g": float(macros.get("proteinas_g", 0) or 0),
+        "gorduras_g": float(macros.get("gorduras_g", 0) or 0),
+    }
+
+
+def com_referencia_nutricional(alimento, referencia=None):
+    """Preserva uma base por grama para permitir reativar porções em 0 g."""
+    novo = dict(alimento)
+    existente = novo.get("referencia_nutricional") or {}
+    if float(existente.get("quantidade_g", 0) or 0) > 0:
+        novo["referencia_nutricional"] = {
+            "quantidade_g": float(existente["quantidade_g"]),
+            "calorias": float(existente.get("calorias", 0) or 0),
+            "macros": {
+                chave: float((existente.get("macros") or {}).get(chave, 0) or 0)
+                for chave in CHAVES_NUTRICIONAIS if chave != "kcal"
+            },
+        }
+        return novo
+
+    base = referencia or alimento
+    quantidade = float(base.get("quantidade_g", 0) or 0)
+    valores = nutrientes_alimento(base)
+    if quantidade <= 0 or not any(valor > 0 for valor in valores.values()):
+        return novo
+    novo["referencia_nutricional"] = {
+        "quantidade_g": quantidade,
+        "calorias": valores["kcal"],
+        "macros": {
+            chave: valores[chave]
+            for chave in CHAVES_NUTRICIONAIS if chave != "kcal"
+        },
+    }
+    return novo
+
+
+def densidades_alimento(alimento):
+    """Retorna kcal/macros por grama, inclusive quando a porção atual é zero."""
+    referencia = alimento.get("referencia_nutricional") or {}
+    quantidade = float(referencia.get("quantidade_g", 0) or 0)
+    if quantidade > 0:
+        macros = referencia.get("macros") or {}
+        valores = {
+            "kcal": float(referencia.get("calorias", 0) or 0),
+            "carboidratos_g": float(macros.get("carboidratos_g", 0) or 0),
+            "proteinas_g": float(macros.get("proteinas_g", 0) or 0),
+            "gorduras_g": float(macros.get("gorduras_g", 0) or 0),
+        }
+        return {chave: valores[chave] / quantidade for chave in CHAVES_NUTRICIONAIS}
+
+    quantidade = float(alimento.get("quantidade_g", 0) or 0)
+    if quantidade <= 0:
+        return {chave: 0.0 for chave in CHAVES_NUTRICIONAIS}
+    valores = nutrientes_alimento(alimento)
+    return {chave: valores[chave] / quantidade for chave in CHAVES_NUTRICIONAIS}
+
+
+def somar_alimentos(alimentos, casas=3):
+    totais = {chave: 0.0 for chave in CHAVES_NUTRICIONAIS}
+    for alimento in alimentos:
+        valores = nutrientes_alimento(alimento)
+        for chave in CHAVES_NUTRICIONAIS:
+            totais[chave] += valores[chave]
+    return {chave: round(valor, casas) for chave, valor in totais.items()}
+
+
+def totais_da_opcao(opcao, casas=3):
+    return somar_alimentos(opcao.get("alimentos", []), casas=casas)
+
+
+def somar_totais(slots, casas=3):
+    """Soma somente a opção marcada como principal em cada horário."""
+    totais = {chave: 0.0 for chave in CHAVES_NUTRICIONAIS}
+    for grupo in slots:
+        for opcao in grupo.get("opcoes", []):
+            if not opcao.get("conta_no_total"):
+                continue
+            parcial = totais_da_opcao(opcao, casas=6)
+            for chave in CHAVES_NUTRICIONAIS:
+                totais[chave] += parcial[chave]
+    return {chave: round(valor, casas) for chave, valor in totais.items()}
+
+
+def limites_das_metas(metas):
+    return {
+        chave: max(float(metas.get(meta_chave, 0) or 0), 0.0)
+        for chave, meta_chave in META_POR_CHAVE.items()
+    }
+
+
+def reescalar_alimento(alimento, gramas, casas_nutrientes=3):
+    """Recalcula kcal e macros proporcionalmente à gramatura informada."""
+    if gramas is None:
+        return dict(alimento)
+    gramas = max(float(gramas), 0.0)
+    novo = com_referencia_nutricional(alimento)
+    densidades = densidades_alimento(novo)
+    novo["quantidade_g"] = round(gramas, 1)
+    novo["calorias"] = round(densidades["kcal"] * gramas, casas_nutrientes)
+    novo["macros"] = {
+        chave: round(densidades[chave] * gramas, casas_nutrientes)
+        for chave in CHAVES_NUTRICIONAIS
+        if chave != "kcal"
+    }
+    novo["ajustado"] = True
+    return novo
+
+
+def quantidade_paciente(alimento):
+    """Gramatura inteira para entrega, sempre para baixo para preservar os tetos."""
+    gramas = max(float(alimento.get("quantidade_g", 0) or 0), 0.0)
+    return int(math.floor(gramas + 1e-9))
+
+
+PASSO_PORCAO_PACIENTE = 5
+
+
+def arredondar_multiplo_proximo(valor, passo=PASSO_PORCAO_PACIENTE):
+    """Arredonda para o múltiplo mais próximo; empates sobem."""
+    valor = max(float(valor or 0), 0.0)
+    if passo <= 0:
+        return int(math.floor(valor + 0.5))
+    unidades = math.floor((valor / passo) + 0.5 + 1e-9)
+    return int(unidades * passo)
+
+
+def arredondar_multiplo_para_baixo(valor, passo=PASSO_PORCAO_PACIENTE):
+    """Arredonda para baixo até um múltiplo do passo."""
+    valor = max(float(valor or 0), 0.0)
+    if passo <= 0:
+        return int(math.floor(valor + 1e-9))
+    unidades = math.floor((valor / passo) + 1e-9)
+    return int(unidades * passo)
+
+
+def arredondar_alimentos_paciente(alimentos, limites=None,
+                                  passo=PASSO_PORCAO_PACIENTE):
+    """Cria porções práticas em múltiplos de 5 sem exceder os limites.
+
+    Primeiro usa o múltiplo mais próximo. Se a soma arredondada ultrapassar
+    algum limite da refeição, reduz porções em passos de 5 g até que kcal e os
+    três macronutrientes voltem a ficar dentro dos tetos.
+    """
+    originais = [dict(alimento) for alimento in alimentos]
+    quantidades_originais = [
+        max(float(alimento.get("quantidade_g", 0) or 0), 0.0)
+        for alimento in originais
+    ]
+    quantidades = [
+        arredondar_multiplo_proximo(quantidade, passo)
+        if quantidade > 0 else 0
+        for quantidade in quantidades_originais
+    ]
+    if limites is None:
+        limites = somar_alimentos(originais, casas=6)
+    limites = {
+        chave: max(float(limites.get(chave, 0) or 0), 0.0)
+        for chave in CHAVES_NUTRICIONAIS
+    }
+
+    def materializar():
+        resultado = []
+        for alimento, quantidade in zip(originais, quantidades):
+            novo = reescalar_alimento(alimento, quantidade)
+            if float(alimento.get("quantidade_g", 0) or 0) <= 0:
+                novo["quantidade_g"] = 0.0
+            novo["arredondado_paciente"] = True
+            resultado.append(novo)
+        return resultado
+
+    max_iteracoes = sum(
+        int(quantidade / max(passo, 1)) + 1
+        for quantidade in quantidades
+    )
+    atuais = materializar()
+    for _ in range(max_iteracoes):
+        totais = somar_alimentos(atuais, casas=6)
+        excessos = {
+            chave: max(totais[chave] - limites[chave], 0.0)
+            for chave in CHAVES_NUTRICIONAIS
+        }
+        if not any(excesso > 1e-6 for excesso in excessos.values()):
+            return atuais
+
+        melhor = None
+        for indice, quantidade in enumerate(quantidades):
+            if quantidade < passo or quantidades_originais[indice] <= 0:
+                continue
+            reduzido = reescalar_alimento(
+                originais[indice], quantidade - passo
+            )
+            atual_nutrientes = nutrientes_alimento(atuais[indice])
+            novo_nutrientes = nutrientes_alimento(reduzido)
+            reducoes = {
+                chave: max(
+                    atual_nutrientes[chave] - novo_nutrientes[chave], 0.0
+                )
+                for chave in CHAVES_NUTRICIONAIS
+            }
+            score = sum(
+                (
+                    excessos[chave] / max(limites[chave], 1.0)
+                ) * reducoes[chave]
+                for chave in CHAVES_NUTRICIONAIS
+                if excessos[chave] > 1e-6
+            )
+            if score <= 0:
+                continue
+            dist_atual = abs(
+                quantidade - quantidades_originais[indice]
+            )
+            dist_nova = abs(
+                (quantidade - passo) - quantidades_originais[indice]
+            )
+            criterio = (score, dist_atual - dist_nova, quantidade)
+            if melhor is None or criterio > melhor[0]:
+                melhor = (criterio, indice)
+
+        if melhor is None:
+            break
+        quantidades[melhor[1]] -= passo
+        atuais = materializar()
+
+    # Salvaguarda extrema: reduzir qualquer item nutritivo até ficar seguro.
+    while any(
+        somar_alimentos(atuais, casas=6)[chave] > limites[chave] + 1e-6
+        for chave in CHAVES_NUTRICIONAIS
+    ):
+        candidatos = [
+            indice for indice, quantidade in enumerate(quantidades)
+            if quantidade >= passo
+            and any(
+                valor > 0
+                for valor in nutrientes_alimento(atuais[indice]).values()
+            )
+        ]
+        if not candidatos:
+            break
+        indice = max(
+            candidatos,
+            key=lambda i: sum(nutrientes_alimento(atuais[i]).values()),
+        )
+        quantidades[indice] -= passo
+        atuais = materializar()
+    return atuais
+
+
+def excedentes_metas(totais, metas, tolerancia=1e-6):
+    """Lista os nutrientes que ultrapassaram seus limites."""
+    limites = limites_das_metas(metas)
+    return {
+        chave: {
+            "atingido": float(totais.get(chave, 0) or 0),
+            "limite": limite,
+            "excesso": round(float(totais.get(chave, 0) or 0) - limite, 3),
+        }
+        for chave, limite in limites.items()
+        if float(totais.get(chave, 0) or 0) > limite + tolerancia
+    }
+
+
+def _densidades(alimento):
+    return densidades_alimento(alimento)
+
+
+def _arredondar_para_baixo(valor, passo=PRECISAO_PROFISSIONAL_G):
+    if passo <= 0:
+        return max(float(valor), 0.0)
+    unidades = math.floor((max(float(valor), 0.0) / passo) + 1e-9)
+    return round(unidades * passo, 10)
+
+
+def otimizar_quantidades(alimentos, limites, max_iteracoes=300,
+                         regularizacao=0.001):
+    """Aproxima quatro metas sem permitir ultrapassagens.
+
+    É uma descida coordenada para mínimos quadráticos normalizados com:
+      - quantidades não negativas;
+      - kcal, carboidrato, proteína e gordura como limites superiores rígidos;
+      - regularização leve para preservar a estrutura do cardápio-base.
+
+    A saída profissional usa décimos de grama arredondados para baixo.
+    """
+    saida = [dict(alimento) for alimento in alimentos]
+    limites = {
+        chave: max(float(limites.get(chave, 0) or 0), 0.0)
+        for chave in CHAVES_NUTRICIONAIS
+    }
+    indices = [
+        i for i, alimento in enumerate(saida)
+        if float(alimento.get("quantidade_g", 0) or 0) > 0
+        and any(valor > 0 for valor in _densidades(alimento).values())
+    ]
+    if not indices:
+        return saida, {
+            "totais": somar_alimentos(saida),
+            "iteracoes": 0,
+            "convergiu": True,
+        }
+
+    bases = [float(saida[i].get("quantidade_g", 0) or 0) for i in indices]
+    densidades = [_densidades(saida[i]) for i in indices]
+    quantidades = list(bases)
+
+    fixos = [
+        alimento for i, alimento in enumerate(saida)
+        if i not in set(indices)
+    ]
+    totais_fixos = somar_alimentos(fixos, casas=9)
+
+    def _totais(qtds):
+        resultado = dict(totais_fixos)
+        for qtd, densidade in zip(qtds, densidades):
+            for chave in CHAVES_NUTRICIONAIS:
+                resultado[chave] += qtd * densidade[chave]
+        return resultado
+
+    # Começa numa região factível, reduzindo todas as porções se necessário.
+    totais = _totais(quantidades)
+    fatores = [
+        limites[chave] / totais[chave]
+        for chave in CHAVES_NUTRICIONAIS
+        if totais[chave] > limites[chave] and totais[chave] > 0
+    ]
+    if fatores:
+        fator = max(min(fatores), 0.0)
+        quantidades = [qtd * fator for qtd in quantidades]
+        totais = _totais(quantidades)
+
+    convergiu = False
+    iteracoes = 0
+    for iteracoes in range(1, max_iteracoes + 1):
+        maior_delta = 0.0
+        for pos, (base, densidade) in enumerate(zip(bases, densidades)):
+            antiga = quantidades[pos]
+            sem_item = {
+                chave: totais[chave] - (antiga * densidade[chave])
+                for chave in CHAVES_NUTRICIONAIS
+            }
+
+            maximo = float("inf")
+            for chave in CHAVES_NUTRICIONAIS:
+                por_g = densidade[chave]
+                if por_g > 0:
+                    maximo = min(
+                        maximo,
+                        max((limites[chave] - sem_item[chave]) / por_g, 0.0),
+                    )
+            if not math.isfinite(maximo):
+                maximo = max(base * 4, 2000.0)
+
+            numerador = 0.0
+            denominador = 0.0
+            for chave in CHAVES_NUTRICIONAIS:
+                alvo = limites[chave]
+                escala = max(alvo, 1.0)
+                peso = PESO_OTIMIZACAO[chave]
+                por_g = densidade[chave]
+                numerador += peso * por_g * (alvo - sem_item[chave]) / (escala ** 2)
+                denominador += peso * (por_g ** 2) / (escala ** 2)
+
+            escala_base = max(base, 1.0)
+            numerador += regularizacao * base / (escala_base ** 2)
+            denominador += regularizacao / (escala_base ** 2)
+            candidata = numerador / denominador if denominador > 0 else antiga
+            nova = min(max(candidata, 0.0), maximo)
+            quantidades[pos] = nova
+            for chave in CHAVES_NUTRICIONAIS:
+                totais[chave] = sem_item[chave] + (nova * densidade[chave])
+            maior_delta = max(maior_delta, abs(nova - antiga))
+
+        if maior_delta < 0.0005:
+            convergiu = True
+            break
+
+
+    # Refinamento projetado: permite trocas simultâneas de composição quando
+    # um nutriente já está no teto (situação em que um passo por vez estagna).
+    contribuicoes = {
+        chave: [
+            base * densidade[chave]
+            for base, densidade in zip(bases, densidades)
+        ]
+        for chave in CHAVES_NUTRICIONAIS
+    }
+    proporcoes = [
+        quantidade / base if base > 0 else 0.0
+        for quantidade, base in zip(quantidades, bases)
+    ]
+    regularizacao_refino = min(regularizacao, 0.00002)
+    lipschitz = 2 * regularizacao_refino
+    for chave in CHAVES_NUTRICIONAIS:
+        escala = max(limites[chave], 1.0)
+        norma = sum(valor ** 2 for valor in contribuicoes[chave])
+        lipschitz += (
+            2 * PESO_OTIMIZACAO[chave] * norma / (escala ** 2)
+        )
+    passo = 0.9 / max(lipschitz, 1e-9)
+    max_refino = max(600, min(2000, max_iteracoes * 4))
+    for _ in range(max_refino):
+        totais_refino = {
+            chave: totais_fixos[chave] + sum(
+                valor * proporcao
+                for valor, proporcao in zip(contribuicoes[chave], proporcoes)
+            )
+            for chave in CHAVES_NUTRICIONAIS
+        }
+        gradiente = []
+        for pos in range(len(proporcoes)):
+            valor = 0.0
+            for chave in CHAVES_NUTRICIONAIS:
+                escala = max(limites[chave], 1.0)
+                valor += (
+                    2 * PESO_OTIMIZACAO[chave]
+                    * contribuicoes[chave][pos]
+                    * (totais_refino[chave] - limites[chave])
+                    / (escala ** 2)
+                )
+            valor += 2 * regularizacao_refino * (proporcoes[pos] - 1.0)
+            gradiente.append(valor)
+
+        novas = [
+            max(proporcao - (passo * gradiente[pos]), 0.0)
+            for pos, proporcao in enumerate(proporcoes)
+        ]
+        for _projecao in range(5):
+            for chave in CHAVES_NUTRICIONAIS:
+                vetor = contribuicoes[chave]
+                total = totais_fixos[chave] + sum(
+                    valor * proporcao for valor, proporcao in zip(vetor, novas)
+                )
+                if total <= limites[chave] + 1e-9:
+                    continue
+                norma = sum(valor ** 2 for valor in vetor)
+                if norma <= 0:
+                    continue
+                deslocamento = (total - limites[chave]) / norma
+                novas = [
+                    max(proporcao - (deslocamento * vetor[pos]), 0.0)
+                    for pos, proporcao in enumerate(novas)
+                ]
+
+        delta = max(
+            abs(nova - antiga)
+            for nova, antiga in zip(novas, proporcoes)
+        )
+        proporcoes = novas
+        if delta < 1e-8:
+            convergiu = True
+            break
+
+    quantidades = [
+        base * proporcao for base, proporcao in zip(bases, proporcoes)
+    ]
+    quantidades = [_arredondar_para_baixo(qtd) for qtd in quantidades]
+    for indice, qtd in zip(indices, quantidades):
+        saida[indice] = reescalar_alimento(saida[indice], qtd)
+
+    totais_saida = somar_alimentos(saida, casas=6)
+    excedentes = {
+        chave: totais_saida[chave] - limites[chave]
+        for chave in CHAVES_NUTRICIONAIS
+        if totais_saida[chave] > limites[chave] + 1e-6
+    }
+    if excedentes:
+        fatores = [
+            limites[chave] / totais_saida[chave]
+            for chave in excedentes
+            if totais_saida[chave] > 0
+        ]
+        fator = max(min(fatores) - 1e-9, 0.0)
+        for indice in indices:
+            qtd = _arredondar_para_baixo(
+                float(saida[indice].get("quantidade_g", 0) or 0) * fator
+            )
+            saida[indice] = reescalar_alimento(saida[indice], qtd)
+        totais_saida = somar_alimentos(saida, casas=6)
+
+    return saida, {
+        "totais": {chave: round(valor, 3) for chave, valor in totais_saida.items()},
+        "iteracoes": iteracoes,
+        "convergiu": convergiu,
+    }
+
+
+def maximo_gramas_por_limites(alimento, limites, totais_fixos=None,
+                              maximo_padrao=2000.0):
+    """Maior porção possível se os demais itens ajustáveis puderem ceder espaço."""
+    densidades = densidades_alimento(alimento)
+    fixos = totais_fixos or {}
+    maximos = [float(maximo_padrao)]
+    for chave in CHAVES_NUTRICIONAIS:
+        por_grama = densidades[chave]
+        if por_grama <= 0 or chave not in limites:
+            continue
+        disponivel = (
+            float(limites.get(chave, 0) or 0)
+            - float(fixos.get(chave, 0) or 0)
+        )
+        maximos.append(max(disponivel / por_grama, 0.0))
+    return _arredondar_para_baixo(min(maximos))
+
+
+def readequar_opcao_com_ancora(alimentos, limites, indice_ancora, gramas,
+                               totais_fixos=None):
+    """Fixa uma porção e reotimiza os demais itens da mesma opção.
+
+    `totais_fixos` representa adições que não pertencem à lista ajustável. O
+    alimento editado é preservado na quantidade solicitada sempre que ele,
+    sozinho, cabe no envelope nutricional restante.
+    """
+    if not 0 <= indice_ancora < len(alimentos):
+        raise IndexError("Índice do alimento âncora fora da opção.")
+
+    saida = [dict(alimento) for alimento in alimentos]
+    limites = {
+        chave: max(float(limites.get(chave, 0) or 0), 0.0)
+        for chave in CHAVES_NUTRICIONAIS
+    }
+    fixos = {
+        chave: max(float((totais_fixos or {}).get(chave, 0) or 0), 0.0)
+        for chave in CHAVES_NUTRICIONAIS
+    }
+    solicitado = max(float(gramas or 0), 0.0)
+    maximo = maximo_gramas_por_limites(
+        saida[indice_ancora], limites, totais_fixos=fixos
+    )
+    aplicado = _arredondar_para_baixo(min(solicitado, maximo))
+    saida[indice_ancora] = reescalar_alimento(
+        saida[indice_ancora], aplicado
+    )
+
+    densidades_ancora = densidades_alimento(saida[indice_ancora])
+    if any(valor > 0 for valor in densidades_ancora.values()):
+        nutrientes_ancora = nutrientes_alimento(saida[indice_ancora])
+        limites_restantes = {
+            chave: max(
+                limites[chave] - fixos[chave] - nutrientes_ancora[chave],
+                0.0,
+            )
+            for chave in CHAVES_NUTRICIONAIS
+        }
+        indices_restantes = [
+            indice for indice in range(len(saida)) if indice != indice_ancora
+        ]
+        restantes = [saida[indice] for indice in indices_restantes]
+        otimizados, _ = otimizar_quantidades(restantes, limites_restantes)
+        for indice, alimento in zip(indices_restantes, otimizados):
+            saida[indice] = alimento
+
+    totais_saida = somar_alimentos(saida, casas=6)
+    totais_com_fixos = {
+        chave: round(totais_saida[chave] + fixos[chave], 6)
+        for chave in CHAVES_NUTRICIONAIS
+    }
+    limitado = aplicado + 1e-9 < solicitado
+    return saida, {
+        "quantidade_solicitada_g": round(solicitado, 1),
+        "quantidade_aplicada_g": round(aplicado, 1),
+        "maximo_g": round(maximo, 1),
+        "limitado": limitado,
+        "totais": totais_com_fixos,
+    }
+
 # 4. SUBSTITUIÇÃO POR AVERSÃO / ALERGIA (lógica "Isabela/Yuri")
 # ---------------------------------------------------------------------------
 
@@ -797,58 +1607,102 @@ def aplicar_swap(alimento_escalado, banco, termos_excluidos_norm):
 # ---------------------------------------------------------------------------
 
 def gerar_cardapio(template, banco, metas, termos_excluidos, opcao_por_slot=None):
-    """Gera o cardápio ajustado por metas de macro.
+    """Gera opções equivalentes sem exceder kcal ou macronutrientes.
 
-    termos_excluidos: lista de strings (aversões ∪ alergias ∪ intolerâncias).
-    opcao_por_slot: dict {slot: índice_da_opção} para escolher qual opção de
-                    cada horário entra no cálculo (padrão: a 1ª de cada slot).
-
-    Retorna (slots_resultado, totais, fatores, avisos).
+    Primeiro é montado o esqueleto completo, incluindo substituições clínicas.
+    Depois, todas as porções principais são otimizadas em conjunto. Cada opção
+    alternativa é ajustada aos limites nutricionais da principal do seu horário;
+    assim qualquer combinação de opções continua dentro dos limites diários.
     """
     termos_norm = [normalizar_texto(t) for t in termos_excluidos if t and t.strip()]
     grupos = agrupar_em_slots(template["refeicoes"])
     opcao_por_slot = opcao_por_slot or {}
 
-    # Refeições que CONTAM para os totais (uma opção por slot).
     incluidas = []
+    indices_principais = {}
     for slot, opcoes in grupos:
-        idx = opcao_por_slot.get(slot, 0)
-        idx = idx if 0 <= idx < len(opcoes) else 0
-        incluidas.append(opcoes[idx])
+        indice = opcao_por_slot.get(slot, 0)
+        indice = indice if 0 <= indice < len(opcoes) else 0
+        indices_principais[slot] = indice
+        incluidas.append(opcoes[indice])
 
     fatores, avisos = calcular_fatores_macro(metas, incluidas)
-
-    totais = {"kcal": 0.0, "carboidratos_g": 0.0, "proteinas_g": 0.0, "gorduras_g": 0.0}
     slots_resultado = []
-
     for slot, opcoes in grupos:
-        idx_incluida = opcao_por_slot.get(slot, 0)
-        idx_incluida = idx_incluida if 0 <= idx_incluida < len(opcoes) else 0
-        opcoes_result = []
-
-        for i, refeicao in enumerate(opcoes):
+        indice_principal = indices_principais[slot]
+        opcoes_resultado = []
+        for indice, refeicao in enumerate(opcoes):
             alimentos_finais = []
             for alimento in refeicao.get("alimentos", []):
                 escalado = escalar_alimento(alimento, fatores)
                 final, _ = aplicar_swap(escalado, banco, termos_norm)
                 alimentos_finais.append(final)
-
-                if i == idx_incluida:  # só a opção escolhida soma nos totais
-                    totais["kcal"] += final.get("calorias", 0) or 0
-                    for m in ("carboidratos_g", "proteinas_g", "gorduras_g"):
-                        totais[m] += final.get("macros", {}).get(m, 0) or 0
-
-            opcoes_result.append({
+            opcoes_resultado.append({
                 "nome_refeicao": refeicao.get("nome_refeicao", "Refeição"),
                 "horario": refeicao.get("horario"),
                 "observacoes": refeicao.get("observacoes_da_refeicao"),
                 "alimentos": alimentos_finais,
-                "conta_no_total": (i == idx_incluida),
+                "conta_no_total": indice == indice_principal,
             })
+        slots_resultado.append({"slot": slot, "opcoes": opcoes_resultado})
 
-        slots_resultado.append({"slot": slot, "opcoes": opcoes_result})
+    principais = []
+    referencias = []
+    for grupo in slots_resultado:
+        principal = next(
+            opcao for opcao in grupo["opcoes"] if opcao.get("conta_no_total")
+        )
+        referencias.append(principal)
+        principais.extend(principal["alimentos"])
 
-    totais = {k: round(v, 1) for k, v in totais.items()}
+    otimizados, diagnostico = otimizar_quantidades(
+        principais, limites_das_metas(metas)
+    )
+    cursor = 0
+    for principal in referencias:
+        quantidade = len(principal["alimentos"])
+        principal["alimentos"] = otimizados[cursor:cursor + quantidade]
+        principal["limites_nutricionais"] = totais_da_opcao(principal)
+        cursor += quantidade
+
+    # Alternativas ficam nutricionalmente limitadas pela principal do horário.
+    for grupo, principal in zip(slots_resultado, referencias):
+        limites_refeicao = totais_da_opcao(principal, casas=6)
+        for opcao in grupo["opcoes"]:
+            opcao["limites_nutricionais"] = dict(limites_refeicao)
+            if opcao is principal:
+                continue
+            opcao["alimentos"], _ = otimizar_quantidades(
+                opcao["alimentos"], limites_refeicao
+            )
+
+    totais = somar_totais(slots_resultado, casas=3)
+    limites = limites_das_metas(metas)
+    rotulos = {
+        "kcal": "calorias",
+        "carboidratos_g": "carboidrato",
+        "proteinas_g": "proteína",
+        "gorduras_g": "gordura",
+    }
+    abaixo = []
+    for chave in CHAVES_NUTRICIONAIS:
+        limite = limites[chave]
+        atingido = totais[chave]
+        tolerancia = max(0.5, limite * 0.01)
+        if limite > 0 and atingido < limite - tolerancia:
+            unidade = "kcal" if chave == "kcal" else "g"
+            abaixo.append(
+                f"{rotulos[chave]} {atingido:.1f}/{limite:.1f} {unidade}"
+            )
+    if abaixo:
+        avisos.append(
+            "O cardápio respeita todos os tetos, mas a combinação atual de "
+            "alimentos não alcançou integralmente: " + "; ".join(abaixo) + "."
+        )
+    if not diagnostico["convergiu"]:
+        avisos.append(
+            "O ajuste atingiu o limite interno de iterações; revise as porções."
+        )
     return slots_resultado, totais, fatores, avisos
 
 
@@ -903,14 +1757,18 @@ def _pluralizar_unidade(unidade, n):
     return " ".join([plural] + partes[1:])
 
 
-def descrever_porcao(alimento):
+def descrever_porcao(alimento, inteiro=False):
     """Texto amigável da porção: '60 g (≈ 2½ colheres de sopa)'.
 
     Usa a medida caseira do alimento (gramas_por_unidade) recalculada para a
     gramatura atual (já escalada). Sem medida conhecida, mostra só as gramas.
     """
-    g = alimento.get("quantidade_g", 0) or 0
-    base = f"{g:.0f} g" if abs(g - round(g)) < 0.05 else f"{g:.1f} g"
+    g = (quantidade_paciente(alimento) if inteiro
+         else float(alimento.get("quantidade_g", 0) or 0))
+    if inteiro:
+        base = f"{int(g)} g"
+    else:
+        base = f"{g:.0f} g" if abs(g - round(g)) < 0.05 else f"{g:.1f} g"
     gpu = alimento.get("gramas_por_unidade")
     unidade = alimento.get("medida_unidade")
     if not gpu or not unidade or g <= 0:
@@ -973,9 +1831,40 @@ def validar_resultado(slots, totais, metas, tol_pct=25, tol_abs=20):
         pct = ((atingido - meta) / meta * 100) if meta else 0
         desvios[chave] = {"atingido": atingido, "meta": meta, "pct": round(pct)}
 
+    excedentes = excedentes_metas(soma, metas)
+    opcoes_excedentes = []
+    for grupo in slots:
+        for opcao in grupo.get("opcoes", []):
+            limites_opcao = opcao.get("limites_nutricionais")
+            if not limites_opcao:
+                continue
+            total_opcao = totais_da_opcao(opcao)
+            excesso = {
+                chave: round(total_opcao[chave] - limites_opcao[chave], 3)
+                for chave in CHAVES_NUTRICIONAIS
+                if total_opcao[chave] > float(limites_opcao.get(chave, 0)) + 1e-6
+            }
+            if excesso:
+                opcoes_excedentes.append({
+                    "slot": grupo.get("slot", ""),
+                    "opcao": opcao.get("nome_refeicao", ""),
+                    "excedentes": excesso,
+                    "detalhes": {
+                        chave: {
+                            "atingido": round(total_opcao[chave], 3),
+                            "limite": round(float(limites_opcao[chave]), 3),
+                            "excesso": valor,
+                        }
+                        for chave, valor in excesso.items()
+                    },
+                })
+
     return {
         "somas_ok": somas_ok,
         "n_alimentos": n_alimentos,
         "incoerentes": incoerentes,
         "desvios": desvios,
+        "limites_ok": not excedentes and not opcoes_excedentes,
+        "excedentes": excedentes,
+        "opcoes_excedentes": opcoes_excedentes,
     }

@@ -19,6 +19,7 @@ Módulos:
     anamnese_ia.py  -> leitura da anamnese via IA
 """
 
+import re
 import streamlit as st
 
 import design_marcela
@@ -26,6 +27,7 @@ import design_marcela
 import motor
 import anamnese_ia
 import comando_ia
+import cardapio_io
 import converter_cardapio as conv  # reusa o resolver de macros (sem efeitos no import)
 import preparos
 import regras_clinicas
@@ -48,13 +50,13 @@ FATORES_ATIVIDADE = {
 
 META_KCAL_MIN = 800
 META_KCAL_MAX = 5000
-META_KCAL_STEP = 25
 
 REVISAO_WIDGET_KEYS = (
     "rev_idade", "rev_peso", "rev_altura", "rev_genero", "rev_objetivo",
     "rev_faf", "rev_aversoes", "rev_alergias", "rev_intolerancias",
     "rev_preferencias", "rev_patologias", "rev_medicamentos",
-    "rev_exames_obs", "rev_meta_kcal", "rev_prot_kg", "rev_perc_gord",
+    "rev_exames_obs", "rev_meta_kcal", "rev_meta_prot_g",
+    "rev_meta_carb_g", "rev_meta_gord_g",
 )
 
 
@@ -106,6 +108,29 @@ def _clamp_int(valor, minimo, maximo):
 def _resetar_controles_revisao():
     for chave in REVISAO_WIDGET_KEYS:
         st.session_state.pop(chave, None)
+    st.session_state.pop("readequacao_aviso", None)
+
+
+def _cb_readequar_metas(ancora):
+    """Mantém kcal e macros sincronizados após qualquer edição."""
+    chaves = (
+        "rev_meta_kcal",
+        "rev_meta_prot_g",
+        "rev_meta_carb_g",
+        "rev_meta_gord_g",
+    )
+    if any(chave not in st.session_state for chave in chaves):
+        return
+    ajuste = motor.readequar_metas_macros(
+        meta_kcal=st.session_state.rev_meta_kcal,
+        proteina_g=st.session_state.rev_meta_prot_g,
+        carboidrato_g=st.session_state.rev_meta_carb_g,
+        gordura_g=st.session_state.rev_meta_gord_g,
+        ancora=ancora,
+    )
+    for chave in ("meta_prot_g", "meta_carb_g", "meta_gord_g"):
+        st.session_state[f"rev_{chave}"] = ajuste[chave]
+    st.session_state.readequacao_aviso = ajuste["mensagem"]
 
 
 # ---------------------------------------------------------------------------
@@ -118,6 +143,10 @@ def _init_estado():
     st.session_state.setdefault("trocas", {})       # {(si, oi, fi): {escolha, pick}}
     st.session_state.setdefault("adicoes", {})      # {(si, oi): [alimento, ...]} (via comando)
     st.session_state.setdefault("ajustes", {})      # {(si, oi, fi): gramas_alvo} (via comando)
+    st.session_state.setdefault("orientacoes_alimentos", {})
+    st.session_state.setdefault("ajuste_porcoes_aviso", "")
+    st.session_state.setdefault("confirmar_exportacao_excessos", False)
+    st.session_state.setdefault("assinatura_excessos_confirmada", None)
     st.session_state.setdefault("comando_plano", None)  # plano pendente de confirmação
     st.session_state.setdefault("preparos_ia", {})  # {nome_refeicao: preparo_ia}
 
@@ -152,6 +181,156 @@ def _sidebar_ia():
     )
     st.sidebar.caption("🔒 A chave fica só nesta sessão do navegador.")
     return api_key, modelo
+
+
+def _criar_assinatura_revisao(idade, peso, altura, genero, objetivo, faf,
+                              meta_kcal, meta_prot_g, meta_carb_g, meta_gord_g,
+                              excluidos, regras_ativas):
+    return (
+        int(idade), round(float(peso), 1), round(float(altura), 1), genero,
+        objetivo, round(float(faf), 3), int(meta_kcal),
+        round(float(meta_prot_g), 1), round(float(meta_carb_g), 1),
+        round(float(meta_gord_g), 1),
+        tuple(motor.normalizar_texto(termo) for termo in excluidos),
+        tuple(regra.get("id", "") for regra in regras_ativas),
+    )
+
+
+def _aplicar_pacote_importado(pacote):
+    """Restaura o estado e os controles a partir do JSON editável."""
+    metas = dict(pacote["metas"])
+    anamnese = dict(pacote.get("anamnese") or {})
+    parametros = dict(pacote.get("parametros") or {})
+
+    idade = int(parametros.get("idade") or anamnese.get("idade") or 30)
+    peso = float(
+        parametros.get("peso")
+        or anamnese.get("peso_atual_kg")
+        or 70.0
+    )
+    altura = float(
+        parametros.get("altura")
+        or anamnese.get("altura_cm")
+        or 170.0
+    )
+    genero = parametros.get("genero") or anamnese.get("genero") or "Feminino"
+    objetivo = (
+        parametros.get("objetivo")
+        or anamnese.get("objetivo")
+        or "Manutenção"
+    )
+    faf = float(
+        parametros.get("faf")
+        or anamnese.get("fator_atividade")
+        or 1.55
+    )
+    meta_kcal = int(round(float(metas.get("meta_kcal", 0) or 0)))
+    meta_prot_g = float(metas.get("meta_prot_g", 0) or 0)
+    meta_carb_g = float(metas.get("meta_carb_g", 0) or 0)
+    meta_gord_g = float(metas.get("meta_gord_g", 0) or 0)
+    regras_ativas = list(pacote.get("regras_ativas") or [])
+    excluidos = list(pacote.get("excluidos") or [])
+
+    anamnese.update({
+        "idade": idade,
+        "peso_atual_kg": peso,
+        "altura_cm": altura,
+        "genero": genero,
+        "objetivo": objetivo,
+        "fator_atividade": faf,
+    })
+    parametros = {
+        "idade": idade,
+        "peso": peso,
+        "altura": altura,
+        "genero": genero,
+        "objetivo": objetivo,
+        "faf": faf,
+        "meta_kcal": meta_kcal,
+        "meta_prot_g": meta_prot_g,
+        "meta_carb_g": meta_carb_g,
+        "meta_gord_g": meta_gord_g,
+    }
+    assinatura = _criar_assinatura_revisao(
+        idade, peso, altura, genero, objetivo, faf,
+        meta_kcal, meta_prot_g, meta_carb_g, meta_gord_g,
+        excluidos, regras_ativas,
+    )
+
+    slots_importados = []
+    for grupo in pacote["slots"]:
+        opcoes = []
+        for opcao in grupo.get("opcoes", []):
+            opcoes.append({
+                **opcao,
+                "alimentos": [
+                    motor.normalizar_alimento_livre(alimento)
+                    for alimento in opcao.get("alimentos", [])
+                ],
+            })
+        slots_importados.append({**grupo, "opcoes": opcoes})
+
+    st.session_state.anamnese = anamnese
+    st.session_state.resultado = {
+        "metas": metas,
+        "slots": slots_importados,
+        "totais": motor.somar_totais(slots_importados, casas=1),
+        "fatores": {},
+        "avisos": list(pacote.get("avisos") or []),
+        "excluidos": excluidos,
+        "assinatura_revisao": assinatura,
+        "excluidos_usuario": list(pacote.get("excluidos_usuario") or []),
+        "excluidos_regras": list(pacote.get("excluidos_regras") or []),
+        "anamnese": anamnese,
+        "regras_ativas": regras_ativas,
+        "parametros": parametros,
+    }
+    st.session_state.trocas = {}
+    st.session_state.adicoes = {}
+    st.session_state.ajustes = {}
+    st.session_state.orientacoes_alimentos = {}
+    st.session_state.ajuste_porcoes_aviso = ""
+    st.session_state.confirmar_exportacao_excessos = False
+    st.session_state.assinatura_excessos_confirmada = None
+    st.session_state.comando_plano = None
+    st.session_state.preparos_ia = {}
+
+    # Remove valores de uma edição anterior. Dados pessoais e filtros serão
+    # preenchidos pela anamnese importada; apenas os quatro tetos precisam ser
+    # injetados diretamente, pois não são valores derivados da anamnese.
+    _resetar_controles_revisao()
+    controles_metas = {
+        "rev_meta_kcal": meta_kcal,
+        "rev_meta_prot_g": meta_prot_g,
+        "rev_meta_carb_g": meta_carb_g,
+        "rev_meta_gord_g": meta_gord_g,
+    }
+    for chave, valor in controles_metas.items():
+        st.session_state[chave] = valor
+
+
+def _secao_importar():
+    with st.expander("📥 Continuar um cardápio salvo"):
+        st.caption(
+            "Importe o arquivo JSON editável exportado por este app. "
+            "Metas, dados clínicos e porções decimais serão restaurados."
+        )
+        arquivo = st.file_uploader(
+            "Cardápio editável (.json)",
+            type=["json"],
+            key="arquivo_cardapio_editavel",
+        )
+        if st.button(
+            "Importar para edição",
+            disabled=arquivo is None,
+            key="btn_importar_cardapio",
+        ):
+            try:
+                pacote = cardapio_io.carregar_pacote(arquivo.getvalue())
+                _aplicar_pacote_importado(pacote)
+                st.success("Cardápio importado. Você já pode continuar os ajustes.")
+            except ValueError as erro:
+                st.error(f"Não foi possível importar: {erro}")
 
 
 # ---------------------------------------------------------------------------
@@ -260,44 +439,131 @@ def _etapa_revisao():
         "TMB e GET ficam como referência. A geração usa a meta calórica final "
         "definida pela Marcela."
     )
-    meta_padrao = _clamp_int(metas_sugeridas["meta_kcal"], META_KCAL_MIN, META_KCAL_MAX)
-    prot_padrao = float(motor.PROTEINA_G_KG_PADRAO.get(objetivo, 1.6))
-    gordura_padrao = int(motor.PERC_GORDURA_PADRAO * 100)
+    st.info(
+        "O cardápio-base da Marcela é a fonte principal: alimentos, refeições "
+        "e opções são preservados, e o app otimiza somente as porções. A TBCA "
+        "é consultada apenas em trocas, adições pontuais ou substituições "
+        "exigidas pelos filtros clínicos."
+    )
+    meta_padrao = _clamp_int(
+        metas_sugeridas["meta_kcal"], META_KCAL_MIN, META_KCAL_MAX
+    )
+    st.session_state.setdefault("rev_meta_kcal", meta_padrao)
+    metas_iniciais = motor.readequar_metas_macros(
+        st.session_state.rev_meta_kcal,
+        metas_sugeridas["meta_prot_g"],
+        metas_sugeridas["meta_carb_g"],
+        metas_sugeridas["meta_gord_g"],
+        ancora="meta_kcal",
+    )
+    st.session_state.setdefault(
+        "rev_meta_prot_g", metas_iniciais["meta_prot_g"]
+    )
+    st.session_state.setdefault(
+        "rev_meta_carb_g", metas_iniciais["meta_carb_g"]
+    )
+    st.session_state.setdefault(
+        "rev_meta_gord_g", metas_iniciais["meta_gord_g"]
+    )
 
-    mc1, mc2, mc3 = st.columns(3)
-    meta_kcal = mc1.slider(
-        "Meta calórica final (kcal)", META_KCAL_MIN, META_KCAL_MAX,
-        meta_padrao, step=META_KCAL_STEP, key="rev_meta_kcal",
-        help="Valor final definido pela nutricionista para gerar o cardápio.",
+    mc1, mc2, mc3, mc4 = st.columns(4)
+    meta_kcal = mc1.number_input(
+        "Limite de calorias (kcal)",
+        min_value=META_KCAL_MIN,
+        max_value=META_KCAL_MAX,
+        step=1,
+        key="rev_meta_kcal",
+        help="Teto diário definido pela nutricionista.",
+        on_change=_cb_readequar_metas,
+        args=("meta_kcal",),
     )
-    prot_kg = mc2.slider(
-        "Proteína (g/kg)", 0.5, 3.5, prot_padrao, step=0.1, key="rev_prot_kg",
+    meta_prot_g = mc2.number_input(
+        "Limite de proteína (g)",
+        min_value=0.0,
+        max_value=500.0,
+        step=1.0,
+        format="%.1f",
+        key="rev_meta_prot_g",
+        on_change=_cb_readequar_metas,
+        args=("meta_prot_g",),
     )
-    perc_gord_pct = mc3.slider(
-        "Gordura (% kcal)", 15, 40, gordura_padrao, step=1, key="rev_perc_gord",
+    meta_carb_g = mc3.number_input(
+        "Limite de carboidrato (g)",
+        min_value=0.0,
+        max_value=800.0,
+        step=1.0,
+        format="%.1f",
+        key="rev_meta_carb_g",
+        on_change=_cb_readequar_metas,
+        args=("meta_carb_g",),
     )
-    perc_gord = perc_gord_pct / 100.0
+    meta_gord_g = mc4.number_input(
+        "Limite de gordura (g)",
+        min_value=0.0,
+        max_value=300.0,
+        step=1.0,
+        format="%.1f",
+        key="rev_meta_gord_g",
+        on_change=_cb_readequar_metas,
+        args=("meta_gord_g",),
+    )
+
+    kcal_pelos_macros = motor.calorias_dos_macros(
+        meta_prot_g, meta_carb_g, meta_gord_g
+    )
+    st.caption(
+        "🔄 Readequação automática ativa: ao mudar calorias, os três macros "
+        "são escalados; ao mudar um macro, os outros dois são redistribuídos. "
+        f"Macros atuais = {kcal_pelos_macros:.1f} kcal."
+    )
+    if st.session_state.get("readequacao_aviso"):
+        st.warning(st.session_state.readequacao_aviso)
 
     metas = motor.calcular_metas(
-        peso_kg=peso, altura_cm=altura, idade=idade, genero=genero,
-        fator_atividade=faf, objetivo=objetivo, prot_g_kg=prot_kg,
-        perc_gordura=perc_gord, meta_kcal_manual=meta_kcal,
+        peso_kg=peso,
+        altura_cm=altura,
+        idade=idade,
+        genero=genero,
+        fator_atividade=faf,
+        objetivo=objetivo,
+        meta_kcal_manual=meta_kcal,
+        meta_prot_g_manual=meta_prot_g,
+        meta_carb_g_manual=meta_carb_g,
+        meta_gord_g_manual=meta_gord_g,
     )
 
     r1, r2, r3, r4 = st.columns(4)
-    r1.metric("TMB de referência", f"{metas['tmb']} kcal")
+    r1.metric("TMB · Harris-Benedict 1984", f"{metas['tmb']} kcal")
     r2.metric("GET de referência", f"{metas['get']} kcal")
-    r3.metric("Meta definida", f"{metas['meta_kcal']} kcal")
+    r3.metric("Limite definido", f"{metas['meta_kcal']} kcal")
     r4.metric("Ajuste vs GET", f"{metas['ajuste_kcal']:+d} kcal")
     r5, r6, r7, r8 = st.columns(4)
-    r5.metric("Proteína", f"{metas['meta_prot_g']:.0f} g", help=f"{prot_kg:.1f} g/kg")
-    r6.metric("Gordura", f"{metas['meta_gord_g']:.0f} g", help=f"{perc_gord_pct}% kcal")
-    r7.metric("Carboidrato", f"{metas['meta_carb_g']:.0f} g")
-    r8.metric("Fibra alvo", f"{metas['meta_fibra_g']:.0f} g")
-    if metas["meta_carb_g"] <= 0:
+    r5.metric(
+        "Proteína",
+        f"{metas['meta_prot_g']:.1f} g",
+        help=f"{metas['prot_g_kg']:.2f} g/kg",
+    )
+    r6.metric(
+        "Gordura",
+        f"{metas['meta_gord_g']:.1f} g",
+        help=f"{metas['perc_gordura'] * 100:.1f}% das kcal",
+    )
+    r7.metric("Carboidrato", f"{metas['meta_carb_g']:.1f} g")
+    r8.metric("Fibra alvo", f"{metas['meta_fibra_g']:.1f} g")
+
+    diferenca_atwater = metas["kcal_macros"] - metas["meta_kcal"]
+    if abs(diferenca_atwater) > 25:
         st.warning(
-            "A combinação atual de meta calórica, proteína e gordura não deixa "
-            "calorias disponíveis para carboidratos. Ajuste antes de gerar."
+            "Os macronutrientes informados equivalem a "
+            f"{metas['kcal_macros']:.0f} kcal, uma diferença de "
+            f"{diferenca_atwater:+.0f} kcal em relação ao limite energético. "
+            "O app não ultrapassará nenhum teto, mas pode ser matematicamente "
+            "impossível atingir todos ao mesmo tempo."
+        )
+    else:
+        st.success(
+            "Metas coerentes. A geração tratará kcal e os três macros como "
+            "tetos rígidos."
         )
 
     st.markdown("**Filtros alimentares** (separe por vírgula)")
@@ -338,6 +604,14 @@ def _etapa_revisao():
         a, patologias_txt, medicamentos_txt, exames_obs,
         aversoes, alergias, intolerancias, preferencias,
     )
+    anamnese_revisada.update({
+        "idade": int(idade),
+        "peso_atual_kg": float(peso),
+        "altura_cm": float(altura),
+        "genero": genero,
+        "objetivo": objetivo,
+        "fator_atividade": float(faf),
+    })
     regras_ativas = regras_clinicas.avaliar_anamnese(
         anamnese_revisada, _carregar_regras_clinicas()
     )
@@ -359,12 +633,10 @@ def _etapa_revisao():
 
     excluidos_usuario = _juntar_termos(aversoes, alergias, intolerancias)
     excluidos = _unicos(excluidos_usuario + termos_regras)
-    assinatura_revisao = (
-        int(idade), round(float(peso), 1), round(float(altura), 1), genero,
-        objetivo, round(float(faf), 3), int(meta_kcal), round(float(prot_kg), 2),
-        round(float(perc_gord), 3),
-        tuple(motor.normalizar_texto(t) for t in excluidos),
-        tuple(r.get("id", "") for r in regras_ativas),
+    assinatura_revisao = _criar_assinatura_revisao(
+        idade, peso, altura, genero, objetivo, faf,
+        meta_kcal, meta_prot_g, meta_carb_g, meta_gord_g,
+        excluidos, regras_ativas,
     )
     resultado_atual = st.session_state.get("resultado")
     if resultado_atual and resultado_atual.get("assinatura_revisao") != assinatura_revisao:
@@ -372,20 +644,24 @@ def _etapa_revisao():
         st.session_state.trocas = {}
         st.session_state.adicoes = {}
         st.session_state.ajustes = {}
+        st.session_state.orientacoes_alimentos = {}
+        st.session_state.ajuste_porcoes_aviso = ""
+        st.session_state.confirmar_exportacao_excessos = False
+        st.session_state.assinatura_excessos_confirmada = None
         st.session_state.comando_plano = None
         st.session_state.preparos_ia = {}
         st.info("Metas ou filtros alterados. Gere o cardápio novamente para aplicar.")
 
     gerar = st.button(
-        "🍽️ Gerar Cardápio com estas metas", type="primary", width="stretch",
-        disabled=metas["meta_carb_g"] <= 0,
+        "🍽️ Gerar Cardápio com estas metas", type="primary", width="stretch"
     )
 
     if gerar:
         return {
             "idade": idade, "peso": peso, "altura": altura, "genero": genero,
             "objetivo": objetivo, "faf": faf,
-            "meta_kcal": meta_kcal, "prot_kg": prot_kg, "perc_gord": perc_gord,
+            "meta_kcal": meta_kcal, "meta_prot_g": meta_prot_g,
+            "meta_carb_g": meta_carb_g, "meta_gord_g": meta_gord_g,
             "metas": metas,
             "assinatura_revisao": assinatura_revisao,
             "excluidos": excluidos,
@@ -439,8 +715,10 @@ def _gerar(template, banco, params):
         metas = motor.calcular_metas(
             peso_kg=params["peso"], altura_cm=params["altura"], idade=params["idade"],
             genero=params["genero"], fator_atividade=params["faf"], objetivo=params["objetivo"],
-            prot_g_kg=params["prot_kg"], perc_gordura=params["perc_gord"],
             meta_kcal_manual=params.get("meta_kcal"),
+            meta_prot_g_manual=params.get("meta_prot_g"),
+            meta_carb_g_manual=params.get("meta_carb_g"),
+            meta_gord_g_manual=params.get("meta_gord_g"),
         )
     slots, totais, fatores, avisos = motor.gerar_cardapio(
         template, banco, metas, params["excluidos"]
@@ -453,10 +731,20 @@ def _gerar(template, banco, params):
         "excluidos_regras": params.get("excluidos_regras", []),
         "anamnese": params.get("anamnese", {}),
         "regras_ativas": params.get("regras_ativas", []),
+        "parametros": {
+            chave: params.get(chave) for chave in (
+                "idade", "peso", "altura", "genero", "objetivo", "faf",
+                "meta_kcal", "meta_prot_g", "meta_carb_g", "meta_gord_g",
+            )
+        },
     }
     st.session_state.trocas = {}        # zera trocas ao gerar um cardápio novo
     st.session_state.adicoes = {}       # idem para adições via comando
     st.session_state.ajustes = {}       # idem para ajustes de quantidade/macro
+    st.session_state.orientacoes_alimentos = {}
+    st.session_state.ajuste_porcoes_aviso = ""
+    st.session_state.confirmar_exportacao_excessos = False
+    st.session_state.assinatura_excessos_confirmada = None
     st.session_state.comando_plano = None
     st.session_state.preparos_ia = {}
 
@@ -464,14 +752,14 @@ def _gerar(template, banco, params):
 def _exibir_resumo(metas):
     st.subheader("📊 Resumo Clínico e Metas")
     c1, c2, c3 = st.columns(3)
-    c1.metric("TMB (Mifflin-St Jeor)", f"{metas['tmb']} kcal")
+    c1.metric("TMB (Harris-Benedict 1984)", f"{metas['tmb']} kcal")
     c2.metric("GET", f"{metas['get']} kcal")
     c3.metric("Meta calórica definida", f"{metas['meta_kcal']} kcal",
               delta=f"{metas['ajuste_kcal']:+d} kcal vs GET")
     c4, c5, c6, c7 = st.columns(4)
-    c4.metric("Proteína", f"{metas['meta_prot_g']:.0f} g", help=f"{metas['prot_g_kg']} g/kg")
-    c5.metric("Gordura", f"{metas['meta_gord_g']:.0f} g", help=f"{metas['perc_gordura']*100:.0f}% kcal")
-    c6.metric("Carboidrato", f"{metas['meta_carb_g']:.0f} g")
+    c4.metric("Proteína", f"{metas['meta_prot_g']:.1f} g", help=f"{metas['prot_g_kg']:.2f} g/kg")
+    c5.metric("Gordura", f"{metas['meta_gord_g']:.1f} g", help=f"{metas['perc_gordura']*100:.1f}% kcal")
+    c6.metric("Carboidrato", f"{metas['meta_carb_g']:.1f} g")
     c7.metric("Fibra (alvo)", f"{metas['meta_fibra_g']:.0f} g")
 
 
@@ -481,11 +769,22 @@ def _exibir_validacao(metas, slots, totais):
     st.subheader("✅ Validação dos Cálculos")
 
     c1, c2 = st.columns(2)
-    c1.success("Fórmulas conferidas: TMB/GET de referência → metas de macro.")
+    c1.success("TMB por Harris-Benedict 1984 e GET conferidos.")
     if v["somas_ok"]:
         c2.success("Somas das refeições batem com os totais.")
     else:
         c2.error("Inconsistência na soma das refeições — revisar.")
+
+    if v["limites_ok"]:
+        st.success(
+            "🔒 Limites preservados: nenhuma opção ultrapassa kcal, "
+            "carboidrato, proteína ou gordura."
+        )
+    else:
+        itens = list(v["excedentes"].keys())
+        if v["opcoes_excedentes"]:
+            itens.append("opções alternativas")
+        st.error("Limites excedidos em: " + ", ".join(itens) + ".")
 
     if not v["incoerentes"]:
         st.success(f"Todos os {v['n_alimentos']} alimentos com valores nutricionais "
@@ -507,11 +806,11 @@ def _exibir_validacao(metas, slots, totais):
                ("proteinas_g", "Proteína", "g"), ("gorduras_g", "Gordura", "g")]
     for col, (chave, titulo, un) in zip(cols, rotulos):
         d = v["desvios"][chave]
-        col.metric(titulo, f"{d['atingido']:.0f} {un}",
+        col.metric(titulo, f"{d['atingido']:.1f} {un}",
                    delta=f"{d['pct']:+d}% vs meta")
-    st.caption("Proteína e carboidrato são ancorados às metas; a gordura é "
-               "reportada (ajuste o % de gordura ou inclua azeite/oleaginosas se "
-               "o desvio incomodar).")
+    st.caption(
+        "Os quatro valores são calculados em conjunto e tratados como tetos rígidos."
+    )
 
 
 def _exibir_revisao_clinica(resultado, working_slots, totais):
@@ -567,6 +866,27 @@ def _buscar_tbca_nomes(query, limite=8):
     return [r["nome"] for r in cands[:limite]]
 
 
+def _garantir_referencia_alimento(alimento):
+    """Recupera a densidade de itens zerados de sessões geradas anteriormente."""
+    alimento = motor.normalizar_alimento_livre(alimento)
+    com_referencia = motor.com_referencia_nutricional(alimento)
+    if com_referencia.get("referencia_nutricional"):
+        return com_referencia
+    quantidade_base = float(
+        alimento.get("quantidade_original_g", 0)
+        or alimento.get("quantidade_g", 0)
+        or 0
+    )
+    if quantidade_base <= 0:
+        return com_referencia
+    resolvido = _resolver_alimento(
+        alimento.get("nome_principal", ""), quantidade_base
+    )
+    return motor.com_referencia_nutricional(
+        com_referencia, referencia=resolvido
+    )
+
+
 def _trocar_por_tbca(original_al, tbca_nome):
     """Troca por um alimento da TBCA por EQUIVALÊNCIA CALÓRICA.
 
@@ -574,13 +894,23 @@ def _trocar_por_tbca(original_al, tbca_nome):
     troca muda de categoria — ex.: arroz (carbo) por patinho (proteína), em que
     bater pelo carboidrato explodiria a quantidade.
     """
-    orig_kcal = original_al.get("calorias", 0) or 0
+    original_al = _garantir_referencia_alimento(original_al)
+    referencia = original_al.get("referencia_nutricional") or {}
+    orig_kcal = (
+        original_al.get("calorias", 0)
+        or referencia.get("calorias", 0)
+        or 0
+    )
     base = _resolver_alimento(tbca_nome, 100)          # valores por 100 g
     sub_kcal_100 = base.get("calorias", 0) or 0
     if sub_kcal_100 > 0 and orig_kcal > 0:
         gramas = round(100 * orig_kcal / sub_kcal_100, 1)
     else:
-        gramas = original_al.get("quantidade_g", 0) or 100
+        gramas = (
+            original_al.get("quantidade_g", 0)
+            or referencia.get("quantidade_g", 0)
+            or 100
+        )
     gramas = max(1.0, min(gramas, 1500.0))             # trava de segurança
     novo = _resolver_alimento(tbca_nome, gramas)
     novo["substituido"] = True
@@ -619,18 +949,7 @@ def _alimento_final(original_al, info):
 
 def _reescalar_para_gramas(al, gramas):
     """Reescala um alimento para uma nova gramatura (macros/calorias proporcionais)."""
-    atual = al.get("quantidade_g", 0) or 0
-    if atual <= 0 or gramas is None:
-        return al
-    f = gramas / atual
-    m = al.get("macros", {}) or {}
-    novo = dict(al)
-    novo["quantidade_g"] = round(gramas, 1)
-    novo["calorias"] = round((al.get("calorias", 0) or 0) * f, 1)
-    novo["macros"] = {k: round(m.get(k, 0) * f, 1)
-                      for k in ("carboidratos_g", "proteinas_g", "gorduras_g")}
-    novo["ajustado"] = True
-    return novo
+    return motor.reescalar_alimento(al, gramas)
 
 
 def _aplicar_substituicoes(orig_slots):
@@ -642,6 +961,7 @@ def _aplicar_substituicoes(orig_slots):
     trocas = st.session_state.get("trocas", {})
     adicoes = st.session_state.get("adicoes", {})
     ajustes = st.session_state.get("ajustes", {})
+    orientacoes = st.session_state.get("orientacoes_alimentos", {})
     working = []
     totais = {"kcal": 0.0, "carboidratos_g": 0.0, "proteinas_g": 0.0, "gorduras_g": 0.0}
     for si, grupo in enumerate(orig_slots):
@@ -649,10 +969,14 @@ def _aplicar_substituicoes(orig_slots):
         for oi, opcao in enumerate(grupo["opcoes"]):
             finais = []
             for fi, al in enumerate(opcao["alimentos"]):
-                novo = _alimento_final(al, trocas.get((si, oi, fi)))
-                g_alvo = ajustes.get((si, oi, fi))
+                chave = (si, oi, fi)
+                base = _garantir_referencia_alimento(al)
+                novo = _alimento_final(base, trocas.get(chave))
+                g_alvo = ajustes.get(chave)
                 if g_alvo is not None:  # ajuste de quantidade/macro via comando
                     novo = _reescalar_para_gramas(novo, g_alvo)
+                if chave in orientacoes:
+                    novo = {**novo, "orientacao_paciente": orientacoes[chave]}
                 finais.append(novo)
             # Alimentos incluídos por comando ("adicionar") entram ao final da opção.
             finais += [dict(a) for a in adicoes.get((si, oi), [])]
@@ -663,7 +987,7 @@ def _aplicar_substituicoes(orig_slots):
                         totais[k] += novo.get("macros", {}).get(k, 0) or 0
             opcoes.append({**opcao, "alimentos": finais})
         working.append({**grupo, "opcoes": opcoes})
-    totais = {k: round(v, 1) for k, v in totais.items()}
+    totais = {k: round(v, 3) for k, v in totais.items()}
     return working, totais
 
 
@@ -682,9 +1006,10 @@ def _tabela_alimentos(alimentos):
             nome = "➕ " + nome
         elif al.get("ajustado"):
             nome = "📏 " + nome
+        orientacao = str(al.get("orientacao_paciente", "") or "").strip()
         linhas.append({
             "Alimento": nome,
-            "Porção": motor.descrever_porcao(al),
+            "Porção": orientacao or motor.descrever_porcao(al),
             "Kcal": round(al.get("calorias", 0)),
             "Carb": m.get("carboidratos_g", 0),
             "Prot": m.get("proteinas_g", 0),
@@ -735,9 +1060,12 @@ def _cb_pick(si, oi, fi):
 def _controle_troca(si, oi, alimentos):
     """Controle recolhido para trocar um alimento — só aparece se a Marcela abrir."""
     with st.expander("🔁 Trocar um alimento (opcional)"):
-        idxs = [fi for fi, al in enumerate(alimentos) if (al.get("quantidade_g") or 0) > 0]
+        idxs = [
+            fi for fi, al in enumerate(alimentos)
+            if not al.get("removido")
+        ]
         if not idxs:
-            st.caption("Nenhum item com quantidade para trocar.")
+            st.caption("Nenhum alimento disponível para troca.")
             return
         nomes = [alimentos[fi]["nome_principal"] for fi in idxs]
         sel = st.selectbox("Qual alimento trocar?", nomes, key=f"subfood_{si}_{oi}")
@@ -776,6 +1104,176 @@ def _controle_troca(si, oi, alimentos):
                     st.session_state.trocas.pop((si, oi, j), None)
                 st.rerun()
 
+
+def _cb_orientacao_alimento(si, oi, fi, widget_key):
+    texto = str(st.session_state.get(widget_key, "") or "").strip()
+    st.session_state.orientacoes_alimentos[(si, oi, fi)] = texto
+
+
+def _cb_quantidade(si, oi, fi, widget_key, alimentos,
+                   quantidade_originais, limites):
+    valor = float(st.session_state.get(widget_key, 0) or 0)
+    originais = [
+        dict(alimento) for alimento in alimentos[:quantidade_originais]
+    ]
+    fixos = motor.somar_alimentos(
+        alimentos[quantidade_originais:], casas=9
+    )
+    readequados, diagnostico = motor.readequar_opcao_com_ancora(
+        originais,
+        limites,
+        indice_ancora=fi,
+        gramas=valor,
+        totais_fixos=fixos,
+    )
+    for indice, alimento in enumerate(readequados):
+        st.session_state.ajustes[(si, oi, indice)] = round(
+            max(float(alimento.get("quantidade_g", 0) or 0), 0.0), 1
+        )
+
+    nome = alimentos[fi].get("nome_principal", f"Alimento {fi + 1}")
+    if diagnostico["limitado"]:
+        st.session_state[widget_key] = diagnostico["quantidade_aplicada_g"]
+        mensagem = (
+            f"{nome}: solicitado {diagnostico['quantidade_solicitada_g']:.1f} g; "
+            f"aplicado {diagnostico['quantidade_aplicada_g']:.1f} g, que é o "
+            "máximo possível nesta opção."
+        )
+    else:
+        mensagem = (
+            f"{nome} ajustado para {diagnostico['quantidade_aplicada_g']:.1f} g. "
+            "Os demais alimentos desta opção foram readequados automaticamente."
+        )
+    st.session_state.ajuste_porcoes_aviso = {
+        "opcao": (si, oi),
+        "limitado": diagnostico["limitado"],
+        "mensagem": mensagem,
+    }
+
+
+def _maximo_gramas_sem_exceder(alimento, totais_fixos, limites):
+    return motor.maximo_gramas_por_limites(
+        alimento, limites, totais_fixos=totais_fixos
+    )
+
+
+def _controle_quantidades(si, oi, opcao_original, opcao_atual,
+                          totais_diarios, metas, limites_opcao=None):
+    """Edita porções com recálculo imediato e teto dinâmico."""
+    with st.expander("✏️ Ajustar quantidades e nutrientes"):
+        st.caption(
+            "Use décimos de grama quando necessário. Ao alterar um alimento, "
+            "os demais itens desta opção são readequados automaticamente. "
+            "Kcal e macros são recalculados na hora."
+        )
+        limites = limites_opcao or opcao_atual.get(
+            "limites_nutricionais"
+        ) or motor.totais_da_opcao(opcao_atual)
+
+        widgets = []
+        quantidade_originais = len(opcao_original.get("alimentos", []))
+        alimentos = opcao_atual.get("alimentos", [])
+        totais_fixos = motor.somar_alimentos(
+            alimentos[quantidade_originais:], casas=9
+        )
+        for fi, alimento in enumerate(alimentos[:quantidade_originais]):
+            if alimento.get("removido"):
+                continue
+            atual = float(alimento.get("quantidade_g", 0) or 0)
+            nome = alimento.get("nome_principal", f"Alimento {fi + 1}")
+            identidade = motor.normalizar_texto(nome).replace(" ", "_")[:28]
+            widget_key = f"qtd_{si}_{oi}_{fi}_{identidade}"
+            chave_ajuste = (si, oi, fi)
+            if chave_ajuste not in st.session_state.ajustes:
+                st.session_state[widget_key] = atual
+            elif abs(
+                float(st.session_state.get(widget_key, atual) or 0) - atual
+            ) > 0.05:
+                st.session_state[widget_key] = atual
+
+
+            permitido = _maximo_gramas_sem_exceder(
+                alimento, totais_fixos, limites
+            )
+            maximo_widget = max(atual, permitido)
+            col_qtd, col_nutrientes = st.columns([1.2, 2])
+            col_qtd.number_input(
+                nome,
+                min_value=0.0,
+                max_value=float(maximo_widget),
+                step=0.1,
+                format="%.1f",
+                key=widget_key,
+                on_change=_cb_quantidade,
+                args=(
+                    si, oi, fi, widget_key, alimentos,
+                    quantidade_originais, limites,
+                ),
+                help=(
+                    f"Máximo com readequação dos demais itens: "
+                    f"{permitido:.1f} g."
+                ),
+            )
+            macros = alimento.get("macros", {}) or {}
+            col_nutrientes.caption(
+                f"{alimento.get('calorias', 0):.1f} kcal · "
+                f"C {macros.get('carboidratos_g', 0):.1f} g · "
+                f"P {macros.get('proteinas_g', 0):.1f} g · "
+                f"G {macros.get('gorduras_g', 0):.1f} g"
+            )
+            if motor.eh_salada_ou_legume(alimento):
+                orientacao_key = (
+                    f"orientacao_{si}_{oi}_{fi}_{identidade}"
+                )
+                orientacao_atual = str(
+                    alimento.get("orientacao_paciente", "") or ""
+                ).strip()
+                if orientacao_key not in st.session_state:
+                    st.session_state[orientacao_key] = orientacao_atual
+                elif (
+                    chave_ajuste in st.session_state.orientacoes_alimentos
+                    and st.session_state.get(orientacao_key, "")
+                    != orientacao_atual
+                ):
+                    st.session_state[orientacao_key] = orientacao_atual
+                st.text_input(
+                    f"Texto exibido ao paciente — {nome}",
+                    key=orientacao_key,
+                    placeholder="Ex.: À vontade; mínimo 100 g; 2 colheres",
+                    on_change=_cb_orientacao_alimento,
+                    args=(si, oi, fi, orientacao_key),
+                    help=(
+                        "Deixe vazio para exportar a quantidade em gramas. "
+                        "O texto não altera os cálculos nutricionais."
+                    ),
+                )
+                if not any(motor.densidades_alimento(alimento).values()):
+                    st.caption(
+                        "Item livre sem composição cadastrada: a quantidade é "
+                        "uma orientação ao paciente e não entra nos macros."
+                    )
+            widgets.append((fi, widget_key))
+
+        aviso = st.session_state.get("ajuste_porcoes_aviso")
+        if isinstance(aviso, dict) and aviso.get("opcao") == (si, oi):
+            if aviso.get("limitado"):
+                st.warning(aviso.get("mensagem", ""))
+            else:
+                st.success(aviso.get("mensagem", ""))
+
+        if len(alimentos) > quantidade_originais:
+            st.caption(
+                "Alimentos adicionados por comando podem ser ajustados pelo "
+                "próprio assistente de comandos."
+            )
+        if widgets and st.button(
+            "Restaurar quantidades desta opção",
+            key=f"restaurar_qtd_{si}_{oi}",
+        ):
+            for fi, widget_key in widgets:
+                st.session_state.ajustes.pop((si, oi, fi), None)
+                st.session_state.pop(widget_key, None)
+            st.rerun()
 
 # ---------------------------------------------------------------------------
 # Assistente de comandos em texto (trocar / remover / adicionar / ajustar)
@@ -1053,10 +1551,16 @@ def _secao_comando(slots, working, api_key, modelo):
     _confirmar_plano()
 
 
-def _exibir_cardapio(orig_slots, working_slots):
+def _exibir_cardapio(orig_slots, working_slots, totais, metas):
     st.subheader("🍽️ Cardápio Final")
     for si, (grupo, wgrupo) in enumerate(zip(orig_slots, working_slots)):
         st.markdown(f"#### {grupo['slot']}")
+        principal_atual = next(
+            opcao for opcao in wgrupo["opcoes"] if opcao.get("conta_no_total")
+        )
+        limites_opcao = principal_atual.get(
+            "limites_nutricionais"
+        ) or motor.totais_da_opcao(principal_atual)
         for oi, (opcao, wopcao) in enumerate(zip(grupo["opcoes"], wgrupo["opcoes"])):
             conta = opcao["conta_no_total"]
             rotulo = opcao["nome_refeicao"] + ("" if conta else "  · _(alternativa)_")
@@ -1065,6 +1569,10 @@ def _exibir_cardapio(orig_slots, working_slots):
                     st.caption(opcao["observacoes"])
                 _tabela_alimentos(wopcao["alimentos"])
                 _controle_troca(si, oi, opcao["alimentos"])
+                _controle_quantidades(
+                    si, oi, opcao, wopcao, totais, metas,
+                    limites_opcao=limites_opcao,
+                )
 
 
 def _preparo_exportacao(opcao, preparos_curados, preparos_ia):
@@ -1075,6 +1583,21 @@ def _preparo_exportacao(opcao, preparos_curados, preparos_ia):
     return encontrados[0] if encontrados else None
 
 
+
+def _arredondar_quantidades_texto_paciente(texto):
+    """Converte valores de g/ml para o múltiplo de 5 mais próximo."""
+    def substituir(match):
+        valor = float(match.group(1).replace(",", "."))
+        valor = motor.arredondar_multiplo_proximo(valor)
+        return f"{valor} {match.group(2)}"
+
+    return re.sub(
+        r"(\d+(?:[.,]\d+)?)\s*(g|ml)\b",
+        substituir,
+        texto,
+        flags=re.IGNORECASE,
+    )
+
 def _exportar_markdown(metas, slots, selecionados, incluir_subs=False,
                        incluir_preparos=False, preparos_curados=None, preparos_ia=None):
     """Gera o Markdown do cardápio apenas com as opções selecionadas (já com trocas).
@@ -1084,37 +1607,59 @@ def _exportar_markdown(metas, slots, selecionados, incluir_subs=False,
     """
     m = metas
     sel = set(selecionados)
+    macros_paciente = {
+        chave: motor.arredondar_multiplo_para_baixo(m[chave])
+        for chave in (
+            "meta_carb_g", "meta_prot_g", "meta_gord_g", "meta_fibra_g"
+        )
+    }
     linhas = [
         "# Cardápio",
         "",
         f"- **Meta calórica:** {m['meta_kcal']} kcal "
         f"(TMB {m['tmb']} · GET {m['get']})",
-        f"- **Macros-alvo:** Carb {m['meta_carb_g']:.0f} g · "
-        f"Prot {m['meta_prot_g']:.0f} g · Gord {m['meta_gord_g']:.0f} g · "
-        f"Fibra {m['meta_fibra_g']:.0f} g",
+        f"- **Macros-alvo:** Carb {macros_paciente['meta_carb_g']} g · "
+        f"Prot {macros_paciente['meta_prot_g']} g · "
+        f"Gord {macros_paciente['meta_gord_g']} g · "
+        f"Fibra {macros_paciente['meta_fibra_g']} g",
         "",
     ]
     preparos_curados = preparos_curados or []
     preparos_ia = preparos_ia or {}
     for si, grupo in enumerate(slots):
+        principal = next(
+            opcao for opcao in grupo["opcoes"] if opcao.get("conta_no_total")
+        )
+        limites_refeicao = motor.totais_da_opcao(principal, casas=6)
         for oi, opcao in enumerate(grupo["opcoes"]):
             if (si, oi) not in sel:
                 continue
             linhas.append(f"## {opcao['nome_refeicao']}")
-            for al in opcao["alimentos"]:
+            alimentos_paciente = motor.arredondar_alimentos_paciente(
+                opcao["alimentos"], limites=limites_refeicao
+            )
+            for al in alimentos_paciente:
                 if al.get("removido"):
                     continue
-                linhas.append(f"- {al.get('nome_principal', '')} — {motor.descrever_porcao(al)}")
+                orientacao = str(
+                    al.get("orientacao_paciente", "") or ""
+                ).strip()
+                if motor.quantidade_paciente(al) <= 0 and not orientacao:
+                    continue
+                linhas.append(
+                    f"- {al.get('nome_principal', '')} — "
+                    f"{orientacao or motor.descrever_porcao(al, inteiro=True)}"
+                )
                 if incluir_subs:
                     for sub in al.get("opcoes_de_substituicao_listadas") or []:
-                        linhas.append(f"  - ou {sub}")
+                        linhas.append(f"  - ou {_arredondar_quantidades_texto_paciente(sub)}")
             if incluir_preparos:
                 preparo = _preparo_exportacao(opcao, preparos_curados, preparos_ia)
                 if preparo:
                     linhas.append("")
                     linhas.append(preparos.formatar_preparo_markdown(preparo, nivel_titulo="###"))
             linhas.append("")
-    return "\n".join(linhas)
+    return _arredondar_quantidades_texto_paciente("\n".join(linhas))
 
 
 def _contexto_clinico_resumido(resultado):
@@ -1142,12 +1687,91 @@ def _opcoes_selecionadas(slots, selecionados):
                 yield si, oi, opcao
 
 
+def _linhas_excessos_exportacao(validacao):
+    rotulos = {
+        "kcal": ("Calorias", "kcal"),
+        "carboidratos_g": ("Carboidrato", "g"),
+        "proteinas_g": ("Proteína", "g"),
+        "gorduras_g": ("Gordura", "g"),
+    }
+    linhas = []
+    for chave, item in validacao.get("excedentes", {}).items():
+        rotulo, unidade = rotulos.get(chave, (chave, ""))
+        linhas.append(
+            f"**Total diário · {rotulo}:** {item['atingido']:.1f} {unidade} "
+            f"para limite de {item['limite']:.1f} {unidade} "
+            f"(**+{item['excesso']:.1f} {unidade}**)."
+        )
+
+    for opcao in validacao.get("opcoes_excedentes", []):
+        detalhes = opcao.get("detalhes") or {}
+        for chave, excesso in opcao.get("excedentes", {}).items():
+            rotulo, unidade = rotulos.get(chave, (chave, ""))
+            detalhe = detalhes.get(chave) or {}
+            if detalhe:
+                valores = (
+                    f"{detalhe['atingido']:.1f} {unidade} para limite de "
+                    f"{detalhe['limite']:.1f} {unidade} "
+                    f"(**+{detalhe['excesso']:.1f} {unidade}**)"
+                )
+            else:
+                valores = f"**+{float(excesso):.1f} {unidade}**"
+            linhas.append(
+                f"**{opcao.get('slot', '')} · {opcao.get('opcao', '')} · "
+                f"{rotulo}:** {valores}."
+            )
+    return linhas
+
+def _cb_confirmar_exportacao(assinatura):
+    if st.session_state.get("confirmar_exportacao_excessos"):
+        st.session_state.assinatura_excessos_confirmada = assinatura
+    else:
+        st.session_state.assinatura_excessos_confirmada = None
+
+
+
+
 def _secao_exportar(resultado, working_slots, totais, api_key, modelo):
     """Seção de exportação: escolha quais opções entram no cardápio do paciente."""
     metas = resultado["metas"]
     st.subheader("📤 Exportar Cardápio")
     st.caption("Marque quais opções de cada refeição vão para o paciente. "
                "Por padrão vem a opção principal de cada horário.")
+
+    pacote_json = cardapio_io.serializar_pacote(
+        resultado, working_slots, totais
+    )
+    st.download_button(
+        "💾 Salvar versão editável (.json)",
+        pacote_json,
+        file_name="cardapio_editavel.json",
+        mime="application/json",
+        help="Use este arquivo para reabrir o cardápio no app futuramente.",
+    )
+    st.caption(
+        "O JSON preserva os décimos de grama. A entrega em Markdown usa "
+        "porções práticas em múltiplos de 5 g/ml."
+    )
+
+    validacao_limites = motor.validar_resultado(working_slots, totais, metas)
+    linhas_excessos = _linhas_excessos_exportacao(validacao_limites)
+    assinatura_excessos = tuple(linhas_excessos)
+    if validacao_limites["limites_ok"]:
+        st.session_state.confirmar_exportacao_excessos = False
+        st.session_state.assinatura_excessos_confirmada = None
+    elif (
+        st.session_state.get("assinatura_excessos_confirmada")
+        != assinatura_excessos
+    ):
+        st.session_state.confirmar_exportacao_excessos = False
+        st.session_state.assinatura_excessos_confirmada = None
+    if not validacao_limites["limites_ok"]:
+        st.warning(
+            "Há valores acima dos limites. A exportação continuará disponível "
+            "depois da sua confirmação."
+        )
+        for linha in linhas_excessos:
+            st.markdown(f"- {linha}")
 
     todas = st.checkbox("✅ Selecionar TODAS as opções (todas as refeições)")
     selecionados = []
@@ -1237,8 +1861,32 @@ def _secao_exportar(resultado, working_slots, totais, api_key, modelo):
         preparos_curados=preparos_curados,
         preparos_ia=st.session_state.preparos_ia,
     )
-    st.download_button("⬇️ Baixar cardápio (.md)", md,
-                       file_name="cardapio.md", mime="text/markdown")
+    pode_exportar = True
+    if not validacao_limites["limites_ok"]:
+        st.markdown("**Confirmação necessária para exportar**")
+        pode_exportar = st.checkbox(
+            "Revisei os valores ultrapassados acima e confirmo a exportação "
+            "deste cardápio.",
+            key="confirmar_exportacao_excessos",
+            on_change=_cb_confirmar_exportacao,
+            args=(assinatura_excessos,),
+        )
+        if not pode_exportar:
+            st.info(
+                "Marque a confirmação para liberar o arquivo do paciente."
+            )
+    st.download_button(
+        "⬇️ Baixar cardápio do paciente (.md)",
+        md,
+        file_name="cardapio.md",
+        mime="text/markdown",
+        disabled=not pode_exportar,
+    )
+    st.caption(
+        "Porções do paciente arredondadas para valores terminados em 0 ou 5. "
+        "Se o múltiplo mais próximo ultrapassar algum teto, o app usa o "
+        "múltiplo seguro anterior."
+    )
     with st.expander("Ver / copiar texto do cardápio"):
         st.code(md, language="markdown")
 
@@ -1268,8 +1916,15 @@ def main():
 
     api_key, modelo = _sidebar_ia()
     st.sidebar.success(
-        f"✅ Template: {template['nome']}\n\n🍎 {len(banco)} alimentos no banco"
+        "✅ Base principal: cardápio da Marcela\n\n"
+        f"📋 {template['nome']}"
     )
+    st.sidebar.caption(
+        "TBCA: apoio somente para trocas e adições pontuais "
+        f"({len(banco)} alimentos disponíveis)."
+    )
+
+    _secao_importar()
 
     _etapa_anamnese(api_key, modelo)
     params = _etapa_revisao()
@@ -1292,7 +1947,9 @@ def main():
         st.divider()
         _secao_comando(resultado["slots"], working_slots, api_key, modelo)
         st.divider()
-        _exibir_cardapio(resultado["slots"], working_slots)
+        _exibir_cardapio(
+            resultado["slots"], working_slots, totais, resultado["metas"]
+        )
 
         st.divider()
         _secao_exportar(resultado, working_slots, totais, api_key, modelo)

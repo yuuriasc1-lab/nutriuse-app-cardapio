@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#f2ece0;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  input[type=range]{-webkit-appearance:none;appearance:none;background:transparent;width:100%}
+  input[type=range]::-webkit-slider-runnable-track{height:5px;border-radius:6px;background:linear-gradient(90deg,#cba64f,#e6d6a6)}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:19px;height:19px;margin-top:-7px;border-radius:50%;background:#fffdf7;border:2px solid #b0842c;box-shadow:0 2px 6px -1px rgba(140,100,30,.5);cursor:pointer}
+  input[type=range]::-moz-range-track{height:5px;border-radius:6px;background:linear-gradient(90deg,#cba64f,#e6d6a6)}
+  input[type=range]::-moz-range-thumb{width:17px;height:17px;border-radius:50%;background:#fffdf7;border:2px solid #b0842c;cursor:pointer}
+  ::selection{background:#e7d29a}
+  .cc-scroll::-webkit-scrollbar{height:8px}
+  .cc-scroll::-webkit-scrollbar-thumb{background:#e0d3b6;border-radius:8px}
+</style>
+</helmet>
+
+<div data-screen-label="Copiloto Clínico — App" style="min-height:100vh;background:radial-gradient(1300px 620px at 50% -260px,#fbf7ec,#f2ece0 70%);font-family:'Hanken Grotesk',system-ui,sans-serif;color:#3a332a">
+<div style="--gold:{{ goldVar }};--pad:{{ padVar }};max-width:1220px;margin:0 auto;padding:30px 22px 90px;display:flex;flex-wrap:wrap;gap:26px;align-items:flex-start">
+
+  <!-- ================= LEFT RAIL ================= -->
+  <aside style="flex:1 1 268px;max-width:308px;position:sticky;top:24px;display:flex;flex-direction:column;gap:18px">
+
+    <!-- Brand -->
+    <div style="background:#fffdf9;border:1px solid #ece2ce;border-radius:20px;box-shadow:0 18px 40px -30px rgba(120,92,30,.42);padding:22px 22px 20px;text-align:center;position:relative;overflow:hidden">
+      <div style="position:absolute;inset:0;background:radial-gradient(120px 80px at 50% 0,rgba(203,166,79,.10),transparent);pointer-events:none"></div>
+      <img src="assets/logo-mp.png" alt="Assinatura MP" style="width:118px;height:auto;display:block;margin:2px auto 8px;filter:drop-shadow(0 3px 6px rgba(150,110,30,.16))">
+      <div style="font:600 21px/1 'Cormorant Garamond',serif;letter-spacing:.4px;color:#3a332a">Marcela Pacheco</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:7px;margin-top:7px">
+        <span style="height:1px;width:20px;background:linear-gradient(90deg,transparent,#d6bd84)"></span>
+        <span style="font:600 9.5px 'Hanken Grotesk';letter-spacing:2.4px;text-transform:uppercase;color:var(--gold,#a3762a)">Nutrição Clínica</span>
+        <span style="height:1px;width:20px;background:linear-gradient(90deg,#d6bd84,transparent)"></span>
+      </div>
+    </div>
+
+    <!-- Step tracker -->
+    <nav style="background:#fffdf9;border:1px solid #ece2ce;border-radius:18px;box-shadow:0 14px 34px -30px rgba(120,92,30,.4);padding:16px 15px">
+      <div style="font:600 10px 'Hanken Grotesk';letter-spacing:1.8px;text-transform:uppercase;color:#b7ac97;padding:2px 8px 12px">Fluxo</div>
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+        <div style="display:flex;align-items:center;gap:11px;padding:8px 8px;border-radius:11px;background:{{ s.bg }}">
+          <span style="width:24px;height:24px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font:600 12px 'Hanken Grotesk';background:{{ s.dot }};color:{{ s.dotText }};border:1px solid {{ s.dotBorder }}">{{ s.mark }}</span>
+          <span style="font:{{ s.weight }} 14px 'Hanken Grotesk';color:{{ s.color }}">{{ s.label }}</span>
+        </div>
+      </sc-for>
+    </nav>
+
+    <!-- AI config -->
+    <div style="background:#fffdf9;border:1px solid #ece2ce;border-radius:18px;box-shadow:0 14px 34px -30px rgba(120,92,30,.4);padding:18px 17px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--gold,#a3762a)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z"/><path d="M19 14l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg>
+        <div style="font:600 13.5px 'Hanken Grotesk';color:#4a4235">Leitura por IA</div>
+      </div>
+      <p style="margin:0 0 14px;font-size:12px;line-height:1.5;color:#9a917f">A IA lê a anamnese e interpreta comandos. Ela não calcula macros.</p>
+
+      <label style="display:block;font:600 10.5px 'Hanken Grotesk';letter-spacing:.6px;text-transform:uppercase;color:#b0a68f;margin-bottom:6px">Chave da API Gemini</label>
+      <div style="display:flex;align-items:center;justify-content:space-between;background:#faf5ea;border:1px solid #e6dcc6;border-radius:11px;padding:11px 13px;margin-bottom:13px">
+        <span style="letter-spacing:2px;color:#9a917f;font-size:14px">••••••••••••</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#bcae90" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      </div>
+
+      <label style="display:block;font:600 10.5px 'Hanken Grotesk';letter-spacing:.6px;text-transform:uppercase;color:#b0a68f;margin-bottom:6px">Modelo</label>
+      <div style="display:flex;align-items:center;justify-content:space-between;background:#faf5ea;border:1px solid #e6dcc6;border-radius:11px;padding:11px 13px">
+        <span style="font-size:13.5px;color:#4a4235;font-weight:500">gemini-2.5-flash</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a3762a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid #efe6d3">
+        <span style="width:8px;height:8px;border-radius:50%;background:#6f9159;box-shadow:0 0 0 3px rgba(111,145,89,.16);flex:none"></span>
+        <span style="font-size:12px;color:#8a8168;line-height:1.4">Plano base carregado · <b style="color:#5c5544">312</b> alimentos no banco</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN COLUMN ================= -->
+  <main style="flex:3 1 560px;min-width:0;display:flex;flex-direction:column;gap:22px">
+
+    <!-- Hero -->
+    <header style="padding:4px 4px 2px">
+      <div style="font:600 10.5px 'Hanken Grotesk';letter-spacing:3px;text-transform:uppercase;color:var(--gold,#a3762a);margin-bottom:8px">Copiloto Clínico de Prescrição</div>
+      <h1 style="margin:0;font:600 42px/1.02 'Cormorant Garamond',serif;letter-spacing:.2px;color:#37312a">Do prontuário ao cardápio,<br><span style="font-style:italic;color:var(--gold,#9a6f22)">com precisão clínica.</span></h1>
+      <p style="margin:14px 0 0;max-width:600px;font-size:14.5px;line-height:1.6;color:#8a8168">Cole a anamnese, a IA organiza os dados, você revisa as metas e recebe o cardápio pronto para o WebDiet — com validação de cálculos e revisão clínica em cada etapa.</p>
+    </header>
+
+    <!-- ===== STEP 1: ANAMNESE ===== -->
+    <section data-screen-label="Etapa 1 — Anamnese" style="background:#fffdf9;border:1px solid #ece2ce;border-radius:20px;box-shadow:0 20px 44px -34px rgba(120,92,30,.45),0 1px 2px rgba(60,50,30,.03);padding:var(--pad,26px) 28px">
+      <div style="display:flex;align-items:center;gap:13px">
+        <span style="width:34px;height:34px;border-radius:50%;background:linear-gradient(150deg,#dcb85f,#a97e28);color:#fffdf7;display:flex;align-items:center;justify-content:center;font:600 15px 'Hanken Grotesk';box-shadow:0 7px 15px -5px rgba(150,110,30,.55);flex:none">1</span>
+        <h2 style="margin:0;font:600 25px/1 'Cormorant Garamond',serif;color:#3a332a">Anamnese do paciente</h2>
+      </div>
+      <p style="margin:9px 0 16px 47px;color:#9a917f;font-size:13.5px;max-width:560px">Cole a anamnese preenchida. A IA lê e organiza os campos abaixo para você revisar.</p>
+
+      <div style="background:#fbf6ec;border:1px solid #e9dfc8;border-radius:13px;padding:15px 17px;position:relative">
+        <span style="position:absolute;top:12px;right:14px;font:600 9.5px 'Hanken Grotesk';letter-spacing:1px;text-transform:uppercase;color:#6f9159;background:#eef4e6;border:1px solid #d8e6c8;border-radius:20px;padding:3px 10px">texto colado</span>
+        <p style="margin:0;font-size:13.5px;line-height:1.7;color:#5f5848;max-width:640px">Paciente <b>Ana Beatriz</b>, 34 anos, feminino, 68 kg, 1,65 m. Objetivo: emagrecimento. Treina musculação 4×/semana (moderado). Rotina com 5–6 refeições. Aversão a fígado e jiló. Intolerância leve à lactose. Diagnóstico de resistência à insulina; glicemia de jejum recente 104 mg/dL. Prefere café pela manhã e frutas nos lanches…</p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:16px">
+        <button style="flex:1 1 240px;display:flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(150deg,#c69c3f,#a5762a);color:#fffdf7;border:none;border-radius:12px;padding:14px 20px;font:600 14.5px 'Hanken Grotesk';box-shadow:0 12px 24px -12px rgba(150,110,30,.6);cursor:pointer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z"/></svg>
+          Ler anamnese com IA
+        </button>
+        <button style="flex:1 1 240px;background:#fffdf9;color:#7a6224;border:1px solid #e3d3ab;border-radius:12px;padding:14px 20px;font:600 14.5px 'Hanken Grotesk';cursor:pointer">Preencher manualmente</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:9px;margin-top:15px;background:#f0f5e9;border:1px solid #d9e7c9;border-radius:11px;padding:11px 14px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5f8047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        <span style="font-size:13px;color:#5a6b47;font-weight:500">Anamnese lida. Revise os dados abaixo.</span>
+      </div>
+    </section>
+
+    <!-- ===== STEP 2: REVISÃO / METAS ===== -->
+    <section data-screen-label="Etapa 2 — Revisão e metas" style="background:#fffdf9;border:1px solid #ece2ce;border-radius:20px;box-shadow:0 20px 44px -34px rgba(120,92,30,.45),0 1px 2px rgba(60,50,30,.03);padding:var(--pad,26px) 28px">
+      <div style="display:flex;align-items:center;gap:13px">
+        <span style="width:34px;height:34px;border-radius:50%;background:linear-gradient(150deg,#dcb85f,#a97e28);color:#fffdf7;display:flex;align-items:center;justify-content:center;font:600 15px 'Hanken Grotesk';box-shadow:0 7px 15px -5px rgba(150,110,30,.55);flex:none">2</span>
+        <h2 style="margin:0;font:600 25px/1 'Cormorant Garamond',serif;color:#3a332a">Revisão, metas e parâmetros</h2>
+      </div>
+      <p style="margin:9px 0 18px 47px;color:#9a917f;font-size:13.5px;max-width:580px">Confira a anamnese, defina a meta calórica final e ajuste os macros antes de gerar o cardápio.</p>
+
+      <!-- Antropométricos -->
+      <div style="font:600 10.5px 'Hanken Grotesk';letter-spacing:1.4px;text-transform:uppercase;color:#b7ac97;margin:0 0 10px 2px">Dados antropométricos & objetivo</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:11px">
+        <sc-for list="{{ campos }}" as="c" hint-placeholder-count="6">
+          <div style="background:#faf5ea;border:1px solid #eee3cd;border-radius:12px;padding:11px 13px">
+            <div style="font:600 9.5px 'Hanken Grotesk';letter-spacing:.6px;text-transform:uppercase;color:#b0a68f;margin-bottom:5px">{{ c.label }}</div>
+            <div style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 15.5px 'Hanken Grotesk';color:#463f32">{{ c.value }}</span><span style="font-size:11px;color:#b3a98f">{{ c.unit }}</span></div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- Sliders de meta -->
+      <div style="font:600 10.5px 'Hanken Grotesk';letter-spacing:1.4px;text-transform:uppercase;color:#b7ac97;margin:22px 0 12px 2px">Metas antes da geração</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;background:#fbf6ec;border:1px solid #e9dfc8;border-radius:15px;padding:20px 22px">
+        <div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px"><span style="font-size:12.5px;color:#8a8168;font-weight:500">Meta calórica final</span><span style="font:600 18px 'Cormorant Garamond',serif;color:var(--gold,#9a6f22)">{{ metaKcal }} <span style="font-size:11px;font-family:'Hanken Grotesk';color:#b3a98f">kcal</span></span></div>
+          <input type="range" min="800" max="3000" step="25" value="{{ metaKcal }}" oninput="{{ setKcal }}">
+        </div>
+        <div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px"><span style="font-size:12.5px;color:#8a8168;font-weight:500">Proteína</span><span style="font:600 18px 'Cormorant Garamond',serif;color:var(--gold,#9a6f22)">{{ protKg }} <span style="font-size:11px;font-family:'Hanken Grotesk';color:#b3a98f">g/kg</span></span></div>
+          <input type="range" min="0.5" max="3.5" step="0.1" value="{{ protKg }}" oninput="{{ setProt }}">
+        </div>
+        <div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px"><span style="font-size:12.5px;color:#8a8168;font-weight:500">Gordura</span><span style="font:600 18px 'Cormorant Garamond',serif;color:var(--gold,#9a6f22)">{{ percGord }} <span style="font-size:11px;font-family:'Hanken Grotesk';color:#b3a98f">% kcal</span></span></div>
+          <input type="range" min="15" max="40" step="1" value="{{ percGord }}" oninput="{{ setGord }}">
+        </div>
+      </div>
+
+      <!-- Metric tiles -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:11px;margin-top:16px">
+        <sc-for list="{{ metaTiles }}" as="t" hint-placeholder-count="8">
+          <div style="background:{{ t.bg }};border:1px solid {{ t.border }};border-radius:13px;padding:13px 15px">
+            <div style="font:600 9.5px 'Hanken Grotesk';letter-spacing:.6px;text-transform:uppercase;color:#b0a68f;margin-bottom:6px">{{ t.label }}</div>
+            <div style="font:600 23px/1 'Cormorant Garamond',serif;color:{{ t.color }}">{{ t.value }}</div>
+            <div style="font-size:10.5px;color:#b3a98f;margin-top:3px">{{ t.sub }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- Filtros -->
+      <div style="font:600 10.5px 'Hanken Grotesk';letter-spacing:1.4px;text-transform:uppercase;color:#b7ac97;margin:22px 0 11px 2px">Filtros alimentares</div>
+      <div style="display:flex;flex-wrap:wrap;gap:9px">
+        <sc-for list="{{ filtros }}" as="f" hint-placeholder-count="5">
+          <span style="display:inline-flex;align-items:center;gap:7px;background:{{ f.bg }};border:1px solid {{ f.border }};border-radius:20px;padding:6px 13px 6px 11px;font-size:12.5px;color:{{ f.color }};font-weight:500"><b style="font-size:9.5px;letter-spacing:.5px;text-transform:uppercase;color:{{ f.tagColor }};font-weight:700">{{ f.tag }}</b>{{ f.value }}</span>
+        </sc-for>
+      </div>
+
+      <!-- Clinical rule -->
+      <div style="display:flex;gap:12px;margin-top:20px;background:#fbf3e3;border:1px solid #ecdcb4;border-left:3px solid #cba64f;border-radius:13px;padding:15px 17px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b08a2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px"><path d="M12 9v4M12 17h.01M10.3 3.9L2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+        <div>
+          <div style="font:600 14px 'Hanken Grotesk';color:#6b5620">Regra clínica detectada · Controle glicêmico <span style="font-weight:500;color:#a08a5a;font-size:12px">— atenção</span></div>
+          <p style="margin:5px 0 0;font-size:12.5px;line-height:1.55;color:#8a7c56">Resistência à insulina: priorizar carboidratos de baixo índice glicêmico e fibras; evitar açúcares livres. Termos adicionados aos filtros: <b>açúcar, refrigerante, doces</b>.</p>
+        </div>
+      </div>
+
+      <button style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(150deg,#c69c3f,#a5762a);color:#fffdf7;border:none;border-radius:13px;padding:16px 20px;font:600 15.5px 'Hanken Grotesk';box-shadow:0 14px 28px -13px rgba(150,110,30,.6);cursor:pointer;margin-top:20px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16M4 11a8 8 0 0 1 16 0M4 11v2a8 8 0 0 0 16 0v-2M9 21h6"/></svg>
+        Gerar cardápio com estas metas
+      </button>
+    </section>
+
+    <!-- ===== VALIDAÇÃO / RESUMO ===== -->
+    <section data-screen-label="Validação e revisão clínica" style="background:#fffdf9;border:1px solid #ece2ce;border-radius:20px;box-shadow:0 20px 44px -34px rgba(120,92,30,.45);padding:var(--pad,26px) 28px">
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#6f9159" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        <h2 style="margin:0;font:600 22px/1 'Cormorant Garamond',serif;color:#3a332a">Validação dos cálculos</h2>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px">
+        <div style="flex:1 1 240px;display:flex;align-items:center;gap:9px;background:#f0f5e9;border:1px solid #d9e7c9;border-radius:11px;padding:11px 14px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5f8047" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:12.5px;color:#5a6b47;font-weight:500">Somas das refeições batem com os totais.</span></div>
+        <div style="flex:1 1 240px;display:flex;align-items:center;gap:9px;background:#f0f5e9;border:1px solid #d9e7c9;border-radius:11px;padding:11px 14px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5f8047" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:12.5px;color:#5a6b47;font-weight:500">18 alimentos com valores coerentes (Atwater).</span></div>
+      </div>
+      <div style="font:600 10.5px 'Hanken Grotesk';letter-spacing:1.4px;text-transform:uppercase;color:#b7ac97;margin:0 0 11px 2px">Aderência às metas</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:11px">
+        <sc-for list="{{ adher }}" as="a" hint-placeholder-count="4">
+          <div style="background:#faf5ea;border:1px solid #eee3cd;border-radius:13px;padding:14px 15px">
+            <div style="font:600 9.5px 'Hanken Grotesk';letter-spacing:.6px;text-transform:uppercase;color:#b0a68f;margin-bottom:7px">{{ a.label }}</div>
+            <div style="font:600 22px/1 'Cormorant Garamond',serif;color:#463f32">{{ a.val }}</div>
+            <div style="display:inline-block;margin-top:8px;font:600 11px 'Hanken Grotesk';color:{{ a.color }};background:{{ a.chipBg }};border-radius:20px;padding:3px 9px">{{ a.pct }} vs meta</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:11px;margin:22px 0 14px">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--gold,#a3762a)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3c0 1 .5 1.8 1 2.5C8.5 9 7 10.5 7 13a5 5 0 0 0 10 0c0-2.5-1.5-4-3-5.5.5-.7 1-1.5 1-2.5a3 3 0 0 0-3-3z"/><path d="M12 13v8"/></svg>
+        <h2 style="margin:0;font:600 22px/1 'Cormorant Garamond',serif;color:#3a332a">Revisão clínica</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div style="display:flex;gap:11px;background:#eef4fb;border:1px solid #d3e3f2;border-radius:12px;padding:13px 15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5b82ab" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg><span style="font-size:12.5px;line-height:1.5;color:#4f6a86"><b style="color:#3f5b78">Carboidrato 11% acima da meta.</b> Coerente com o volume de treino; monitorar glicemia. Reduzir arroz/batata-doce se necessário.</span></div>
+        <div style="display:flex;gap:11px;background:#f0f5e9;border:1px solid #d9e7c9;border-radius:12px;padding:13px 15px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5f8047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:12.5px;line-height:1.5;color:#5a6b47"><b style="color:#4c6039">Distribuição de proteína adequada</b> ao longo das 5 refeições. Fibra dentro do alvo.</span></div>
+      </div>
+    </section>
+
+    <!-- ===== COMANDO ===== -->
+    <section data-screen-label="Assistente de comandos" style="background:linear-gradient(160deg,#fffaf0,#fdf4e4);border:1px solid #ecddbb;border-radius:20px;box-shadow:0 20px 44px -34px rgba(150,110,30,.5);padding:var(--pad,26px) 28px">
+      <div style="display:flex;align-items:center;gap:11px">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--gold,#a3762a)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M12 7l1 2.5L15.5 11 13 12l-1 2.5L11 12 8.5 11 11 9.5z"/></svg>
+        <h2 style="margin:0;font:600 22px/1 'Cormorant Garamond',serif;color:#3a332a">Assistente de comandos</h2>
+      </div>
+      <p style="margin:9px 0 15px 30px;color:#9a8f77;font-size:13px;max-width:560px">Digite uma instrução em linguagem natural e a IA prepara a alteração para você confirmar.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <div style="flex:1 1 300px;display:flex;align-items:center;background:#fffdf9;border:1px solid #e6dcc6;border-radius:12px;padding:2px 4px 2px 15px"><span style="font-size:13.5px;color:#5f5848;flex:1">aumenta a proteína do jantar em 15g</span><button style="background:linear-gradient(150deg,#c69c3f,#a5762a);color:#fffdf7;border:none;border-radius:10px;padding:10px 16px;font:600 13px 'Hanken Grotesk';cursor:pointer;margin:3px">Interpretar</button></div>
+      </div>
+      <div style="background:#fffdf9;border:1px dashed #e0cfa4;border-radius:13px;padding:15px 17px;margin-top:13px">
+        <div style="font-size:11.5px;color:#a08a5a;font-style:italic;margin-bottom:9px">A IA entendeu 1 alteração:</div>
+        <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5f5848;margin-bottom:13px"><span style="width:20px;height:20px;border-radius:6px;background:#f3e8cf;display:flex;align-items:center;justify-content:center;flex:none"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#a5762a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>Ajustar <b>Proteína</b> de <b>Jantar</b> de 30 g para 45 g (escala a tilápia da refeição).</div>
+        <div style="display:flex;gap:9px"><button style="background:linear-gradient(150deg,#c69c3f,#a5762a);color:#fffdf7;border:none;border-radius:10px;padding:9px 18px;font:600 13px 'Hanken Grotesk';cursor:pointer">Aplicar</button><button style="background:#fffdf9;color:#8a7c56;border:1px solid #e3d3ab;border-radius:10px;padding:9px 18px;font:600 13px 'Hanken Grotesk';cursor:pointer">Cancelar</button></div>
+      </div>
+    </section>
+
+    <!-- ===== STEP 3: CARDÁPIO ===== -->
+    <section data-screen-label="Etapa 3 — Cardápio final" style="background:#fffdf9;border:1px solid #ece2ce;border-radius:20px;box-shadow:0 20px 44px -34px rgba(120,92,30,.45);padding:var(--pad,26px) 28px">
+      <div style="display:flex;align-items:center;gap:13px">
+        <span style="width:34px;height:34px;border-radius:50%;background:linear-gradient(150deg,#dcb85f,#a97e28);color:#fffdf7;display:flex;align-items:center;justify-content:center;font:600 15px 'Hanken Grotesk';box-shadow:0 7px 15px -5px rgba(150,110,30,.55);flex:none">3</span>
+        <h2 style="margin:0;font:600 25px/1 'Cormorant Garamond',serif;color:#3a332a">Cardápio final</h2>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0 20px 47px">
+        <span style="font:600 12px 'Hanken Grotesk';color:var(--gold,#9a6f22);background:#faf2df;border:1px solid #ecddbb;border-radius:20px;padding:5px 13px">{{ totKcal }} kcal / dia</span>
+        <span style="font-size:12px;color:#b3a98f">·</span>
+        <span style="font-size:12.5px;color:#8a8168">Carb {{ totCStr }} g · Prot {{ totPrStr }} g · Gord {{ totGStr }} g · 5 refeições</span>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <sc-for list="{{ meals }}" as="m" hint-placeholder-count="5">
+          <div style="border:1px solid #eee3cd;border-radius:16px;overflow:hidden;background:#fffefb">
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:15px 18px;background:linear-gradient(180deg,#fbf5ea,#fdf9f0);border-bottom:1px solid #efe6d3">
+              <span style="width:9px;height:9px;border-radius:50%;background:var(--gold,#b58a2c);box-shadow:0 0 0 4px rgba(197,156,63,.15);flex:none"></span>
+              <h3 style="margin:0;font:600 19px/1 'Cormorant Garamond',serif;color:#3f3729">{{ m.slot }}</h3>
+              <sc-if value="{{ mostrarHoras }}" hint-placeholder-val="{{ true }}"><span style="font:600 10.5px 'Hanken Grotesk';letter-spacing:.5px;color:#a08a5a;background:#f4ead3;border-radius:20px;padding:3px 10px">{{ m.hora }}</span></sc-if>
+              <span style="margin-left:auto;font:600 12px 'Hanken Grotesk';color:#8a8168">{{ m.subKcal }} kcal</span>
+            </div>
+            <div style="padding:6px 18px 16px">
+              <p style="margin:9px 2px 12px;font-size:12px;color:#a89e86;font-style:italic">{{ m.obs }}</p>
+              <div class="cc-scroll" style="overflow-x:auto">
+                <div style="min-width:520px">
+                  <div style="display:grid;grid-template-columns:1.7fr 1.3fr .6fr .5fr .5fr .5fr;gap:8px;padding:0 4px 9px;border-bottom:1px solid #f0e8d6">
+                    <span style="font:600 9.5px 'Hanken Grotesk';letter-spacing:.8px;text-transform:uppercase;color:#bcb096">Alimento</span>
+                    <span style="font:600 9.5px 'Hanken Grotesk';letter-spacing:.8px;text-transform:uppercase;color:#bcb096">Porção</span>
+                    <span style="font:600 9.5px 'Hanken Grotesk';letter-spacing:.8px;text-transform:uppercase;color:#bcb096;text-align:right">Kcal</span>
+                    <span style="font:600 9.5px 'Hanken Grotesk';letter-spacing:.8px;text-transform:uppercase;color:#bcb096;text-align:right">C</span>
+                    <span style="font:600 9.5px 'Hanken Grotesk';letter-spacing:.8px;text-transform:uppercase;color:#bcb096;text-align:right">P</span>
+                    <span style="font:600 9.5px 'Hanken Grotesk';letter-spacing:.8px;text-transform:uppercase;color:#bcb096;text-align:right">G</span>
+                  </div>
+                  <sc-for list="{{ m.foods }}" as="f" hint-placeholder-count="4">
+                    <div style="display:grid;grid-template-columns:1.7fr 1.3fr .6fr .5fr .5fr .5fr;gap:8px;padding:9px 4px;border-bottom:1px solid #f6f0e3;align-items:center">
+                      <span style="font-size:13px;color:#463f32;font-weight:500">{{ f.n }}</span>
+                      <span style="font-size:12px;color:#93896f">{{ f.p }}</span>
+                      <span style="font-size:12.5px;color:#5f5848;text-align:right;font-weight:600">{{ f.kcalStr }}</span>
+                      <span style="font-size:12px;color:#a89e86;text-align:right">{{ f.c }}</span>
+                      <span style="font-size:12px;color:#a89e86;text-align:right">{{ f.pr }}</span>
+                      <span style="font-size:12px;color:#a89e86;text-align:right">{{ f.g }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+
+              <sc-if value="{{ m.hasSub }}" hint-placeholder-val="{{ true }}">
+                <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:13px">
+                  <span style="font-size:11px;color:#a08a5a;font-weight:600">Trocar {{ m.subFood }}:</span>
+                  <sc-for list="{{ m.subOpts }}" as="opt" hint-placeholder-count="3">
+                    <span style="font-size:11.5px;color:#7a6a44;background:#faf2df;border:1px solid #ecddbb;border-radius:20px;padding:4px 11px">{{ opt }}</span>
+                  </sc-for>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ m.alt }}" hint-placeholder-val="{{ true }}">
+                <div style="margin-top:14px;background:#faf6ee;border:1px solid #ede3cd;border-radius:12px;padding:12px 15px">
+                  <div style="font:600 11px 'Hanken Grotesk';letter-spacing:.5px;text-transform:uppercase;color:#b09a68;margin-bottom:9px">Opção alternativa · {{ m.altNome }}</div>
+                  <sc-for list="{{ m.altFoods }}" as="af" hint-placeholder-count="3">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:4px 0;border-bottom:1px solid #f3ecdc"><span style="font-size:12.5px;color:#5f5848">{{ af.n }} <span style="color:#a89e86">· {{ af.p }}</span></span><span style="font-size:12px;color:#8a8168;font-weight:600">{{ af.kcal }} kcal</span></div>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- ===== STEP 4: EXPORTAR ===== -->
+    <section data-screen-label="Etapa 4 — Exportar" style="background:#fffdf9;border:1px solid #ece2ce;border-radius:20px;box-shadow:0 20px 44px -34px rgba(120,92,30,.45);padding:var(--pad,26px) 28px">
+      <div style="display:flex;align-items:center;gap:13px">
+        <span style="width:34px;height:34px;border-radius:50%;background:linear-gradient(150deg,#dcb85f,#a97e28);color:#fffdf7;display:flex;align-items:center;justify-content:center;font:600 15px 'Hanken Grotesk';box-shadow:0 7px 15px -5px rgba(150,110,30,.55);flex:none">4</span>
+        <h2 style="margin:0;font:600 25px/1 'Cormorant Garamond',serif;color:#3a332a">Exportar cardápio</h2>
+      </div>
+      <p style="margin:9px 0 18px 47px;color:#9a917f;font-size:13.5px;max-width:560px">Marque quais opções de cada refeição vão para o paciente. Por padrão vem a opção principal de cada horário.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px">
+        <sc-for list="{{ exportItens }}" as="e" hint-placeholder-count="5">
+          <div style="display:flex;align-items:center;gap:11px;background:#faf5ea;border:1px solid #eee3cd;border-radius:12px;padding:12px 14px">
+            <span style="width:20px;height:20px;border-radius:6px;background:linear-gradient(150deg,#c69c3f,#a5762a);display:flex;align-items:center;justify-content:center;flex:none"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fffdf7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span style="font-size:13px;color:#463f32;font-weight:500">{{ e }}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px">
+        <div style="flex:1 1 240px;display:flex;align-items:center;gap:10px;background:#fbf6ec;border:1px solid #e9dfc8;border-radius:11px;padding:11px 14px"><span style="width:34px;height:19px;border-radius:20px;background:linear-gradient(150deg,#c69c3f,#a5762a);position:relative;flex:none"><span style="position:absolute;top:2px;right:2px;width:15px;height:15px;border-radius:50%;background:#fffdf7"></span></span><span style="font-size:12.5px;color:#5f5848">Incluir lista de substituições</span></div>
+        <div style="flex:1 1 240px;display:flex;align-items:center;gap:10px;background:#fbf6ec;border:1px solid #e9dfc8;border-radius:11px;padding:11px 14px"><span style="width:34px;height:19px;border-radius:20px;background:linear-gradient(150deg,#c69c3f,#a5762a);position:relative;flex:none"><span style="position:absolute;top:2px;right:2px;width:15px;height:15px;border-radius:50%;background:#fffdf7"></span></span><span style="font-size:12.5px;color:#5f5848">Incluir modos de preparo</span></div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:9px;margin-top:16px;background:#f0f5e9;border:1px solid #d9e7c9;border-radius:11px;padding:11px 14px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5f8047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        <span style="font-size:12.5px;color:#5a6b47;font-weight:500">Checklist sem alertas pendentes. Cardápio pronto para baixar.</span>
+      </div>
+
+      <button style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(150deg,#c69c3f,#a5762a);color:#fffdf7;border:none;border-radius:13px;padding:16px 20px;font:600 15.5px 'Hanken Grotesk';box-shadow:0 14px 28px -13px rgba(150,110,30,.6);cursor:pointer;margin-top:18px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+        Baixar cardápio (.md)
+      </button>
+    </section>
+
+    <div style="text-align:center;padding:8px 0 0">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:11px;color:#b3a98f"><span style="height:1px;width:26px;background:linear-gradient(90deg,transparent,#d6bd84)"></span>Marcela Pacheco · Nutrição Clínica<span style="height:1px;width:26px;background:linear-gradient(90deg,#d6bd84,transparent)"></span></span>
+    </div>
+
+  </main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1220,&quot;height&quot;:1400},&quot;mostrarHoras&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cardápio&quot;},&quot;densidade&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Confortável&quot;,&quot;options&quot;:[&quot;Confortável&quot;,&quot;Compacto&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;sotaqueDourado&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Médio&quot;,&quot;options&quot;:[&quot;Suave&quot;,&quot;Médio&quot;,&quot;Marcante&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Estilo&quot;}}">
+class Component extends DCLogic {
+  peso = 68; altura = 165; idade = 34; genero = 'Feminino'; faf = 1.55; objetivo = 'Emagrecimento';
+  state = { metaKcal: 1600, protKg: 2.0, percGord: 25 };
+
+  get tmb() { return Math.round(10 * this.peso + 6.25 * this.altura - 5 * this.idade - 161); }
+  get get() { return Math.round(this.tmb * this.faf); }
+
+  mealsBase() {
+    return [
+      { slot: 'Café da manhã', hora: '07h00', obs: 'Ovos com pouco óleo; café sem açúcar.',
+        foods: [
+          { n: 'Ovos mexidos', p: '2 unid · 100 g', kcal: 155, c: 1, pr: 13, g: 11 },
+          { n: 'Pão integral', p: '2 fatias · 50 g', kcal: 123, c: 22, pr: 6, g: 2 },
+          { n: 'Mamão papaia', p: '1 fatia · 150 g', kcal: 60, c: 15, pr: 1, g: 0 },
+          { n: 'Café preto sem açúcar', p: '200 ml', kcal: 3, c: 0, pr: 0, g: 0 },
+        ],
+        hasSub: true, subFood: 'mamão', subOpts: ['Melão · 170 g', 'Morango · 200 g', 'Abacaxi · 130 g'],
+        altNome: 'Tapioca proteica', altFoods: [
+          { n: 'Tapioca (goma)', p: '40 g', kcal: 130 }, { n: 'Frango desfiado', p: '60 g', kcal: 99 }, { n: 'Queijo cottage', p: '30 g', kcal: 29 },
+        ] },
+      { slot: 'Lanche da manhã', hora: '10h00', obs: 'Misturar a aveia no iogurte.',
+        foods: [
+          { n: 'Iogurte natural desnatado', p: '170 g', kcal: 75, c: 10, pr: 9, g: 0 },
+          { n: 'Banana prata', p: '1 unid · 100 g', kcal: 89, c: 23, pr: 1, g: 0 },
+          { n: 'Aveia em flocos', p: '20 g', kcal: 74, c: 13, pr: 3, g: 1 },
+        ] },
+      { slot: 'Almoço', hora: '13h00', obs: 'Grelhados e legumes no vapor; salada à vontade.',
+        foods: [
+          { n: 'Arroz integral', p: '4 c. sopa · 100 g', kcal: 124, c: 26, pr: 3, g: 1 },
+          { n: 'Feijão carioca', p: '1 concha · 80 g', kcal: 61, c: 11, pr: 5, g: 0 },
+          { n: 'Filé de frango grelhado', p: '120 g', kcal: 198, c: 0, pr: 37, g: 4 },
+          { n: 'Brócolis no vapor', p: '80 g', kcal: 28, c: 5, pr: 2, g: 0 },
+          { n: 'Salada verde', p: 'à vontade', kcal: 15, c: 3, pr: 1, g: 0 },
+          { n: 'Azeite extravirgem', p: '1 c. chá · 5 ml', kcal: 44, c: 0, pr: 0, g: 5 },
+        ],
+        hasSub: true, subFood: 'arroz', subOpts: ['Quinoa · 90 g', 'Batata-doce · 130 g', 'Mandioquinha · 120 g'] },
+      { slot: 'Lanche da tarde', hora: '16h00', obs: 'Whey batido com água ou água de coco.',
+        foods: [
+          { n: 'Whey protein', p: '1 scoop · 30 g', kcal: 116, c: 3, pr: 24, g: 1 },
+          { n: 'Maçã', p: '1 unid · 130 g', kcal: 68, c: 18, pr: 0, g: 0 },
+          { n: 'Pasta de amendoim integral', p: '1 c. sopa · 15 g', kcal: 90, c: 3, pr: 4, g: 8 },
+        ] },
+      { slot: 'Jantar', hora: '20h00', obs: 'Peixe grelhado; legumes no vapor com azeite.',
+        foods: [
+          { n: 'Batata-doce cozida', p: '120 g', kcal: 92, c: 22, pr: 2, g: 0 },
+          { n: 'Tilápia grelhada', p: '130 g', kcal: 128, c: 0, pr: 26, g: 3 },
+          { n: 'Legumes no vapor', p: '100 g', kcal: 40, c: 8, pr: 2, g: 0 },
+          { n: 'Azeite extravirgem', p: '1 c. chá · 5 ml', kcal: 44, c: 0, pr: 0, g: 5 },
+        ],
+        altNome: 'Omelete de forno', altFoods: [
+          { n: 'Ovos', p: '2 unid · 100 g', kcal: 155 }, { n: 'Espinafre refogado', p: '80 g', kcal: 35 }, { n: 'Batata-doce', p: '100 g', kcal: 77 },
+        ] },
+    ];
+  }
+
+  renderVals() {
+    const p = this.props || {};
+    const { metaKcal, protKg, percGord } = this.state;
+    const metaProt = protKg * this.peso;
+    const metaGord = (percGord / 100 * metaKcal) / 9;
+    const metaCarb = (metaKcal - metaProt * 4 - metaGord * 9) / 4;
+    const metaFibra = 25;
+
+    const meals = this.mealsBase().map((m) => {
+      const sub = { kcal: 0, c: 0, pr: 0, g: 0 };
+      m.foods.forEach(f => { sub.kcal += f.kcal; sub.c += f.c; sub.pr += f.pr; sub.g += f.g; });
+      return { ...m, subKcal: Math.round(sub.kcal), subC: Math.round(sub.c), subPr: Math.round(sub.pr), subG: Math.round(sub.g),
+        foods: m.foods.map(f => ({ ...f, kcalStr: Math.round(f.kcal) })) };
+    });
+
+    const tot = { kcal: 0, c: 0, pr: 0, g: 0 };
+    meals.forEach(m => m.foods.forEach(f => { tot.kcal += f.kcal; tot.c += f.c; tot.pr += f.pr; tot.g += f.g; }));
+
+    const pct = (a, b) => (b > 0 ? Math.round((a - b) / b * 100) : 0);
+    const sign = (v) => (v > 0 ? '+' : '') + v + '%';
+    const col = (v) => Math.abs(v) <= 8 ? '#5e7a4e' : '#b5852f';
+    const chip = (v) => Math.abs(v) <= 8 ? '#eef4e6' : '#f8f0dd';
+    const mk = (label, val, meta) => { const v = pct(val, meta); return { label, val: Math.round(val) + (label === 'Calorias' ? ' kcal' : ' g'), pct: sign(v), color: col(v), chipBg: chip(v) }; };
+
+    const adher = [
+      mk('Calorias', tot.kcal, metaKcal),
+      mk('Carboidrato', tot.c, metaCarb),
+      mk('Proteína', tot.pr, metaProt),
+      mk('Gordura', tot.g, metaGord),
+    ];
+
+    const goldMap = { 'Suave': '#ac8742', 'Médio': '#9c722a', 'Marcante': '#8a6417' };
+    const goldVar = goldMap[p.sotaqueDourado] || '#9c722a';
+    const padVar = (p.densidade === 'Compacto') ? '18px' : '26px';
+
+    return {
+      goldVar, padVar,
+      mostrarHoras: p.mostrarHoras !== false,
+      metaKcal, protKg: protKg.toFixed(1), percGord,
+      tmb: this.tmb, get: this.get,
+      steps: [
+        { label: 'Anamnese', mark: '✓', done: true },
+        { label: 'Metas & parâmetros', mark: '✓', done: true },
+        { label: 'Cardápio', mark: '3', current: true },
+        { label: 'Exportar', mark: '4' },
+      ].map(s => ({
+        label: s.label, mark: s.mark,
+        bg: s.current ? '#faf2df' : 'transparent',
+        dot: s.done ? goldVar : (s.current ? 'linear-gradient(150deg,#dcb85f,#a97e28)' : '#f2ebda'),
+        dotText: (s.done || s.current) ? '#fffdf7' : '#b7ac97',
+        dotBorder: s.done || s.current ? 'transparent' : '#e6dcc6',
+        color: s.current ? '#4a4235' : (s.done ? '#7a7160' : '#b7ac97'),
+        weight: s.current ? '600' : '500',
+      })),
+      campos: [
+        { label: 'Idade', value: this.idade, unit: 'anos' },
+        { label: 'Peso', value: this.peso, unit: 'kg' },
+        { label: 'Altura', value: '1,65', unit: 'm' },
+        { label: 'Gênero', value: 'Feminino', unit: '' },
+        { label: 'Objetivo', value: 'Emagrecer', unit: '' },
+        { label: 'Atividade', value: 'Moderado', unit: '1.55' },
+      ],
+      metaTiles: [
+        { label: 'TMB ref.', value: this.tmb, sub: 'Mifflin-St Jeor', bg: '#faf5ea', border: '#eee3cd', color: '#7a7160' },
+        { label: 'GET ref.', value: this.get, sub: 'gasto total', bg: '#faf5ea', border: '#eee3cd', color: '#7a7160' },
+        { label: 'Meta kcal', value: metaKcal, sub: (metaKcal - this.get >= 0 ? '+' : '') + (metaKcal - this.get) + ' vs GET', bg: '#faf2df', border: '#ecddbb', color: goldVar },
+        { label: 'Fibra alvo', value: metaFibra + 'g', sub: 'por dia', bg: '#faf5ea', border: '#eee3cd', color: '#7a7160' },
+        { label: 'Proteína', value: Math.round(metaProt) + 'g', sub: protKg.toFixed(1) + ' g/kg', bg: '#f4f0e6', border: '#e6ddc9', color: '#5f5848' },
+        { label: 'Carboidrato', value: Math.round(metaCarb) + 'g', sub: 'restante', bg: '#f4f0e6', border: '#e6ddc9', color: '#5f5848' },
+        { label: 'Gordura', value: Math.round(metaGord) + 'g', sub: percGord + '% kcal', bg: '#f4f0e6', border: '#e6ddc9', color: '#5f5848' },
+        { label: 'Refeições', value: '5', sub: 'no plano', bg: '#faf5ea', border: '#eee3cd', color: '#7a7160' },
+      ],
+      filtros: [
+        { tag: 'Aversão', value: 'fígado', bg: '#fbeee6', border: '#eed6c4', color: '#8a5a3a', tagColor: '#b5654a' },
+        { tag: 'Aversão', value: 'jiló', bg: '#fbeee6', border: '#eed6c4', color: '#8a5a3a', tagColor: '#b5654a' },
+        { tag: 'Intolerância', value: 'lactose (leve)', bg: '#fbf3e3', border: '#ecddbb', color: '#7a6a44', tagColor: '#b08a2e' },
+        { tag: 'Preferência', value: 'café', bg: '#eef4e6', border: '#d8e6c8', color: '#5a6b47', tagColor: '#6f9159' },
+        { tag: 'Preferência', value: 'frutas', bg: '#eef4e6', border: '#d8e6c8', color: '#5a6b47', tagColor: '#6f9159' },
+      ],
+      meals,
+      totKcal: Math.round(tot.kcal), totCStr: Math.round(tot.c), totPrStr: Math.round(tot.pr), totGStr: Math.round(tot.g),
+      adher,
+      exportItens: ['Café da manhã', 'Lanche da manhã', 'Almoço', 'Lanche da tarde', 'Jantar'],
+      setKcal: (e) => this.setState({ metaKcal: +e.target.value }),
+      setProt: (e) => this.setState({ protKg: +e.target.value }),
+      setGord: (e) => this.setState({ percGord: +e.target.value }),
+    };
+  }
+}
+</script>
+</body>
+</html>

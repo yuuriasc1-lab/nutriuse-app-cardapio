@@ -1,0 +1,79 @@
+{
+  "versao": 1,
+  "preparos": [
+    {
+      "id": "crepioca",
+      "titulo": "Crepioca simples",
+      "aplicar_quando": ["crepioca", "goma de tapioca", "ovo de galinha"],
+      "ingredientes_base": ["goma de tapioca", "ovo", "recheio indicado no cardapio"],
+      "modo_preparo": [
+        "Misture a goma de tapioca com o ovo ate formar uma massa uniforme.",
+        "Aqueça uma frigideira antiaderente em fogo baixo.",
+        "Despeje a massa e doure dos dois lados.",
+        "Recheie conforme os alimentos prescritos na refeicao."
+      ],
+      "observacoes": ["Evitar excesso de oleo. Ajustar sal conforme orientacao clinica."]
+    },
+    {
+      "id": "toast_banana",
+      "titulo": "Toast de banana",
+      "aplicar_quando": ["toast de banana", "banana em rodela", "pao de forma"],
+      "ingredientes_base": ["pao de forma", "banana", "canela", "queijo conforme cardapio"],
+      "modo_preparo": [
+        "Monte o pao com a banana em rodelas e o queijo indicado.",
+        "Finalize com canela.",
+        "Aqueça em sanduicheira, frigideira antiaderente ou forno ate dourar levemente."
+      ],
+      "observacoes": ["Nao acrescentar acucar ou mel se nao estiver prescrito."]
+    },
+    {
+      "id": "pao_ricota_whey",
+      "titulo": "Pao com ricota e whey",
+      "aplicar_quando": ["pao frances com ricota e whey", "creme de ricota", "whey protein"],
+      "ingredientes_base": ["pao", "creme de ricota", "whey", "leite conforme cardapio"],
+      "modo_preparo": [
+        "Misture o whey com pequena quantidade de leite ate formar um creme.",
+        "Passe o creme de ricota no pao.",
+        "Complete com o creme de whey e consuma com o cafe indicado."
+      ],
+      "observacoes": ["Para intolerancia a lactose, revisar whey, leite e creme de ricota."]
+    },
+    {
+      "id": "acai_whey",
+      "titulo": "Acai com banana e whey",
+      "aplicar_quando": ["acai com banana e whey", "polpa de acai", "whey protein", "banana"],
+      "ingredientes_base": ["polpa de acai sem acucar", "banana", "whey"],
+      "modo_preparo": [
+        "Bata a polpa de acai com a banana ate ficar cremoso.",
+        "Misture o whey ate incorporar.",
+        "Sirva imediatamente."
+      ],
+      "observacoes": ["Usar polpa sem acucar. Revisar em diabetes/resistencia insulinica."]
+    },
+    {
+      "id": "omelete",
+      "titulo": "Omelete simples",
+      "aplicar_quando": ["omelete", "ovo de galinha", "clara de ovo"],
+      "ingredientes_base": ["ovo", "claras", "temperos naturais"],
+      "modo_preparo": [
+        "Bata os ovos e claras com temperos naturais.",
+        "Leve a uma frigideira antiaderente em fogo baixo.",
+        "Cozinhe ate firmar e vire se necessario."
+      ],
+      "observacoes": ["Evitar embutidos e excesso de sal."]
+    },
+    {
+      "id": "salada",
+      "titulo": "Salada temperada",
+      "aplicar_quando": ["salada", "alface", "tomate", "cenoura", "couve"],
+      "ingredientes_base": ["vegetais prescritos", "limao ou vinagre", "azeite quando prescrito"],
+      "modo_preparo": [
+        "Higienize os vegetais.",
+        "Corte conforme preferencia.",
+        "Tempere com limao ou vinagre e pouco sal.",
+        "Use azeite apenas se estiver previsto no cardapio."
+      ],
+      "observacoes": ["Evitar molhos prontos."]
+    }
+  ]
+}

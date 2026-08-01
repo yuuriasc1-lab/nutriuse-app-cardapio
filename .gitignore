@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Segredos e credenciais — NUNCA commitar
+.streamlit/secrets.toml
+.env
+.env.*
+*.env
+
+# Configurações locais do Claude Code (contém tokens MCP)
+.claude/settings.local.json
+
+# Logs (podem conter IPs, caminhos e stack traces sensíveis)
+logs/
+*.log
+streamlit_run*.log
+
+# Node
+node_modules/
+package-lock.json
+
+# Arquivos de backup
+*.bak
+*.backup
+
+# Uploads de usuários
+design-marcela/uploads/
